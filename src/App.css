@@ -1,0 +1,10 @@
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-image: url('../public/wp4695952.jpg') ;
+  background-size: cover;
+  background-position: center;
+}
