@@ -21,12 +21,66 @@ function DayInfo(props: TypeProps) {
       {props.segunda ? 
         <div className='containerWorkDay'>
           <div className='headerWorkDay'>
-            <p>Segunda</p>
+            <p className='marginHeader'>Segunda</p>
             <p>Costas - Biceps - Panturrilha</p>
             <button className='btnClose' onClick={props.onPressSegunda}>X</button>
           </div>
-          <div>
-            <p>costas</p>
+          <div className='container-exercises'>
+            <div className='title-exercises'>
+              <p>Costas</p>
+              <div className='exercises'>
+                <div className='blocks'>
+                  <p>Exercicio1</p>
+                </div>
+                <div className='blocks'>
+                  <p>Exercicio2</p>
+                </div>
+                <div className='blocks'>
+                  <p>Exercicio3</p>
+                </div>
+                <div className='blocks'>
+                  <p>Exercicio4</p>
+                </div>
+              </div>
+            </div>
+            <div>
+            <div className='title-exercises'>
+              <p>Costas</p>
+              <div className='exercises'>
+                <div className='blocks'>
+                  <p>Exercicio1</p>
+                </div>
+                <div className='blocks'>
+                  <p>Exercicio2</p>
+                </div>
+                <div className='blocks'>
+                  <p>Exercicio3</p>
+                </div>
+                <div className='blocks'>
+                  <p>Exercicio4</p>
+                </div>
+              </div>
+            </div>
+            </div>
+            <div>
+            <div className='title-exercises'>
+              <p>Costas</p>
+              <div className='exercises'>
+                <div className='blocks'>
+                  <p>Exercicio1</p>
+                </div>
+                <div className='blocks'>
+                  <p>Exercicio2</p>
+                </div>
+                <div className='blocks'>
+                  <p>Exercicio3</p>
+                </div>
+                <div className='blocks'>
+                  <p>Exercicio4</p>
+                </div>
+              </div>
+            </div>
+            </div>
           </div>
         </div>
       :<></>}

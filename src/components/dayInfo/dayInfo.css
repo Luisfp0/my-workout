@@ -1,4 +1,7 @@
 .containerWorkDay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: absolute;
   width: 90%;
   height: 90%;
@@ -10,11 +13,39 @@
   display: flex;
   justify-content: space-between;
   height: 30px;
+  width: 100%;
   align-items: center;
-  padding-left: 20px;
-  padding-right: 20px;
+}
+
+.container-exercises {
+  background-color: yellow;
+  width: 95%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .btnClose {
   border: none;
+  margin-right: 20px;
+}
+
+.marginHeader {
+  margin-left: 20px;
+}
+
+.title-exercises {
+  text-align: center;
+  background-color: red;
+}
+
+.exercises {
+  display: flex;
+  justify-content: space-around;
+}
+
+.blocks{
+  height: 150px;
+  width: 150px;
 }
