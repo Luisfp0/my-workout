@@ -16,6 +16,13 @@ interface TypeProps {
 }
 
 function DayInfo(props: TypeProps) {
+  function nextExercise() {
+    console.log('próximo')
+  }
+  function previousExercise() {
+    console.log('anterior')
+  }
+
   return (
     <>
       {props.segunda ? 
@@ -29,57 +36,29 @@ function DayInfo(props: TypeProps) {
             <div className='title-exercises'>
               <p>Costas</p>
               <div className='exercises'>
-                <div className='blocks'>
-                  <p>Exercicio1</p>
+                <div>
+                  <div className='blocks'>
+                    <p>Exercicio1</p>
+                  </div>
+                  <div className='blocks'>
+                    <p>Exercicio2</p>
+                  </div>
                 </div>
-                <div className='blocks'>
-                  <p>Exercicio2</p>
+                <div className='next' onClick={nextExercise}>
+                  <img src='../../../public/arrow.png' alt='Seta avançar'></img>
                 </div>
-                <div className='blocks'>
-                  <p>Exercicio3</p>
-                </div>
-                <div className='blocks'>
-                  <p>Exercicio4</p>
-                </div>
-              </div>
-            </div>
-            <div>
-            <div className='title-exercises'>
-              <p>Costas</p>
-              <div className='exercises'>
-                <div className='blocks'>
-                  <p>Exercicio1</p>
-                </div>
-                <div className='blocks'>
-                  <p>Exercicio2</p>
-                </div>
-                <div className='blocks'>
-                  <p>Exercicio3</p>
-                </div>
-                <div className='blocks'>
-                  <p>Exercicio4</p>
+                <div className='prev' onClick={previousExercise}>
+                  <img src='../../../public/arrow.png' alt='Seta voltar'></img>
+                  </div>
+                <div>
+                  <div className='blocks'>
+                    <p>Exercicio3</p>
+                  </div>
+                  <div className='blocks'>
+                    <p>Exercicio4</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            </div>
-            <div>
-            <div className='title-exercises'>
-              <p>Costas</p>
-              <div className='exercises'>
-                <div className='blocks'>
-                  <p>Exercicio1</p>
-                </div>
-                <div className='blocks'>
-                  <p>Exercicio2</p>
-                </div>
-                <div className='blocks'>
-                  <p>Exercicio3</p>
-                </div>
-                <div className='blocks'>
-                  <p>Exercicio4</p>
-                </div>
-              </div>
-            </div>
             </div>
           </div>
         </div>
