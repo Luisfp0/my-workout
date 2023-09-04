@@ -4,6 +4,10 @@ import barraFixa from '../../../public/costas-barra-fixa-pegada-aberta.webp'
 import remadaMaquina from '../../../public/remada-na-maquina-de-cabos-sentado-e-com-pegada-aberta.webp'
 import cavalinho from '../../../public/remada-em-pe-com-barra-T.webp'
 import remadaSerrote from '../../../public/remada-unilateral-com-halter-serrote.webp'
+import roscaUnilateral from '../../../public/rosca-concentrada-unilateral-com-halter.webp'
+import bicepsInclinado from '../../../public/rosca-biceps-com-halteres-no-banco-inclinado.webp'
+import roscaBarraW from '../../../public/rosca-biceps-no-banco-scott-com-barra-W.webp'
+import martelo from '../../../public/rosca-biceps-martelo-com-halteres.webp'
 
 
 interface TypeProps {
@@ -101,12 +105,12 @@ function DayInfo(props: TypeProps) {
             <div className='exercises'>
               <div>
                 <div className='blocks'>
-                  <p>Biceps1</p>
-                  <img src={barraFixa} className='img-exercices'></img>
+                  <p>Rosca bíceps concentrada unilateral com halter</p>
+                  <img src={roscaUnilateral} className='img-exercices'></img>
                 </div>
                 <div className='blocks'>
-                  <p>Biceps2</p>
-                  <img src={barraFixa} className='img-exercices'></img>
+                  <p>Rosca bíceps com halteres no banco inclinado</p>
+                  <img src={bicepsInclinado} className='img-exercices'></img>
                 </div>
               </div>
               <div className='next' onClick={nextExercise}>
@@ -117,12 +121,12 @@ function DayInfo(props: TypeProps) {
                 </div>
               <div>
                 <div className='blocks'>
-                  <p>Biceps3</p>
-                  <img src={barraFixa} className='img-exercices'></img>
+                  <p>Rosca bíceps apoiado no banco Scott e com a barra EZ</p>
+                  <img src={roscaBarraW} className='img-exercices'></img>
                 </div>
                 <div className='blocks'>
-                  <p>Biceps4</p>
-                  <img src={barraFixa} className='img-exercices'></img>
+                  <p>Rosca bíceps martelo em pé com halteres</p>
+                  <img src={martelo} className='img-exercices'></img>
                 </div>
               </div>
             </div>
