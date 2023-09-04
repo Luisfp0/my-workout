@@ -60,5 +60,14 @@
 
 .blocks{
   height: 250px;
-  width: 300px;
+  width: 400px;
+}
+
+.blocks p {
+  padding-bottom: 10px;
+}
+
+.img-exercices {
+  width: 210px;
+  height: 210px;
 }

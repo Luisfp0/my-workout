@@ -1,5 +1,10 @@
 import { useState } from 'react'
 import './dayInfo.css'
+import barraFixa from '../../../public/costas-barra-fixa-pegada-aberta.webp'
+import remadaMaquina from '../../../public/remada-na-maquina-de-cabos-sentado-e-com-pegada-aberta.webp'
+import cavalinho from '../../../public/remada-em-pe-com-barra-T.webp'
+import remadaSerrote from '../../../public/remada-unilateral-com-halter-serrote.webp'
+
 
 interface TypeProps {
   onPressSegunda: () => void
@@ -46,11 +51,9 @@ function DayInfo(props: TypeProps) {
   
   function nextExercise() {
     if(page < 3)setPage(page + 1)
-    console.log('página',page)
   }
   function previousExercise() {
     if(page > 1) setPage(page - 1)
-    console.log('página',page)
   }
 
   return (
@@ -69,24 +72,25 @@ function DayInfo(props: TypeProps) {
             <div className='exercises'>
               <div>
                 <div className='blocks'>
-                  <p>Costas1</p>
+                  <p>Barra fixa com pegada aberta</p>
+                  <img src={barraFixa} className='img-exercices'></img>
                 </div>
                 <div className='blocks'>
-                  <p>Costas2</p>
+                  <p>Remada na máquina de cabos</p>
+                  <img src={remadaMaquina} className='img-exercices'></img>
                 </div>
               </div>
               <div className='next' onClick={nextExercise}>
                 <img src='../../../public/arrow.png' alt='Seta avançar'></img>
               </div>
-              <div className='prev' onClick={previousExercise}>
-                <img src='../../../public/arrow.png' alt='Seta voltar'></img>
-                </div>
               <div>
                 <div className='blocks'>
-                  <p>Costas3</p>
+                  <p>Remada em pé com a barra T (remada cavalinho)</p>
+                  <img src={cavalinho} className='img-exercices'></img>
                 </div>
                 <div className='blocks'>
-                  <p>Costas4</p>
+                  <p>Remada unilateral com halter (remada serrote)</p>
+                  <img src={remadaSerrote} className='img-exercices'></img>
                 </div>
               </div>
             </div>
@@ -98,9 +102,11 @@ function DayInfo(props: TypeProps) {
               <div>
                 <div className='blocks'>
                   <p>Biceps1</p>
+                  <img src={barraFixa} className='img-exercices'></img>
                 </div>
                 <div className='blocks'>
                   <p>Biceps2</p>
+                  <img src={barraFixa} className='img-exercices'></img>
                 </div>
               </div>
               <div className='next' onClick={nextExercise}>
@@ -112,9 +118,11 @@ function DayInfo(props: TypeProps) {
               <div>
                 <div className='blocks'>
                   <p>Biceps3</p>
+                  <img src={barraFixa} className='img-exercices'></img>
                 </div>
                 <div className='blocks'>
                   <p>Biceps4</p>
+                  <img src={barraFixa} className='img-exercices'></img>
                 </div>
               </div>
             </div>
@@ -126,13 +134,12 @@ function DayInfo(props: TypeProps) {
               <div>
                 <div className='blocks'>
                   <p>Panturrilha1</p>
+                  <img src={barraFixa} className='img-exercices'></img>
                 </div>
                 <div className='blocks'>
                   <p>Panturrilha2</p>
+                  <img src={barraFixa} className='img-exercices'></img>
                 </div>
-              </div>
-              <div className='next' onClick={nextExercise}>
-                <img src='../../../public/arrow.png' alt='Seta avançar'></img>
               </div>
               <div className='prev' onClick={previousExercise}>
                 <img src='../../../public/arrow.png' alt='Seta voltar'></img>
@@ -140,9 +147,11 @@ function DayInfo(props: TypeProps) {
               <div>
                 <div className='blocks'>
                   <p>Panturrilha3</p>
+                  <img src={barraFixa} className='img-exercices'></img>
                 </div>
                 <div className='blocks'>
                   <p>Panturrilha4</p>
+                  <img src={barraFixa} className='img-exercices'></img>
                 </div>
               </div>
             </div>
@@ -172,9 +181,6 @@ function DayInfo(props: TypeProps) {
               <div className='next' onClick={nextExercise}>
                 <img src='../../../public/arrow.png' alt='Seta avançar'></img>
               </div>
-              <div className='prev' onClick={previousExercise}>
-                <img src='../../../public/arrow.png' alt='Seta voltar'></img>
-                </div>
               <div>
                 <div className='blocks'>
                   <p>Peito3</p>
@@ -225,9 +231,6 @@ function DayInfo(props: TypeProps) {
                   <p>Abdomem2</p>
                 </div>
               </div>
-              <div className='next' onClick={nextExercise}>
-                <img src='../../../public/arrow.png' alt='Seta avançar'></img>
-              </div>
               <div className='prev' onClick={previousExercise}>
                 <img src='../../../public/arrow.png' alt='Seta voltar'></img>
                 </div>
@@ -266,9 +269,6 @@ function DayInfo(props: TypeProps) {
               <div className='next' onClick={nextExercise}>
                 <img src='../../../public/arrow.png' alt='Seta avançar'></img>
               </div>
-              <div className='prev' onClick={previousExercise}>
-                <img src='../../../public/arrow.png' alt='Seta voltar'></img>
-                </div>
               <div>
                 <div className='blocks'>
                   <p>Coxa3</p>
@@ -319,9 +319,6 @@ function DayInfo(props: TypeProps) {
                   <p>Panturrilha2</p>
                 </div>
               </div>
-              <div className='next' onClick={nextExercise}>
-                <img src='../../../public/arrow.png' alt='Seta avançar'></img>
-              </div>
               <div className='prev' onClick={previousExercise}>
                 <img src='../../../public/arrow.png' alt='Seta voltar'></img>
                 </div>
@@ -360,9 +357,6 @@ function DayInfo(props: TypeProps) {
               <div className='next' onClick={nextExercise}>
                 <img src='../../../public/arrow.png' alt='Seta avançar'></img>
               </div>
-              <div className='prev' onClick={previousExercise}>
-                <img src='../../../public/arrow.png' alt='Seta voltar'></img>
-                </div>
               <div>
                 <div className='blocks'>
                   <p>Ombro3</p>
@@ -413,9 +407,6 @@ function DayInfo(props: TypeProps) {
                   <p>Abdomem2</p>
                 </div>
               </div>
-              <div className='next' onClick={nextExercise}>
-                <img src='../../../public/arrow.png' alt='Seta avançar'></img>
-              </div>
               <div className='prev' onClick={previousExercise}>
                 <img src='../../../public/arrow.png' alt='Seta voltar'></img>
                 </div>
@@ -454,9 +445,6 @@ function DayInfo(props: TypeProps) {
               <div className='next' onClick={nextExercise}>
                 <img src='../../../public/arrow.png' alt='Seta avançar'></img>
               </div>
-              <div className='prev' onClick={previousExercise}>
-                <img src='../../../public/arrow.png' alt='Seta voltar'></img>
-                </div>
               <div>
                 <div className='blocks'>
                   <p>Peito3</p>
@@ -507,9 +495,6 @@ function DayInfo(props: TypeProps) {
                   <p>n sei</p>
                 </div>
               </div>
-              <div className='next' onClick={nextExercise}>
-                <img src='../../../public/arrow.png' alt='Seta avançar'></img>
-              </div>
               <div className='prev' onClick={previousExercise}>
                 <img src='../../../public/arrow.png' alt='Seta voltar'></img>
                 </div>
@@ -548,9 +533,6 @@ function DayInfo(props: TypeProps) {
               <div className='next' onClick={nextExercise}>
                 <img src='../../../public/arrow.png' alt='Seta avançar'></img>
               </div>
-              <div className='prev' onClick={previousExercise}>
-                <img src='../../../public/arrow.png' alt='Seta voltar'></img>
-                </div>
               <div>
                 <div className='blocks'>
                   <p>Coxa3</p>
@@ -600,9 +582,6 @@ function DayInfo(props: TypeProps) {
                 <div className='blocks'>
                   <p>Panturrilha2</p>
                 </div>
-              </div>
-              <div className='next' onClick={nextExercise}>
-                <img src='../../../public/arrow.png' alt='Seta avançar'></img>
               </div>
               <div className='prev' onClick={previousExercise}>
                 <img src='../../../public/arrow.png' alt='Seta voltar'></img>

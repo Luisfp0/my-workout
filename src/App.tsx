@@ -12,27 +12,27 @@ function App() {
   const [sexta, setSexta] = useState(false)
   const [sabado, setSabado] = useState(false)
 
-  function onPressSegunda():void {
+  function onPressSegunda() {
     setSegunda(!segunda)
     console.log(segunda)
   }
-  function onPressTerca():void  {
+  function onPressTerca()  {
     setTerca(!terca)
     console.log(terca)
   }
-  function onPressQuarta():void  {
+  function onPressQuarta()  {
     setQuarta(!quarta)
     console.log(quarta)
   }
-  function onPressQuinta():void  {
+  function onPressQuinta()  {
     setQuinta(!quinta)
     console.log(quinta)
   }
-  function onPressSexta():void  {
+  function onPressSexta()  {
     setSexta(!sexta)
     console.log(sexta)
   }
-  function onPressSabado():void  {
+  function onPressSabado()  {
     setSabado(!sabado)
     console.log(sabado)
   }
