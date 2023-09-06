@@ -8,6 +8,9 @@ import roscaUnilateral from '../../../public/rosca-concentrada-unilateral-com-ha
 import bicepsInclinado from '../../../public/rosca-biceps-com-halteres-no-banco-inclinado.webp'
 import roscaBarraW from '../../../public/rosca-biceps-no-banco-scott-com-barra-W.webp'
 import martelo from '../../../public/rosca-biceps-martelo-com-halteres.webp'
+import panturrilhaLeg from '../../../public/Panturrilha-no-leg-press.webp'
+import panturrilhaAparelho from '../../../public/Panturrilha-em-pe-no-aparelho.webp'
+import panturrilhaEscada from '../../../public/Elevacao-de-panturrilha-em-pe-escada.webp'
 
 
 interface TypeProps {
@@ -137,12 +140,12 @@ function DayInfo(props: TypeProps) {
             <div className='exercises'>
               <div>
                 <div className='blocks'>
-                  <p>Panturrilha1</p>
-                  <img src={barraFixa} className='img-exercices'></img>
+                  <p>Elevação de panturrilha em pé no aparelho</p>
+                  <img src={panturrilhaAparelho} className='img-exercices'></img>
                 </div>
                 <div className='blocks'>
-                  <p>Panturrilha2</p>
-                  <img src={barraFixa} className='img-exercices'></img>
+                  <p>Elevação de panturrilha no leg press</p>
+                  <img src={panturrilhaLeg} className='img-exercices'></img>
                 </div>
               </div>
               <div className='prev' onClick={previousExercise}>
@@ -150,12 +153,8 @@ function DayInfo(props: TypeProps) {
                 </div>
               <div>
                 <div className='blocks'>
-                  <p>Panturrilha3</p>
-                  <img src={barraFixa} className='img-exercices'></img>
-                </div>
-                <div className='blocks'>
-                  <p>Panturrilha4</p>
-                  <img src={barraFixa} className='img-exercices'></img>
+                  <p>Elevação de panturrilha em pé na escada</p>
+                  <img src={panturrilhaEscada} className='img-exercices'></img>
                 </div>
               </div>
             </div>
