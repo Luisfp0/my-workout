@@ -11,6 +11,12 @@ import martelo from '../../../public/rosca-biceps-martelo-com-halteres.webp'
 import panturrilhaLeg from '../../../public/Panturrilha-no-leg-press.webp'
 import panturrilhaAparelho from '../../../public/Panturrilha-em-pe-no-aparelho.webp'
 import panturrilhaEscada from '../../../public/Elevacao-de-panturrilha-em-pe-escada.webp'
+import crucifixo from '../../../public/crucifixo.webp'
+import supinoRetoHalter from '../../../public/supino-reto-com-halteres.webp'
+import supinoInclinadoHalter from '../../../public/supino-inclinado-com-halteres.webp'
+import voadorInclinado from '../../../public/voador-cabo-banco-inclinado.webp'
+
+ 
 
 
 interface TypeProps {
@@ -175,10 +181,12 @@ function DayInfo(props: TypeProps) {
             <div className='exercises'>
               <div>
                 <div className='blocks'>
-                  <p>Peito1</p>
+                  <p>Supino reto com halteres</p>
+                  <img src={supinoRetoHalter} className='img-exercices'></img>
                 </div>
                 <div className='blocks'>
-                  <p>Peito2</p>
+                  <p>Supino inclinado com halteres</p>
+                  <img src={supinoInclinadoHalter} className='img-exercices'></img>
                 </div>
               </div>
               <div className='next' onClick={nextExercise}>
@@ -186,10 +194,12 @@ function DayInfo(props: TypeProps) {
               </div>
               <div>
                 <div className='blocks'>
-                  <p>Peito3</p>
+                  <p>Crucifixo</p>
+                  <img src={crucifixo} className='img-exercices'></img>
                 </div>
                 <div className='blocks'>
-                  <p>Peito4</p>
+                  <p>Voador no cabo com banco inclinado</p>
+                  <img src={voadorInclinado} className='img-exercices'></img>
                 </div>
               </div>
             </div>
