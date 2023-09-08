@@ -15,6 +15,10 @@ import crucifixo from '../../../public/crucifixo.webp'
 import supinoRetoHalter from '../../../public/supino-reto-com-halteres.webp'
 import supinoInclinadoHalter from '../../../public/supino-inclinado-com-halteres.webp'
 import voadorInclinado from '../../../public/voador-cabo-banco-inclinado.webp'
+import tricepsPulley from '../../../public/triceps-puxada-no-pulley.gif'
+import tricepsPulleyCabeca from '../../../public/triceps-no-pulley-atras-ca-cabeca.webp'
+import extencaoDeitado from '../../../public/extencao-triceps-deitado.webp'
+import tricepsCoice from '../../../public/triceps-coice.gif'
 
  
 
@@ -210,10 +214,12 @@ function DayInfo(props: TypeProps) {
             <div className='exercises'>
               <div>
                 <div className='blocks'>
-                  <p>Triceps1</p>
+                  <p>Tríceps na polia alta com barra reta</p>
+                  <img src={tricepsPulley} className='img-exercices'></img>
                 </div>
                 <div className='blocks'>
-                  <p>Triceps2</p>
+                  <p>Extensão de tríceps no cabo sob a cabeça com corda</p>
+                  <img src={tricepsPulleyCabeca} className='img-exercices'></img>
                 </div>
               </div>
               <div className='next' onClick={nextExercise}>
@@ -224,10 +230,12 @@ function DayInfo(props: TypeProps) {
                 </div>
               <div>
                 <div className='blocks'>
-                  <p>Triceps3</p>
+                  <p>Extensão de tríceps deitado</p>
+                  <img src={extencaoDeitado} className='img-exercices'></img>
                 </div>
                 <div className='blocks'>
-                  <p>Triceps4</p>
+                  <p>Triceps Coice</p>
+                  <img src={tricepsCoice} className='img-exercices'></img>
                 </div>
               </div>
             </div>
