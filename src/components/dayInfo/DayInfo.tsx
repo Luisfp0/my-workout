@@ -19,6 +19,19 @@ import tricepsPulley from '../../../public/triceps-puxada-no-pulley.gif'
 import tricepsPulleyCabeca from '../../../public/triceps-no-pulley-atras-ca-cabeca.webp'
 import extencaoDeitado from '../../../public/extencao-triceps-deitado.webp'
 import tricepsCoice from '../../../public/triceps-coice.gif'
+import aducao from '../../../public/pernas-aducao-de-pernas-na-maquina.webp'
+import abducaoMaquina from '../../../public/abducao-de-pernas-na-maquina-com-cabos.webp'
+import agachamentoRack from '../../../public/agachamento-no-rack.webp'
+import leg45 from '../../../public/pernas-leg-press-45-tradicional.webp'
+import cadeiraExtensora from '../../../public/cadeira-extensora-extensora.gif'
+import cadeiraFlexora from '../../../public/cadeira-flexora.gif'
+import levantamentoTerra from '../../../public/levantamento-terra-com-barra.webp'
+import elevacaoPelvica from '../../../public/elevacao-pelvica.gif'
+
+
+
+
+
 
  
 
@@ -102,11 +115,11 @@ function DayInfo(props: TypeProps) {
               </div>
               <div>
                 <div className='blocks'>
-                  <p>Remada em pé com a barra T (remada cavalinho)</p>
+                  <p>Remada em pé com a barra T</p>
                   <img src={cavalinho} className='img-exercices'></img>
                 </div>
                 <div className='blocks'>
-                  <p>Remada unilateral com halter (remada serrote)</p>
+                  <p>Remada unilateral com halter</p>
                   <img src={remadaSerrote} className='img-exercices'></img>
                 </div>
               </div>
@@ -150,7 +163,7 @@ function DayInfo(props: TypeProps) {
             <div className='exercises'>
               <div>
                 <div className='blocks'>
-                  <p>Elevação de panturrilha em pé no aparelho</p>
+                  <p>Elevação de panturrilha no aparelho</p>
                   <img src={panturrilhaAparelho} className='img-exercices'></img>
                 </div>
                 <div className='blocks'>
@@ -281,10 +294,12 @@ function DayInfo(props: TypeProps) {
             <div className='exercises'>
               <div>
                 <div className='blocks'>
-                  <p>Coxa1</p>
+                  <p>Adução e abdução de pernas</p>
+                  <img src={aducao} className='img-exercices'></img>
                 </div>
                 <div className='blocks'>
-                  <p>Coxa2</p>
+                  <p>Abdução na maquina</p>
+                  <img src={abducaoMaquina} className='img-exercices'></img>
                 </div>
               </div>
               <div className='next' onClick={nextExercise}>
@@ -292,10 +307,22 @@ function DayInfo(props: TypeProps) {
               </div>
               <div>
                 <div className='blocks'>
-                  <p>Coxa3</p>
+                  <p>Agachamento no rack</p>
+                  <img src={agachamentoRack} className='img-exercices'></img>
                 </div>
                 <div className='blocks'>
-                  <p>Coxa4</p>
+                  <p>Leg45</p>
+                  <img src={leg45} className='img-exercices'></img>
+                </div>
+              </div>
+              <div>
+                <div className='blocks'>
+                  <p>Cadeira extensora</p>
+                  <img src={cadeiraExtensora} className='img-exercices'></img>
+                </div>
+                <div className='blocks'>
+                  <p>Cadeira Flexora</p>
+                  <img src={cadeiraFlexora} className='img-exercices'></img>
                 </div>
               </div>
             </div>
@@ -306,10 +333,8 @@ function DayInfo(props: TypeProps) {
             <div className='exercises'>
               <div>
                 <div className='blocks'>
-                  <p>Gluteo1</p>
-                </div>
-                <div className='blocks'>
-                  <p>Gluteo2</p>
+                  <p>Levantamento terra com barra</p>
+                  <img src={levantamentoTerra} className='img-exercices'></img>
                 </div>
               </div>
               <div className='next' onClick={nextExercise}>
@@ -319,11 +344,9 @@ function DayInfo(props: TypeProps) {
                 <img src='../../../public/arrow.png' alt='Seta voltar'></img>
                 </div>
               <div>
-                <div className='blocks'>
-                  <p>Gluteo3</p>
-                </div>
-                <div className='blocks'>
-                  <p>Gluteo4</p>
+              <div className='blocks'>
+                  <p>Elevação pelvica</p>
+                  <img src={elevacaoPelvica} className='img-exercices'></img>
                 </div>
               </div>
             </div>
@@ -334,10 +357,12 @@ function DayInfo(props: TypeProps) {
             <div className='exercises'>
               <div>
                 <div className='blocks'>
-                  <p>Panturrilha1</p>
+                  <p>Elevação de panturrilha no aparelho</p>
+                  <img src={panturrilhaAparelho} className='img-exercices'></img>
                 </div>
                 <div className='blocks'>
-                  <p>Panturrilha2</p>
+                  <p>Elevação de panturrilha no leg press</p>
+                  <img src={panturrilhaLeg} className='img-exercices'></img>
                 </div>
               </div>
               <div className='prev' onClick={previousExercise}>
@@ -345,10 +370,8 @@ function DayInfo(props: TypeProps) {
                 </div>
               <div>
                 <div className='blocks'>
-                  <p>Panturrilha3</p>
-                </div>
-                <div className='blocks'>
-                  <p>Panturrilha4</p>
+                  <p>Elevação de panturrilha em pé na escada</p>
+                  <img src={panturrilhaEscada} className='img-exercices'></img>
                 </div>
               </div>
             </div>
