@@ -28,6 +28,11 @@ import cadeiraFlexora from '../../../public/cadeira-flexora.gif'
 import levantamentoTerra from '../../../public/levantamento-terra-com-barra.webp'
 import elevacaoPelvica from '../../../public/elevacao-pelvica.gif'
 import desenHalter from '../../../public/desenvolvimento-para-ombros-com-halteres.webp'
+import elevacaoLateral from '../../../public/ombros-elevacao-lateral-de-ombros-com-halteres.webp'
+import remadaAlta from '../../../public/ombros-remada-alta-em-pe-com-halteres.webp'
+import elevacaoFrontal from '../../../public/Elevacao-Frontal-com-Barra-na-Polia.gif'
+
+
 
 
 
@@ -398,7 +403,8 @@ function DayInfo(props: TypeProps) {
                   <img src={desenHalter} className='img-exercices'></img>
                 </div>
                 <div className='blocks'>
-                  <p>Ombro2</p>
+                  <p>Elevação lateral</p>
+                  <img src={elevacaoLateral} className='img-exercices'></img>
                 </div>
               </div>
               <div className='next' onClick={nextExercise}>
@@ -406,10 +412,12 @@ function DayInfo(props: TypeProps) {
               </div>
               <div>
                 <div className='blocks'>
-                  <p>Ombro3</p>
+                  <p>Remada alta</p>
+                  <img src={remadaAlta} className='img-exercices'></img>
                 </div>
                 <div className='blocks'>
-                  <p>Ombro4</p>
+                  <p>Elevação frontal</p>
+                  <img src={elevacaoFrontal} className='img-exercices'></img>
                 </div>
               </div>
             </div>
