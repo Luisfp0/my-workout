@@ -27,6 +27,8 @@ import cadeiraExtensora from '../../../public/cadeira-extensora-extensora.gif'
 import cadeiraFlexora from '../../../public/cadeira-flexora.gif'
 import levantamentoTerra from '../../../public/levantamento-terra-com-barra.webp'
 import elevacaoPelvica from '../../../public/elevacao-pelvica.gif'
+import desenHalter from '../../../public/desenvolvimento-para-ombros-com-halteres.webp'
+
 
 
 
@@ -159,29 +161,29 @@ function DayInfo(props: TypeProps) {
           </div>}
           {page === 3 && 
             <div className='title-exercises'>
-            <p style={{height: 40}}>Panturrilha</p>
-            <div className='exercises'>
-              <div>
-                <div className='blocks'>
-                  <p>Elevação de panturrilha no aparelho</p>
-                  <img src={panturrilhaAparelho} className='img-exercices'></img>
+              <p style={{height: 40}}>Panturrilha</p>
+              <div className='exercises'>
+                <div>
+                  <div className='blocks'>
+                    <p>Elevação de panturrilha no aparelho</p>
+                    <img src={panturrilhaAparelho} className='img-exercices'></img>
+                  </div>
+                  <div className='blocks'>
+                    <p>Elevação de panturrilha no leg press</p>
+                    <img src={panturrilhaLeg} className='img-exercices'></img>
+                  </div>
                 </div>
-                <div className='blocks'>
-                  <p>Elevação de panturrilha no leg press</p>
-                  <img src={panturrilhaLeg} className='img-exercices'></img>
+                <div className='prev' onClick={previousExercise}>
+                  <img src='../../../public/arrow.png' alt='Seta voltar'></img>
+                  </div>
+                <div>
+                  <div className='blocks'>
+                    <p>Elevação de panturrilha em pé na escada</p>
+                    <img src={panturrilhaEscada} className='img-exercices'></img>
+                  </div>
                 </div>
               </div>
-              <div className='prev' onClick={previousExercise}>
-                <img src='../../../public/arrow.png' alt='Seta voltar'></img>
-                </div>
-              <div>
-                <div className='blocks'>
-                  <p>Elevação de panturrilha em pé na escada</p>
-                  <img src={panturrilhaEscada} className='img-exercices'></img>
-                </div>
-              </div>
-            </div>
-          </div>}
+            </div>}
           </div>
         </div>}
       {props.terca &&
@@ -392,7 +394,8 @@ function DayInfo(props: TypeProps) {
             <div className='exercises'>
               <div>
                 <div className='blocks'>
-                  <p>Ombro1</p>
+                  <p>Desenvolvimento com halter</p>
+                  <img src={desenHalter} className='img-exercices'></img>
                 </div>
                 <div className='blocks'>
                   <p>Ombro2</p>
@@ -468,180 +471,198 @@ function DayInfo(props: TypeProps) {
         </div>}
         {props.sexta &&
         <div className='containerWorkDay'>
-          <div className='headerWorkDay'>
-            <p className='marginHeader'>Sexta</p>
-            <p>Peito - Triceps - n sei</p>
-            <button className='btnClose' onClick={closeSexta}>X</button>
-          </div>
-          <div className='container-exercises'>
-            {page === 1 &&
-            <div className='title-exercises'>
-            <p style={{height: 40}}>Peito</p>
-            <div className='exercises'>
-              <div>
-                <div className='blocks'>
-                  <p>Peito1</p>
-                </div>
-                <div className='blocks'>
-                  <p>Peito2</p>
-                </div>
+        <div className='headerWorkDay'>
+          <p className='marginHeader'>Sexta</p>
+          <p>Peito - Triceps - Abdomem</p>
+          <button className='btnClose' onClick={closeSexta}>X</button>
+        </div>
+        <div className='container-exercises'>
+          {page === 1 &&
+          <div className='title-exercises'>
+          <p style={{height: 40}}>Peito</p>
+          <div className='exercises'>
+            <div>
+              <div className='blocks'>
+                <p>Supino reto com halteres</p>
+                <img src={supinoRetoHalter} className='img-exercices'></img>
               </div>
-              <div className='next' onClick={nextExercise}>
-                <img src='../../../public/arrow.png' alt='Seta avançar'></img>
-              </div>
-              <div>
-                <div className='blocks'>
-                  <p>Peito3</p>
-                </div>
-                <div className='blocks'>
-                  <p>Peito4</p>
-                </div>
+              <div className='blocks'>
+                <p>Supino inclinado com halteres</p>
+                <img src={supinoInclinadoHalter} className='img-exercices'></img>
               </div>
             </div>
-          </div>}
-          {page === 2 &&
-            <div className='title-exercises'>
-            <p style={{height: 40}}>Triceps</p>
-            <div className='exercises'>
-              <div>
-                <div className='blocks'>
-                  <p>Triceps1</p>
-                </div>
-                <div className='blocks'>
-                  <p>Triceps2</p>
-                </div>
+            <div className='next' onClick={nextExercise}>
+              <img src='../../../public/arrow.png' alt='Seta avançar'></img>
+            </div>
+            <div>
+              <div className='blocks'>
+                <p>Crucifixo</p>
+                <img src={crucifixo} className='img-exercices'></img>
               </div>
-              <div className='next' onClick={nextExercise}>
-                <img src='../../../public/arrow.png' alt='Seta avançar'></img>
-              </div>
-              <div className='prev' onClick={previousExercise}>
-                <img src='../../../public/arrow.png' alt='Seta voltar'></img>
-                </div>
-              <div>
-                <div className='blocks'>
-                  <p>Triceps3</p>
-                </div>
-                <div className='blocks'>
-                  <p>Triceps4</p>
-                </div>
+              <div className='blocks'>
+                <p>Voador no cabo com banco inclinado</p>
+                <img src={voadorInclinado} className='img-exercices'></img>
               </div>
             </div>
-          </div>}
-          {page === 3 &&
-            <div className='title-exercises'>
-            <p style={{height: 40}}>n sei</p>
-            <div className='exercises'>
-              <div>
-                <div className='blocks'>
-                  <p>n sei</p>
-                </div>
-                <div className='blocks'>
-                  <p>n sei</p>
-                </div>
-              </div>
-              <div className='prev' onClick={previousExercise}>
-                <img src='../../../public/arrow.png' alt='Seta voltar'></img>
-                </div>
-              <div>
-                <div className='blocks'>
-                  <p>n sei</p>
-                </div>
-                <div className='blocks'>
-                  <p>n sei</p>
-                </div>
-              </div>
-            </div>
-          </div>}
           </div>
         </div>}
+        {page === 2 &&
+          <div className='title-exercises'>
+          <p style={{height: 40}}>Triceps</p>
+          <div className='exercises'>
+            <div>
+              <div className='blocks'>
+                <p>Tríceps na polia alta com barra reta</p>
+                <img src={tricepsPulley} className='img-exercices'></img>
+              </div>
+              <div className='blocks'>
+                <p>Extensão de tríceps no cabo sob a cabeça com corda</p>
+                <img src={tricepsPulleyCabeca} className='img-exercices'></img>
+              </div>
+            </div>
+            <div className='next' onClick={nextExercise}>
+              <img src='../../../public/arrow.png' alt='Seta avançar'></img>
+            </div>
+            <div className='prev' onClick={previousExercise}>
+              <img src='../../../public/arrow.png' alt='Seta voltar'></img>
+              </div>
+            <div>
+              <div className='blocks'>
+                <p>Extensão de tríceps deitado</p>
+                <img src={extencaoDeitado} className='img-exercices'></img>
+              </div>
+              <div className='blocks'>
+                <p>Triceps Coice</p>
+                <img src={tricepsCoice} className='img-exercices'></img>
+              </div>
+            </div>
+          </div>
+        </div>}
+        {page === 3 &&
+          <div className='title-exercises'>
+          <p style={{height: 40}}>Abdomem</p>
+          <div className='exercises'>
+            <div>
+              <div className='blocks'>
+                <p>Abdomem1</p>
+              </div>
+              <div className='blocks'>
+                <p>Abdomem2</p>
+              </div>
+            </div>
+            <div className='prev' onClick={previousExercise}>
+              <img src='../../../public/arrow.png' alt='Seta voltar'></img>
+              </div>
+            <div>
+              <div className='blocks'>
+                <p>Abdomem3</p>
+              </div>
+              <div className='blocks'>
+                <p>Abdomem4</p>
+              </div>
+            </div>
+          </div>
+        </div>}
+        </div>
+      </div>}
         {props.sabado &&
         <div className='containerWorkDay'>
-          <div className='headerWorkDay'>
-            <p className='marginHeader'>Sabado</p>
-            <p>Coxa - Gluteo - Panturrilha</p>
-            <button className='btnClose' onClick={closeSabado}>X</button>
-          </div>
-          <div className='container-exercises'>
-            {page === 1 &&
-            <div className='title-exercises'>
-            <p style={{height: 40}}>Coxa</p>
-            <div className='exercises'>
-              <div>
-                <div className='blocks'>
-                  <p>Coxa1</p>
-                </div>
-                <div className='blocks'>
-                  <p>Coxa2</p>
-                </div>
+        <div className='headerWorkDay'>
+          <p className='marginHeader'>Sábado</p>
+          <p>Coxa - Gluteo - Panturrilha</p>
+          <button className='btnClose' onClick={closeSabado}>X</button>
+        </div>
+        <div className='container-exercises'>
+          {page === 1 &&
+          <div className='title-exercises'>
+          <p style={{height: 40}}>Coxa</p>
+          <div className='exercises'>
+            <div>
+              <div className='blocks'>
+                <p>Adução e abdução de pernas</p>
+                <img src={aducao} className='img-exercices'></img>
               </div>
-              <div className='next' onClick={nextExercise}>
-                <img src='../../../public/arrow.png' alt='Seta avançar'></img>
-              </div>
-              <div>
-                <div className='blocks'>
-                  <p>Coxa3</p>
-                </div>
-                <div className='blocks'>
-                  <p>Coxa4</p>
-                </div>
+              <div className='blocks'>
+                <p>Abdução na maquina</p>
+                <img src={abducaoMaquina} className='img-exercices'></img>
               </div>
             </div>
-          </div>}
-          {page === 2 &&
-            <div className='title-exercises'>
-            <p style={{height: 40}}>Gluteo</p>
-            <div className='exercises'>
-              <div>
-                <div className='blocks'>
-                  <p>Gluteo1</p>
-                </div>
-                <div className='blocks'>
-                  <p>Gluteo2</p>
-                </div>
+            <div className='next' onClick={nextExercise}>
+              <img src='../../../public/arrow.png' alt='Seta avançar'></img>
+            </div>
+            <div>
+              <div className='blocks'>
+                <p>Agachamento no rack</p>
+                <img src={agachamentoRack} className='img-exercices'></img>
               </div>
-              <div className='next' onClick={nextExercise}>
-                <img src='../../../public/arrow.png' alt='Seta avançar'></img>
-              </div>
-              <div className='prev' onClick={previousExercise}>
-                <img src='../../../public/arrow.png' alt='Seta voltar'></img>
-                </div>
-              <div>
-                <div className='blocks'>
-                  <p>Gluteo3</p>
-                </div>
-                <div className='blocks'>
-                  <p>Gluteo4</p>
-                </div>
+              <div className='blocks'>
+                <p>Leg45</p>
+                <img src={leg45} className='img-exercices'></img>
               </div>
             </div>
-          </div>}
-          {page === 3 &&
-            <div className='title-exercises'>
-            <p style={{height: 40}}>Panturrilha</p>
-            <div className='exercises'>
-              <div>
-                <div className='blocks'>
-                  <p>Panturrilha1</p>
-                </div>
-                <div className='blocks'>
-                  <p>Panturrilha2</p>
-                </div>
+            <div>
+              <div className='blocks'>
+                <p>Cadeira extensora</p>
+                <img src={cadeiraExtensora} className='img-exercices'></img>
               </div>
-              <div className='prev' onClick={previousExercise}>
-                <img src='../../../public/arrow.png' alt='Seta voltar'></img>
-                </div>
-              <div>
-                <div className='blocks'>
-                  <p>Panturrilha3</p>
-                </div>
-                <div className='blocks'>
-                  <p>Panturrilha4</p>
-                </div>
+              <div className='blocks'>
+                <p>Cadeira Flexora</p>
+                <img src={cadeiraFlexora} className='img-exercices'></img>
               </div>
             </div>
-          </div>}
           </div>
         </div>}
+        {page === 2 &&
+          <div className='title-exercises'>
+          <p style={{height: 40}}>Gluteo</p>
+          <div className='exercises'>
+            <div>
+              <div className='blocks'>
+                <p>Levantamento terra com barra</p>
+                <img src={levantamentoTerra} className='img-exercices'></img>
+              </div>
+            </div>
+            <div className='next' onClick={nextExercise}>
+              <img src='../../../public/arrow.png' alt='Seta avançar'></img>
+            </div>
+            <div className='prev' onClick={previousExercise}>
+              <img src='../../../public/arrow.png' alt='Seta voltar'></img>
+              </div>
+            <div>
+            <div className='blocks'>
+                <p>Elevação pelvica</p>
+                <img src={elevacaoPelvica} className='img-exercices'></img>
+              </div>
+            </div>
+          </div>
+        </div>}
+        {page === 3 &&
+          <div className='title-exercises'>
+          <p style={{height: 40}}>Panturrilha</p>
+          <div className='exercises'>
+            <div>
+              <div className='blocks'>
+                <p>Elevação de panturrilha no aparelho</p>
+                <img src={panturrilhaAparelho} className='img-exercices'></img>
+              </div>
+              <div className='blocks'>
+                <p>Elevação de panturrilha no leg press</p>
+                <img src={panturrilhaLeg} className='img-exercices'></img>
+              </div>
+            </div>
+            <div className='prev' onClick={previousExercise}>
+              <img src='../../../public/arrow.png' alt='Seta voltar'></img>
+              </div>
+            <div>
+              <div className='blocks'>
+                <p>Elevação de panturrilha em pé na escada</p>
+                <img src={panturrilhaEscada} className='img-exercices'></img>
+              </div>
+            </div>
+          </div>
+        </div>}
+        </div>
+      </div>}
     </>
   )
 }
