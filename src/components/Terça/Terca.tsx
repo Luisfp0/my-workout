@@ -7,8 +7,6 @@ import extencaoDeitado from '../../../public/extencao-triceps-deitado.webp'
 import tricepsCoice from '../../../public/triceps-coice.gif'
 import crucifixo from '../../../public/crucifixo.webp'
 
-
-
 interface PropsTerca {
   onPressTerca: () => void
   page: number

@@ -1,0 +1,101 @@
+[33mcommit 3aed0967ff0e994e80e2643469821c50aabc916d[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Luis <luis.oliveirabr1@gmail.com>
+Date:   Wed Sep 13 16:12:53 2023 -0300
+
+    Feito a componentização de terça
+
+[33mcommit c3e74f07322b4ad328a0f5483ced9c270d5ca7d5[m
+Author: Luis <luis.oliveirabr1@gmail.com>
+Date:   Wed Sep 13 15:16:36 2023 -0300
+
+    Componentinzado os dias, feito na segunda
+
+[33mcommit e634afe4c988398730c1a41f5cad2a779d87a853[m
+Author: Luis <luis.oliveirabr1@gmail.com>
+Date:   Tue Sep 12 17:28:24 2023 -0300
+
+    Finalizado quinta ombro
+
+[33mcommit 93f86b7b2973ea3a86c151762e800441e2dae645[m
+Author: Luis <luis.oliveirabr1@gmail.com>
+Date:   Mon Sep 11 21:30:04 2023 -0300
+
+    Organizado e colocado primeiro exercicio de ombro
+
+[33mcommit c654fc9e42dc2204532e6b956016417f63bcba45[m
+Author: Luis <luis.oliveirabr1@gmail.com>
+Date:   Fri Sep 8 17:23:25 2023 -0300
+
+    Finalizado o dia de quarta, perna
+
+[33mcommit e32bdc371c57b637aacd4d96ea21791b1cff9b3a[m
+Author: Luis <luis.oliveirabr1@gmail.com>
+Date:   Fri Sep 8 15:19:44 2023 -0300
+
+     Adicionado as imagens e exercicios corretos a triceps terça
+
+[33mcommit 5578f1624c9f8f1eb853b3d765be5ef3c6fdd07e[m
+Author: Luis <luis.oliveirabr1@gmail.com>
+Date:   Thu Sep 7 14:54:03 2023 -0300
+
+    Posicionado as imagens e exercicios no treino de terça peito
+
+[33mcommit 718188cb885ca6326cdcd60c59f785b4d9945a17[m
+Author: Luis <luis.oliveirabr1@gmail.com>
+Date:   Wed Sep 6 12:19:35 2023 -0300
+
+    Adicionado as imagens e exercicios corretos a panturrilha de segunda
+
+[33mcommit 3073a4effda8d4eaf9d51968f537a1d1ea4e0188[m
+Author: Luis <luis.oliveirabr1@gmail.com>
+Date:   Mon Sep 4 18:44:48 2023 -0300
+
+    Adicionado imagem a segunda biceps
+
+[33mcommit 543ea1fb4adcbd872f444064aa413aec43792c3a[m
+Author: Luis <luis.oliveirabr1@gmail.com>
+Date:   Mon Sep 4 18:12:12 2023 -0300
+
+    Adicionado imagens a segunda costas
+
+[33mcommit 95e724cb6b20e1787b842dca728efc5daf2e7f48[m
+Author: Luis <luis.oliveirabr1@gmail.com>
+Date:   Fri Sep 1 18:29:12 2023 -0300
+
+    Feito cada DayInfo ter seus exercicios
+
+[33mcommit d5999cee05d6e650e1bf5bc30241c2d2fd79dfdc[m
+Author: Luis <luis.oliveirabr1@gmail.com>
+Date:   Fri Sep 1 17:31:16 2023 -0300
+
+    Dividido a tela em 3 no dayInfo, ao clicar na seta passa para os próximos exercícios
+
+[33mcommit c7681db817488a5082b53586fc2d1803aefbbf4c[m
+Author: Luis <luis.oliveirabr1@gmail.com>
+Date:   Fri Sep 1 16:21:04 2023 -0300
+
+    Adicionado as arrows e formatado a pagina para ficar 4 exercicios por pagina
+
+[33mcommit c8f44b949712c05e961d0df2e22e26e2e1b0d221[m
+Author: Luis <luis.oliveirabr1@gmail.com>
+Date:   Wed Aug 30 22:42:35 2023 -0300
+
+    Formatado o DayInfo
+
+[33mcommit 0a98d0299be3ea2f306c912cc54009a4c75d115b[m
+Author: Luis <luis.oliveirabr1@gmail.com>
+Date:   Tue Aug 29 13:32:45 2023 -0300
+
+    Feito logica para abrir e fechar de acordo com o dia da semana
+
+[33mcommit 88d6bc01f84c16476223d11989489bceb4180f12[m
+Author: Luis <luis.oliveirabr1@gmail.com>
+Date:   Mon Aug 28 11:40:21 2023 -0300
+
+    Added reset.css
+
+[33mcommit f4fd868a8db9c05dbcbf45aa1de8d138d634f6a0[m
+Author: Luis <luis.oliveirabr1@gmail.com>
+Date:   Mon Aug 28 11:37:26 2023 -0300
+
+    git init
