@@ -24,6 +24,7 @@ import elevacaoLateral from '../../../public/ombros-elevacao-lateral-de-ombros-c
 import remadaAlta from '../../../public/ombros-remada-alta-em-pe-com-halteres.webp'
 import elevacaoFrontal from '../../../public/Elevacao-Frontal-com-Barra-na-Polia.gif'
 import Segunda from '../Segunda/Segunda'
+import Terca from '../Terça/Terca'
 
 interface TypeProps {
   onPressSegunda: () => void
@@ -44,10 +45,7 @@ interface TypeProps {
 function DayInfo(props: TypeProps) {
   const [page, setPage] = useState(1);
 
-  function closeTerca() {
-    props.onPressTerca()
-    setPage(1)
-  }
+
   function closeQuarta() {
     props.onPressQuarta()
     setPage(1)
@@ -78,101 +76,7 @@ function DayInfo(props: TypeProps) {
       <Segunda onPressSegunda={props.onPressSegunda} setPage={setPage} page={page} nextExercise={nextExercise} previousExercise={previousExercise}></Segunda>
         }
       {props.terca &&
-        <div className='containerWorkDay'>
-          <div className='headerWorkDay'>
-            <p className='marginHeader'>Terça</p>
-            <p>Peito - Triceps - Abdomem</p>
-            <button className='btnClose' onClick={closeTerca}>X</button>
-          </div>
-          <div className='container-exercises'>
-            {page === 1 &&
-            <div className='title-exercises'>
-            <p style={{height: 40}}>Peito</p>
-            <div className='exercises'>
-              <div>
-                <div className='blocks'>
-                  <p>Supino reto com halteres</p>
-                  <img src={supinoRetoHalter} className='img-exercices'></img>
-                </div>
-                <div className='blocks'>
-                  <p>Supino inclinado com halteres</p>
-                  <img src={supinoInclinadoHalter} className='img-exercices'></img>
-                </div>
-              </div>
-              <div className='next' onClick={nextExercise}>
-                <img src='../../../public/arrow.png' alt='Seta avançar'></img>
-              </div>
-              <div>
-                <div className='blocks'>
-                  <p>Crucifixo</p>
-                  <img src={crucifixo} className='img-exercices'></img>
-                </div>
-                <div className='blocks'>
-                  <p>Voador no cabo com banco inclinado</p>
-                  <img src={voadorInclinado} className='img-exercices'></img>
-                </div>
-              </div>
-            </div>
-          </div>}
-          {page === 2 &&
-            <div className='title-exercises'>
-            <p style={{height: 40}}>Triceps</p>
-            <div className='exercises'>
-              <div>
-                <div className='blocks'>
-                  <p>Tríceps na polia alta com barra reta</p>
-                  <img src={tricepsPulley} className='img-exercices'></img>
-                </div>
-                <div className='blocks'>
-                  <p>Extensão de tríceps no cabo sob a cabeça com corda</p>
-                  <img src={tricepsPulleyCabeca} className='img-exercices'></img>
-                </div>
-              </div>
-              <div className='next' onClick={nextExercise}>
-                <img src='../../../public/arrow.png' alt='Seta avançar'></img>
-              </div>
-              <div className='prev' onClick={previousExercise}>
-                <img src='../../../public/arrow.png' alt='Seta voltar'></img>
-                </div>
-              <div>
-                <div className='blocks'>
-                  <p>Extensão de tríceps deitado</p>
-                  <img src={extencaoDeitado} className='img-exercices'></img>
-                </div>
-                <div className='blocks'>
-                  <p>Triceps Coice</p>
-                  <img src={tricepsCoice} className='img-exercices'></img>
-                </div>
-              </div>
-            </div>
-          </div>}
-          {page === 3 &&
-            <div className='title-exercises'>
-            <p style={{height: 40}}>Abdomem</p>
-            <div className='exercises'>
-              <div>
-                <div className='blocks'>
-                  <p>Abdomem1</p>
-                </div>
-                <div className='blocks'>
-                  <p>Abdomem2</p>
-                </div>
-              </div>
-              <div className='prev' onClick={previousExercise}>
-                <img src='../../../public/arrow.png' alt='Seta voltar'></img>
-                </div>
-              <div>
-                <div className='blocks'>
-                  <p>Abdomem3</p>
-                </div>
-                <div className='blocks'>
-                  <p>Abdomem4</p>
-                </div>
-              </div>
-            </div>
-          </div>}
-          </div>
-        </div>}
+        <Terca onPressTerca={props.onPressTerca} setPage={setPage} page={page} nextExercise={nextExercise} previousExercise={previousExercise}></Terca>}
       {props.quarta &&
         <div className='containerWorkDay'>
           <div className='headerWorkDay'>
