@@ -1,8 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import WrapWeek from './components/WrapWeek/WrapWeek'
-import DayInfo from './components/dayInfo/DayInfo'
-
+import DayInfo from './components/DayInfo/DayInfo'
 
 function App() {
   const [segunda, setSegunda] = useState(false)
@@ -46,7 +45,7 @@ function App() {
         onPressQuinta={onPressQuinta}
         onPressSexta={onPressSexta}
         onPressSabado={onPressSabado}/>
-        <DayInfo
+      <DayInfo
         onPressSegunda={onPressSegunda}
         onPressTerca={onPressTerca}
         onPressQuarta={onPressQuarta}
@@ -59,7 +58,7 @@ function App() {
         quinta={quinta}
         sexta={sexta}
         sabado={sabado}
-        />
+      />
     </div>
   )
 }

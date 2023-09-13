@@ -1,7 +1,16 @@
 import './wrapWeek.css'
 
+interface PropsWrapWeek {
+  onPressSegunda: () => void
+  onPressTerca: () => void
+  onPressQuarta: () => void
+  onPressQuinta: () => void
+  onPressSexta: () => void
+  onPressSabado: () => void
+}
 
-function WrapWeek(props: any) {
+
+function WrapWeek(props: PropsWrapWeek) {
 
   return (
     <div className='wrapContent'>
