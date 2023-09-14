@@ -19,6 +19,7 @@ interface PropsQuarta {
 }
 
 function Quarta(props: PropsQuarta) {
+  
   function closeQuarta() {
     props.onPressQuarta();
     props.setPage(1);
