@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "./dayInfo.css";
-
 import Segunda from "../Segunda/Segunda";
 import Terca from "../Terça/Terca";
 import Quarta from "../Quarta/Quarta";

@@ -23,6 +23,19 @@ interface PropsSegunda {
 function Segunda(props: PropsSegunda) {
   const [explBarraFixa, setExplBarraFixa] = useState(false);
   const [explRemadaCabos, setExplRemadaCabos] = useState(false);
+  const [explCavalinho, setExplCavalinho] = useState(false);
+  const [explRemadaUnilateral, setExplRemadaUnilateral] = useState(false);
+
+  const [explRoscaUnilateral, setExplRoscaUnilateral] = useState(false);
+  const [explRoscaInclinado, setExplRoscaInclinado] = useState(false);
+  const [explRoscaBanco, setExplRoscaBanco] = useState(false);
+  const [explMartelo, setExplMartelo] = useState(false);
+  const [explPanturrilhaAparelho, setExplPanturrilhaAparelho] = useState(false);
+  const [explPanturrilhaLegPress, setExplPanturrilhaLegPress] = useState(false);
+  const [explPanturrilhaEscada, setExplPanturrilhaEscada] = useState(false);
+
+
+
 
 
   function closeSegunda() {
@@ -33,7 +46,7 @@ function Segunda(props: PropsSegunda) {
   return (
     <>
       <div className="containerWorkDay">
-        <Explication exercBarraFixa={explBarraFixa} explRemadaCabos={explRemadaCabos}></Explication>
+        <Explication explPanturrilhaAparelho={explPanturrilhaAparelho} explPanturrilhaLegPress={explPanturrilhaLegPress} explPanturrilhaEscada={explPanturrilhaEscada} explRoscaUnilateral={explRoscaUnilateral} explRoscaInclinado={explRoscaInclinado} explRoscaBanco={explRoscaBanco} explMartelo={explMartelo}  explCavalinho={explCavalinho} explRemadaUnilateral={explRemadaUnilateral} exercBarraFixa={explBarraFixa} explRemadaCabos={explRemadaCabos}></Explication>
         <div className="headerWorkDay">
           <p className="marginHeader">Segunda</p>
           <p>Costas - Biceps - Panturrilha</p>
@@ -60,11 +73,11 @@ function Segunda(props: PropsSegunda) {
                   <img src="../../../public/arrow.png" alt="Seta avançar"></img>
                 </div>
                 <div>
-                  <div className="blocks">
+                  <div className="blocks" onClick={()=> setExplCavalinho(!explCavalinho)}>
                     <p className="tittle">Remada em pé com a barra T</p>
                     <img src={cavalinho} className="img-exercices"></img>
                   </div>
-                  <div className="blocks">
+                  <div className="blocks" onClick={()=> setExplRemadaUnilateral(!explRemadaUnilateral)}>
                     <p className="tittle">Remada unilateral com halter</p>
                     <img src={remadaSerrote} className="img-exercices"></img>
                   </div>
@@ -77,11 +90,11 @@ function Segunda(props: PropsSegunda) {
               <p style={{ height: 40 }}>Biceps</p>
               <div className="exercises">
                 <div>
-                  <div className="blocks">
+                  <div className="blocks" onClick={()=> setExplRoscaUnilateral(!explRoscaUnilateral)}>
                     <p className="tittle">Rosca bíceps unilateral com halter</p>
                     <img src={roscaUnilateral} className="img-exercices"></img>
                   </div>
-                  <div className="blocks">
+                  <div className="blocks" onClick={()=> setExplRoscaInclinado(!explRoscaInclinado)}>
                     <p className="tittle">Rosca bíceps no banco inclinado</p>
                     <img src={bicepsInclinado} className="img-exercices"></img>
                   </div>
@@ -93,11 +106,11 @@ function Segunda(props: PropsSegunda) {
                   <img src="../../../public/arrow.png" alt="Seta voltar"></img>
                 </div>
                 <div>
-                  <div className="blocks">
+                  <div className="blocks" onClick={()=> setExplRoscaBanco(!explRoscaBanco)}>
                     <p className="tittle">Rosca bíceps no banco Scott</p>
                     <img src={roscaBarraW} className="img-exercices"></img>
                   </div>
-                  <div className="blocks">
+                  <div className="blocks" onClick={()=> setExplMartelo(!explMartelo)}>
                     <p className="tittle">Rosca bíceps martelo com halteres</p>
                     <img src={martelo} className="img-exercices"></img>
                   </div>
@@ -110,18 +123,18 @@ function Segunda(props: PropsSegunda) {
               <p style={{ height: 40 }}>Panturrilha</p>
               <div className="exercises">
                 <div>
-                  <div className="blocks">
+                  <div className="blocks" onClick={()=> setExplPanturrilhaAparelho(!explPanturrilhaAparelho)}>
                     <p className="tittle">
-                      Elevação de panturrilha no aparelho
+                      Elevação de panturrilha aparelho
                     </p>
                     <img
                       src={panturrilhaAparelho}
                       className="img-exercices"
                     ></img>
                   </div>
-                  <div className="blocks">
+                  <div className="blocks" onClick={()=> setExplPanturrilhaLegPress(!explPanturrilhaLegPress)}>
                     <p className="tittle">
-                      Elevação de panturrilha no leg press
+                      Elevação de panturrilha no leg
                     </p>
                     <img src={panturrilhaLeg} className="img-exercices"></img>
                   </div>
@@ -130,9 +143,9 @@ function Segunda(props: PropsSegunda) {
                   <img src="../../../public/arrow.png" alt="Seta voltar"></img>
                 </div>
                 <div>
-                  <div className="blocks">
+                  <div className="blocks" onClick={()=> setExplPanturrilhaEscada(!explPanturrilhaEscada)}>
                     <p className="tittle">
-                      Elevação de panturrilha em pé na escada
+                      Elevação de panturrilha na escada
                     </p>
                     <img
                       src={panturrilhaEscada}
