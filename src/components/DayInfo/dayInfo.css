@@ -51,6 +51,7 @@
 .title-exercises {
   text-align: center;
   background-color: red;
+  height: 100%;
 }
 
 .exercises {
@@ -58,16 +59,28 @@
   justify-content: space-around;
 }
 
-.blocks{
-  height: 250px;
-  width: 250px;
-}
-
-.blocks p {
-  padding-bottom: 10px;
-}
-
 .img-exercices {
   width: 210px;
   height: 210px;
+}
+
+.blocks{
+  height: 250px;
+  width: 250px;
+  margin-bottom: 10px;
+}
+
+.blocks:hover .img-exercices {
+  width: 230px;
+  height: 230px;
+  cursor: pointer;
+} 
+
+.blocks:hover .tittle{
+  font-size: 18px;
+  cursor: pointer;
+} 
+
+.tittle {
+  padding-bottom: 10px;
 }

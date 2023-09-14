@@ -1,50 +1,45 @@
-import { useState } from 'react'
-import './App.css'
-import WrapWeek from './components/WrapWeek/WrapWeek'
-import DayInfo from './components/DayInfo/DayInfo'
+import { useState } from "react";
+import "./App.css";
+import WrapWeek from "./components/WrapWeek/WrapWeek";
+import DayInfo from "./components/DayInfo/DayInfo";
 
 function App() {
-  const [segunda, setSegunda] = useState(false)
-  const [terca, setTerca] = useState(false)
-  const [quarta, setQuarta] = useState(false)
-  const [quinta, setQuinta] = useState(false)
-  const [sexta, setSexta] = useState(false)
-  const [sabado, setSabado] = useState(false)
+  const [segunda, setSegunda] = useState(false);
+  const [terca, setTerca] = useState(false);
+  const [quarta, setQuarta] = useState(false);
+  const [quinta, setQuinta] = useState(false);
+  const [sexta, setSexta] = useState(false);
+  const [sabado, setSabado] = useState(false);
 
   function onPressSegunda() {
-    setSegunda(!segunda)
-    console.log(segunda)
+    setSegunda(!segunda);
   }
-  function onPressTerca()  {
-    setTerca(!terca)
-    console.log(terca)
+  function onPressTerca() {
+    setTerca(!terca);
   }
-  function onPressQuarta()  {
-    setQuarta(!quarta)
-    console.log(quarta)
+  function onPressQuarta() {
+    setQuarta(!quarta);
   }
-  function onPressQuinta()  {
-    setQuinta(!quinta)
-    console.log(quinta)
+  function onPressQuinta() {
+    setQuinta(!quinta);
   }
-  function onPressSexta()  {
-    setSexta(!sexta)
-    console.log(sexta)
+  function onPressSexta() {
+    setSexta(!sexta);
   }
-  function onPressSabado()  {
-    setSabado(!sabado)
-    console.log(sabado)
+  function onPressSabado() {
+    setSabado(!sabado);
   }
 
   return (
-    <div className='app'>
-      <WrapWeek 
+    <div className="app">
+      <WrapWeek
         onPressSegunda={onPressSegunda}
         onPressTerca={onPressTerca}
         onPressQuarta={onPressQuarta}
         onPressQuinta={onPressQuinta}
         onPressSexta={onPressSexta}
-        onPressSabado={onPressSabado}/>
+        onPressSabado={onPressSabado}
+      />
       <DayInfo
         onPressSegunda={onPressSegunda}
         onPressTerca={onPressTerca}
@@ -60,7 +55,7 @@ function App() {
         sabado={sabado}
       />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
