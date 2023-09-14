@@ -7,7 +7,6 @@ import Quarta from "../Quarta/Quarta";
 import Quinta from "../Quinta/Quinta";
 import Sexta from "../Sexta/Sexta";
 import Sabado from "../Sabado/Sabado";
-import Explication from "../Explication/Explication";
 
 interface DayInfoProps {
   onPressSegunda: () => void;
