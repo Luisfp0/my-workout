@@ -9,8 +9,8 @@ import martelo from "../../../public/rosca-biceps-martelo-com-halteres.webp";
 import panturrilhaLeg from "../../../public/Panturrilha-no-leg-press.webp";
 import panturrilhaAparelho from "../../../public/Panturrilha-em-pe-no-aparelho.webp";
 import panturrilhaEscada from "../../../public/Elevacao-de-panturrilha-em-pe-escada.webp";
-import Explication from "../Explication/Explication";
 import { useState } from "react";
+import ExplicacaoSegunda from "../Explicação Segunda/ExplicacaoSegunda";
 
 interface PropsSegunda {
   onPressSegunda: () => void;
@@ -41,7 +41,7 @@ function Segunda(props: PropsSegunda) {
   return (
     <>
       <div className="containerWorkDay">
-        <Explication
+        <ExplicacaoSegunda
           explPanturrilhaAparelho={explPanturrilhaAparelho}
           setExplPanturrilhaAparelho={setExplPanturrilhaAparelho}
           explPanturrilhaLegPress={explPanturrilhaLegPress}
@@ -64,7 +64,7 @@ function Segunda(props: PropsSegunda) {
           setExplBarraFixa={setExplBarraFixa}
           explRemadaCabos={explRemadaCabos}
           setExplRemadaCabos={setExplRemadaCabos}
-        ></Explication>
+        ></ExplicacaoSegunda>
         <div className="headerWorkDay">
           <p className="marginHeader">Segunda</p>
           <p>Costas - Biceps - Panturrilha</p>

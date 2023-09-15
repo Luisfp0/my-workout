@@ -1,4 +1,4 @@
-import "./explication.css";
+import "./ExplicacaoSegunda.css";
 
 interface PropsExplication {
   explBarraFixa: boolean;
@@ -25,7 +25,7 @@ interface PropsExplication {
   setExplPanturrilhaEscada: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-function Explication(props: PropsExplication) {
+function ExplicacaoSegunda(props: PropsExplication) {
   return (
     <>
       {props.explBarraFixa && (
@@ -175,4 +175,4 @@ function Explication(props: PropsExplication) {
   );
 }
 
-export default Explication;
+export default ExplicacaoSegunda;
