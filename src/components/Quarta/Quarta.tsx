@@ -79,14 +79,14 @@ function Quarta(props: PropsQuarta) {
             <div className="exercises">
               <div>
                 <div className="blocks" onClick={() => setExplAducao(true)}>
-                  <p>Adução e abdução de coxa</p>
+                  <p className="tittle">Adução e abdução de coxa</p>
                   <img src={aducao} className="img-exercices"></img>
                 </div>
                 <div
                   className="blocks"
                   onClick={() => setExplAbducaoMaquina(true)}
                 >
-                  <p>Abdução na maquina</p>
+                  <p className="tittle">Abdução na maquina</p>
                   <img src={abducaoMaquina} className="img-exercices"></img>
                 </div>
               </div>
@@ -98,11 +98,11 @@ function Quarta(props: PropsQuarta) {
                   className="blocks"
                   onClick={() => setExplAgachamentoRack(true)}
                 >
-                  <p>Agachamento no rack</p>
+                  <p className="tittle">Agachamento no rack</p>
                   <img src={agachamentoRack} className="img-exercices"></img>
                 </div>
                 <div className="blocks" onClick={() => setExplLeg45(true)}>
-                  <p>Leg45</p>
+                  <p className="tittle">Leg45</p>
                   <img src={leg45} className="img-exercices"></img>
                 </div>
               </div>
@@ -111,14 +111,14 @@ function Quarta(props: PropsQuarta) {
                   className="blocks"
                   onClick={() => setExplCadeiraExtensora(true)}
                 >
-                  <p>Cadeira extensora</p>
+                  <p className="tittle">Cadeira extensora</p>
                   <img src={cadeiraExtensora} className="img-exercices"></img>
                 </div>
                 <div
                   className="blocks"
                   onClick={() => setExplCadeiraFlexora(true)}
                 >
-                  <p>Cadeira Flexora</p>
+                  <p className="tittle">Cadeira Flexora</p>
                   <img src={cadeiraFlexora} className="img-exercices"></img>
                 </div>
               </div>
@@ -131,7 +131,7 @@ function Quarta(props: PropsQuarta) {
             <div className="exercises">
               <div>
                 <div className="blocks" onClick={() => setExpLevantamentoTerra(true)}>
-                  <p>Levantamento terra com barra</p>
+                  <p className="tittle">Levantamento terra com barra</p>
                   <img src={levantamentoTerra} className="img-exercices"></img>
                 </div>
               </div>
@@ -143,7 +143,7 @@ function Quarta(props: PropsQuarta) {
               </div>
               <div>
                 <div className="blocks" onClick={() => setExplElevacaoPelvica(true)}>
-                  <p>Elevação pelvica</p>
+                  <p className="tittle">Elevação pelvica</p>
                   <img src={elevacaoPelvica} className="img-exercices"></img>
                 </div>
               </div>
@@ -156,14 +156,14 @@ function Quarta(props: PropsQuarta) {
             <div className="exercises">
               <div>
                 <div className="blocks" onClick={() => setExplPanturrilhaAparelho(true)}>
-                  <p>Elevação de panturrilha no aparelho</p>
+                  <p className="tittle">Elevação de panturrilha no aparelho</p>
                   <img
                     src={panturrilhaAparelho}
                     className="img-exercices"
                   ></img>
                 </div>
                 <div className="blocks" onClick={() => setExplPanturrilhaLeg(true)}>
-                  <p>Elevação de panturrilha no leg press</p>
+                  <p className="tittle">Elevação de panturrilha no leg press</p>
                   <img src={panturrilhaLeg} className="img-exercices"></img>
                 </div>
               </div>
@@ -172,7 +172,7 @@ function Quarta(props: PropsQuarta) {
               </div>
               <div>
                 <div className="blocks" onClick={() => setExplPanturrilhaEscada(true)}>
-                  <p>Elevação de panturrilha em pé na escada</p>
+                  <p className="tittle">Elevação de panturrilha em pé na escada</p>
                   <img src={panturrilhaEscada} className="img-exercices"></img>
                 </div>
               </div>
