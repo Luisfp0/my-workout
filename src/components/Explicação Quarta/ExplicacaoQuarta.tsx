@@ -3,7 +3,6 @@ interface ExplicacaoQuarta {
   setExplAducao: React.Dispatch<React.SetStateAction<boolean>>;
   explAbducaoMaquina: boolean;
   setExplAbducaoMaquina: React.Dispatch<React.SetStateAction<boolean>>;
-
   explLeg45: boolean;
   setExplLeg45: React.Dispatch<React.SetStateAction<boolean>>;
   explCadeiraExtensora: boolean;
@@ -12,6 +11,21 @@ interface ExplicacaoQuarta {
   setExplCadeiraFlexora: React.Dispatch<React.SetStateAction<boolean>>;
   explAgachamentoRack: boolean;
   setExplAgachamentoRack:React.Dispatch<React.SetStateAction<boolean>>;
+
+  expLevantamentoTerra: boolean;
+  setExpLevantamentoTerra:React.Dispatch<React.SetStateAction<boolean>>;
+
+  explElevacaoPelvica: boolean;
+  setExplElevacaoPelvica:React.Dispatch<React.SetStateAction<boolean>>;
+
+  explPanturrilhaLeg: boolean;
+  setExplPanturrilhaLeg:React.Dispatch<React.SetStateAction<boolean>>;
+
+  explPanturrilhaAparelho: boolean;
+  setExplPanturrilhaAparelho:React.Dispatch<React.SetStateAction<boolean>>;
+
+  explPanturrilhaEscada: boolean;
+  setExplPanturrilhaEscada:React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 function ExplicacaoQuarta(props: ExplicacaoQuarta) {
@@ -95,26 +109,65 @@ function ExplicacaoQuarta(props: ExplicacaoQuarta) {
           </div>
         </div>
       )}
-      {props.explTricepsTesta && (
+      {props.expLevantamentoTerra && (
         <div className="explication">
           <div className="header-explication">
-            <p className="tittle-explication">Triceps Testa</p>
+            <p className="tittle-explication">Levantamento terra</p>
             <button
               className="close-explication"
-              onClick={() => props.setExplTricepsTesta(false)}
+              onClick={() => props.setExpLevantamentoTerra(false)}
             >
               X
             </button>
           </div>
         </div>
       )}
-      {props.explTricepsCoice && (
+      {props.explElevacaoPelvica && (
         <div className="explication">
           <div className="header-explication">
-            <p className="tittle-explication">Sinuquinha</p>
+            <p className="tittle-explication">Elevação Pelvica</p>
             <button
               className="close-explication"
-              onClick={() => props.setExplTricepsCoice(false)}
+              onClick={() => props.setExplElevacaoPelvica(false)}
+            >
+              X
+            </button>
+          </div>
+        </div>
+      )}
+            {props.explPanturrilhaLeg && (
+        <div className="explication">
+          <div className="header-explication">
+            <p className="tittle-explication">Panturrilha LEG</p>
+            <button
+              className="close-explication"
+              onClick={() => props.setExplPanturrilhaLeg(false)}
+            >
+              X
+            </button>
+          </div>
+        </div>
+      )}
+            {props.explPanturrilhaAparelho && (
+        <div className="explication">
+          <div className="header-explication">
+            <p className="tittle-explication">Panturrilha Aparelho</p>
+            <button
+              className="close-explication"
+              onClick={() => props.setExplPanturrilhaAparelho(false)}
+            >
+              X
+            </button>
+          </div>
+        </div>
+      )}
+            {props.explPanturrilhaEscada && (
+        <div className="explication">
+          <div className="header-explication">
+            <p className="tittle-explication">Panturrilha Escada</p>
+            <button
+              className="close-explication"
+              onClick={() => props.setExplPanturrilhaEscada(false)}
             >
               X
             </button>
