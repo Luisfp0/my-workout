@@ -9,6 +9,8 @@ import cadeiraExtensora from "../../../public/cadeira-extensora-extensora.gif";
 import cadeiraFlexora from "../../../public/cadeira-flexora.gif";
 import levantamentoTerra from "../../../public/levantamento-terra-com-barra.webp";
 import elevacaoPelvica from "../../../public/elevacao-pelvica.gif";
+import { useState } from "react";
+import ExplicacaoSabado from "../Explicação Sabado/ExplicacaoSabado";
 
 interface PropsSabado {
   onPressSabado: () => void;
@@ -19,7 +21,18 @@ interface PropsSabado {
 }
 
 function Sabado(props: PropsSabado) {
-  
+  const [explAducao, setExplAducao] = useState(false);
+  const [explAbducaoMaquina, setExplAbducaoMaquina] = useState(false);
+  const [explLeg45, setExplLeg45] = useState(false);
+  const [explCadeiraExtensora, setExplCadeiraExtensora] = useState(false);
+  const [explCadeiraFlexora, setExplCadeiraFlexora] = useState(false);
+  const [explAgachamentoRack, setExplAgachamentoRack] = useState(false);
+  const [expLevantamentoTerra, setExpLevantamentoTerra] = useState(false);
+  const [explElevacaoPelvica, setExplElevacaoPelvica] = useState(false);
+  const [explPanturrilhaLeg, setExplPanturrilhaLeg] = useState(false);
+  const [explPanturrilhaAparelho, setExplPanturrilhaAparelho] = useState(false);
+  const [explPanturrilhaEscada, setExplPanturrilhaEscada] = useState(false);
+
   function closeSabado() {
     props.onPressSabado();
     props.setPage(1);
@@ -27,6 +40,30 @@ function Sabado(props: PropsSabado) {
 
   return (
     <div className="containerWorkDay">
+      <ExplicacaoSabado
+        expLevantamentoTerra={expLevantamentoTerra}
+        setExpLevantamentoTerra={setExpLevantamentoTerra}
+        explElevacaoPelvica={explElevacaoPelvica}
+        setExplElevacaoPelvica={setExplElevacaoPelvica}
+        explPanturrilhaLeg={explPanturrilhaLeg}
+        setExplPanturrilhaLeg={setExplPanturrilhaLeg}
+        explPanturrilhaAparelho={explPanturrilhaAparelho}
+        setExplPanturrilhaAparelho={setExplPanturrilhaAparelho}
+        explPanturrilhaEscada={explPanturrilhaEscada}
+        setExplPanturrilhaEscada={setExplPanturrilhaEscada}
+        explAgachamentoRack={explAgachamentoRack}
+        setExplAgachamentoRack={setExplAgachamentoRack}
+        explCadeiraFlexora={explCadeiraFlexora}
+        setExplCadeiraFlexora={setExplCadeiraFlexora}
+        explLeg45={explLeg45}
+        setExplLeg45={setExplLeg45}
+        explCadeiraExtensora={explCadeiraExtensora}
+        setExplCadeiraExtensora={setExplCadeiraExtensora}
+        explAbducaoMaquina={explAbducaoMaquina}
+        setExplAbducaoMaquina={setExplAbducaoMaquina}
+        explAducao={explAducao}
+        setExplAducao={setExplAducao}
+      ></ExplicacaoSabado>
       <div className="headerWorkDay">
         <p className="marginHeader">Sábado</p>
         <p>Coxa - Gluteo - Panturrilha</p>
@@ -40,12 +77,12 @@ function Sabado(props: PropsSabado) {
             <p style={{ height: 40 }}>Coxa</p>
             <div className="exercises">
               <div>
-                <div className="blocks">
-                  <p>Adução e abdução de pernas</p>
+                <div className="blocks" onClick={() => setExplAducao(true)}>
+                  <p className="tittle">Adução e abdução de pernas</p>
                   <img src={aducao} className="img-exercices"></img>
                 </div>
-                <div className="blocks">
-                  <p>Abdução na maquina</p>
+                <div className="blocks" onClick={() => setExplAbducaoMaquina(true)}>
+                  <p className="tittle">Abdução na maquina</p>
                   <img src={abducaoMaquina} className="img-exercices"></img>
                 </div>
               </div>
@@ -53,22 +90,22 @@ function Sabado(props: PropsSabado) {
                 <img src="../../../public/arrow.png" alt="Seta avançar"></img>
               </div>
               <div>
-                <div className="blocks">
-                  <p>Agachamento no rack</p>
+                <div className="blocks" onClick={() => setExplAgachamentoRack(true)}>
+                  <p className="tittle">Agachamento no rack</p>
                   <img src={agachamentoRack} className="img-exercices"></img>
                 </div>
-                <div className="blocks">
-                  <p>Leg45</p>
+                <div className="blocks" onClick={() => setExplLeg45(true)}>
+                  <p className="tittle">Leg45</p>
                   <img src={leg45} className="img-exercices"></img>
                 </div>
               </div>
               <div>
-                <div className="blocks">
-                  <p>Cadeira extensora</p>
+                <div className="blocks" onClick={() => setExplCadeiraExtensora(true)}>
+                  <p className="tittle">Cadeira extensora</p>
                   <img src={cadeiraExtensora} className="img-exercices"></img>
                 </div>
-                <div className="blocks">
-                  <p>Cadeira Flexora</p>
+                <div className="blocks" onClick={() => setExplCadeiraFlexora(true)}>
+                  <p className="tittle">Cadeira Flexora</p>
                   <img src={cadeiraFlexora} className="img-exercices"></img>
                 </div>
               </div>
@@ -80,8 +117,8 @@ function Sabado(props: PropsSabado) {
             <p style={{ height: 40 }}>Gluteo</p>
             <div className="exercises">
               <div>
-                <div className="blocks">
-                  <p>Levantamento terra com barra</p>
+                <div className="blocks" onClick={() => setExpLevantamentoTerra(true)}>
+                  <p className="tittle">Levantamento terra com barra</p>
                   <img src={levantamentoTerra} className="img-exercices"></img>
                 </div>
               </div>
@@ -92,8 +129,8 @@ function Sabado(props: PropsSabado) {
                 <img src="../../../public/arrow.png" alt="Seta voltar"></img>
               </div>
               <div>
-                <div className="blocks">
-                  <p>Elevação pelvica</p>
+                <div className="blocks" onClick={() => setExplElevacaoPelvica(true)}>
+                  <p className="tittle">Elevação pelvica</p>
                   <img src={elevacaoPelvica} className="img-exercices"></img>
                 </div>
               </div>
@@ -105,15 +142,15 @@ function Sabado(props: PropsSabado) {
             <p style={{ height: 40 }}>Panturrilha</p>
             <div className="exercises">
               <div>
-                <div className="blocks">
-                  <p>Elevação de panturrilha no aparelho</p>
+                <div className="blocks" onClick={() => setExplPanturrilhaAparelho(true)}>
+                  <p className="tittle">Panturrilha no aparelho</p>
                   <img
                     src={panturrilhaAparelho}
                     className="img-exercices"
                   ></img>
                 </div>
-                <div className="blocks">
-                  <p>Elevação de panturrilha no leg press</p>
+                <div className="blocks" onClick={() => setExplPanturrilhaLeg(true)}>
+                  <p className="tittle">Panturrilha no leg press</p>
                   <img src={panturrilhaLeg} className="img-exercices"></img>
                 </div>
               </div>
@@ -121,8 +158,8 @@ function Sabado(props: PropsSabado) {
                 <img src="../../../public/arrow.png" alt="Seta voltar"></img>
               </div>
               <div>
-                <div className="blocks">
-                  <p>Elevação de panturrilha em pé na escada</p>
+                <div className="blocks" onClick={() => setExplPanturrilhaEscada(true)}>
+                  <p className="tittle">Panturrilha em pé na escada</p>
                   <img src={panturrilhaEscada} className="img-exercices"></img>
                 </div>
               </div>

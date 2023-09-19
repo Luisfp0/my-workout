@@ -27,7 +27,6 @@ function Quarta(props: PropsQuarta) {
   const [explCadeiraExtensora, setExplCadeiraExtensora] = useState(false);
   const [explCadeiraFlexora, setExplCadeiraFlexora] = useState(false);
   const [explAgachamentoRack, setExplAgachamentoRack] = useState(false);
-
   const [expLevantamentoTerra, setExpLevantamentoTerra] = useState(false);
   const [explElevacaoPelvica, setExplElevacaoPelvica] = useState(false);
   const [explPanturrilhaLeg, setExplPanturrilhaLeg] = useState(false);
@@ -130,7 +129,10 @@ function Quarta(props: PropsQuarta) {
             <p style={{ height: 40 }}>Gluteo</p>
             <div className="exercises">
               <div>
-                <div className="blocks" onClick={() => setExpLevantamentoTerra(true)}>
+                <div
+                  className="blocks"
+                  onClick={() => setExpLevantamentoTerra(true)}
+                >
                   <p className="tittle">Levantamento terra com barra</p>
                   <img src={levantamentoTerra} className="img-exercices"></img>
                 </div>
@@ -142,7 +144,10 @@ function Quarta(props: PropsQuarta) {
                 <img src="../../../public/arrow.png" alt="Seta voltar"></img>
               </div>
               <div>
-                <div className="blocks" onClick={() => setExplElevacaoPelvica(true)}>
+                <div
+                  className="blocks"
+                  onClick={() => setExplElevacaoPelvica(true)}
+                >
                   <p className="tittle">Elevação pelvica</p>
                   <img src={elevacaoPelvica} className="img-exercices"></img>
                 </div>
@@ -155,14 +160,20 @@ function Quarta(props: PropsQuarta) {
             <p style={{ height: 40 }}>Panturrilha</p>
             <div className="exercises">
               <div>
-                <div className="blocks" onClick={() => setExplPanturrilhaAparelho(true)}>
+                <div
+                  className="blocks"
+                  onClick={() => setExplPanturrilhaAparelho(true)}
+                >
                   <p className="tittle">Elevação de panturrilha no aparelho</p>
                   <img
                     src={panturrilhaAparelho}
                     className="img-exercices"
                   ></img>
                 </div>
-                <div className="blocks" onClick={() => setExplPanturrilhaLeg(true)}>
+                <div
+                  className="blocks"
+                  onClick={() => setExplPanturrilhaLeg(true)}
+                >
                   <p className="tittle">Elevação de panturrilha no leg press</p>
                   <img src={panturrilhaLeg} className="img-exercices"></img>
                 </div>
@@ -171,8 +182,13 @@ function Quarta(props: PropsQuarta) {
                 <img src="../../../public/arrow.png" alt="Seta voltar"></img>
               </div>
               <div>
-                <div className="blocks" onClick={() => setExplPanturrilhaEscada(true)}>
-                  <p className="tittle">Elevação de panturrilha em pé na escada</p>
+                <div
+                  className="blocks"
+                  onClick={() => setExplPanturrilhaEscada(true)}
+                >
+                  <p className="tittle">
+                    Elevação de panturrilha em pé na escada
+                  </p>
                   <img src={panturrilhaEscada} className="img-exercices"></img>
                 </div>
               </div>
