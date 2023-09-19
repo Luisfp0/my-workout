@@ -1,4 +1,5 @@
 import "./ExplicacaoSegunda.css";
+import explMuscleBarraFixa from "../../../public/expl-barra-fixa.webp";
 
 interface PropsExplication {
   explBarraFixa: boolean;
@@ -31,13 +32,44 @@ function ExplicacaoSegunda(props: PropsExplication) {
       {props.explBarraFixa && (
         <div className="explication">
           <div className="header-explication">
-            <p className="tittle-explication">Exercicio barra fixa</p>
-            <button
-              className="close-explication"
-              onClick={() => props.setExplBarraFixa(false)}
-            >
-              X
-            </button>
+            <p className="tittle-explication">
+              Como fazer a barra fixa pull up
+            </p>
+            <div className="close-box">
+              <button
+                className="close-explication"
+                onClick={() => props.setExplBarraFixa(false)}
+              >
+                X
+              </button>
+            </div>
+          </div>
+          <div className="body-explanation">
+            <div className="texts">
+              <p>
+                Ele é feito com a pegada pronada, em que as palmas das mãos
+                ficam voltadas para fora e as costas das mãos ficam em direção
+                ao corpo.
+              </p>
+              <p>
+                Para realizar o movimento corretamente, é importante segurar a
+                barra com a pegada aberta pronada. Primeiramente, se pendure na
+                barra com os braços esticados e as mãos afastadas na mesma
+                largura dos ombros.
+              </p>
+              <p>
+                Em seguida, flexione os joelhos e cruze os tornozelos. Então,
+                contraia os glúteos e as escápulas dos ombros e faça força para
+                levantar o corpo para o alto até que seus ombros fiquem abaixo
+                da barra e seus braços fiquem em um ângulo de 90 graus.
+              </p>
+              <p>
+                Mantenha-se no alto por alguns segundos e desça em um movimento
+                controlado até seus braços ficarem esticados novamente. Repita o
+                movimento até completar as repetições da sua série.
+              </p>
+            </div>
+            <img className="image-muscle" src={explMuscleBarraFixa}></img>
           </div>
         </div>
       )}
