@@ -69,7 +69,9 @@ function ExplicacaoSegunda(props: PropsExplication) {
                 movimento até completar as repetições da sua série.
               </p>
             </div>
-            <img className="image-muscle" src={explMuscleBarraFixa}></img>
+            <div className="teste">
+              <img className="image-muscle" src={explMuscleBarraFixa}></img>
+            </div>
           </div>
         </div>
       )}
