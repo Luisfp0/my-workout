@@ -62,7 +62,7 @@ function Sexta(props: PropsSexta) {
       <div className="container-exercises">
         {props.page === 1 && (
           <div className="title-exercises">
-            <p style={{ height: 40 }}>Peito</p>
+            <p>Peito</p>
             <div className="exercises">
               <div>
                 <div className="blocks" onClick={() => setExplSupinoAlter(true)}>
@@ -95,7 +95,7 @@ function Sexta(props: PropsSexta) {
         )}
         {props.page === 2 && (
           <div className="title-exercises">
-            <p style={{ height: 40 }}>Triceps</p>
+            <p>Triceps</p>
             <div className="exercises">
               <div>
                 <div className="blocks" onClick={() => setExplTricepsPulley(true)}>

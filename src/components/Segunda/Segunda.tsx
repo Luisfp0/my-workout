@@ -75,7 +75,7 @@ function Segunda(props: PropsSegunda) {
         <div className="container-exercises">
           {props.page === 1 && (
             <div className="title-exercises">
-              <p style={{ height: 40 }}>Costas</p>
+              <p>Costas</p>
               <div className="exercises">
                 <div>
                   <div
@@ -119,7 +119,7 @@ function Segunda(props: PropsSegunda) {
           )}
           {props.page === 2 && (
             <div className="title-exercises">
-              <p style={{ height: 40 }}>Biceps</p>
+              <p>Biceps</p>
               <div className="exercises">
                 <div>
                   <div
@@ -164,7 +164,7 @@ function Segunda(props: PropsSegunda) {
           )}
           {props.page === 3 && (
             <div className="title-exercises">
-              <p style={{ height: 40 }}>Panturrilha</p>
+              <p>Panturrilha</p>
               <div className="exercises">
                 <div>
                   <div

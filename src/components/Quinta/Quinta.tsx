@@ -46,7 +46,7 @@ function Quinta(props: PropsQuinta) {
       <div className="container-exercises">
         {props.page === 1 && (
           <div className="title-exercises">
-            <p style={{ height: 40 }} >Ombro</p>
+            <p >Ombro</p>
             <div className="exercises">
               <div>
                 <div className="blocks" onClick={() => setDesenvolvimentoHalter(true)}>
@@ -76,7 +76,7 @@ function Quinta(props: PropsQuinta) {
         )}
         {props.page === 2 && (
           <div className="title-exercises">
-            <p style={{ height: 40 }}>Antebraço</p>
+            <p>Antebraço</p>
             <div className="exercises">
               <div>
                 <div className="blocks">
@@ -105,7 +105,7 @@ function Quinta(props: PropsQuinta) {
         )}
         {props.page === 3 && (
           <div className="title-exercises">
-            <p style={{ height: 40 }}>Abdomem</p>
+            <p>Abdomem</p>
             <div className="exercises">
               <div>
                 <div className="blocks">

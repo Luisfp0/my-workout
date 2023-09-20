@@ -74,7 +74,7 @@ function Sabado(props: PropsSabado) {
       <div className="container-exercises">
         {props.page === 1 && (
           <div className="title-exercises">
-            <p style={{ height: 40 }}>Coxa</p>
+            <p>Coxa</p>
             <div className="exercises">
               <div>
                 <div className="blocks" onClick={() => setExplAducao(true)}>
@@ -114,7 +114,7 @@ function Sabado(props: PropsSabado) {
         )}
         {props.page === 2 && (
           <div className="title-exercises">
-            <p style={{ height: 40 }}>Gluteo</p>
+            <p>Gluteo</p>
             <div className="exercises">
               <div>
                 <div className="blocks" onClick={() => setExpLevantamentoTerra(true)}>
@@ -139,7 +139,7 @@ function Sabado(props: PropsSabado) {
         )}
         {props.page === 3 && (
           <div className="title-exercises">
-            <p style={{ height: 40 }}>Panturrilha</p>
+            <p>Panturrilha</p>
             <div className="exercises">
               <div>
                 <div className="blocks" onClick={() => setExplPanturrilhaAparelho(true)}>

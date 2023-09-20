@@ -4,7 +4,7 @@
   align-items: center;
   position: absolute;
   width: 90%;
-  height: 90%;
+  height: 95%;
   background-color: blue;
 }
 
@@ -54,6 +54,10 @@
   height: 100%;
 }
 
+.title-exercises p {
+  height: 25px;
+}
+
 .exercises {
   display: flex;
   justify-content: space-around;
@@ -67,7 +71,7 @@
 .blocks{
   height: 250px;
   width: 250px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .blocks:hover .img-exercices {
