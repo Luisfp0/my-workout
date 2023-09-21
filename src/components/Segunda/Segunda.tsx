@@ -21,25 +21,15 @@ interface PropsSegunda {
 }
 
 function Segunda(props: PropsSegunda) {
-  const [explBarraFixa, setExplBarraFixa] = useState(false);
-  const [explRemadaCabos, setExplRemadaCabos] = useState(false);
-  const [explCavalinho, setExplCavalinho] = useState(false);
-  const [explRemadaUnilateral, setExplRemadaUnilateral] = useState(false);
-  const [explRoscaUnilateral, setExplRoscaUnilateral] = useState(false);
-  const [explRoscaInclinado, setExplRoscaInclinado] = useState(false);
-  const [explRoscaBanco, setExplRoscaBanco] = useState(false);
-  const [explMartelo, setExplMartelo] = useState(false);
-  const [explPanturrilhaAparelho, setExplPanturrilhaAparelho] = useState(false);
-  const [explPanturrilhaLegPress, setExplPanturrilhaLegPress] = useState(false);
-  const [explPanturrilhaEscada, setExplPanturrilhaEscada] = useState(false);
-
   function closeSegunda() {
     props.onPressSegunda();
     props.setPage(1);
   }
+  
   const explicacoesData = [
     {
       tittleApresentation: "Barra Fixa Pull Up",
+      imageApresentation: barraFixa,
       title: "0",
       texts: [
         "Para realizar o movimento corretamente, é importante segurar a barra com a pegada aberta pronada. Primeiramente, se pendure na barra com os braços esticados e as mãos afastadas na mesma largura dos ombros.",
@@ -66,6 +56,7 @@ function Segunda(props: PropsSegunda) {
       onClose: () => setExplicacaoAberta(null),    },
     {
       tittleApresentation: "Remada na máquina de cabos",
+      imageApresentation: remadaMaquina,
       title: "1",
       texts: [
         "Texto 1",
@@ -92,7 +83,8 @@ function Segunda(props: PropsSegunda) {
       onClose: () => setExplicacaoAberta(null),
     },
     {
-      tittleApresentation: "Remada na testes de cabos",
+      tittleApresentation: "Remada em pé com a barra T",
+      imageApresentation: cavalinho,
       title: "2",
       texts: [
         "Texto 1",
@@ -119,8 +111,205 @@ function Segunda(props: PropsSegunda) {
       onClose: () => setExplicacaoAberta(null),
     },
     {
-      tittleApresentation: "Remada na testes de cabos",
+      tittleApresentation: "Remada unilateral com halter",
+      imageApresentation: remadaSerrote,
       title: "3",
+      texts: [
+        "Texto 1",
+        "Texto 2",
+        "Texto 3",
+      ],
+      errors: [
+        {
+          title: "Erro 1",
+          description:
+            "Descrição erro 1",
+        },
+        {
+          title: "Erro 1",
+          description:
+            "Descrição erro 1",
+        },
+        {
+          title: "Erro 2",
+          description:
+            "Descrição erro 2",
+        },
+      ],
+      onClose: () => setExplicacaoAberta(null),
+    },
+    {
+      tittleApresentation: "Rosca bíceps unilateral com halter",
+      imageApresentation: roscaUnilateral,
+      title: "4",
+      texts: [
+        "Texto 1",
+        "Texto 2",
+        "Texto 3",
+      ],
+      errors: [
+        {
+          title: "Erro 1",
+          description:
+            "Descrição erro 1",
+        },
+        {
+          title: "Erro 1",
+          description:
+            "Descrição erro 1",
+        },
+        {
+          title: "Erro 2",
+          description:
+            "Descrição erro 2",
+        },
+      ],
+      onClose: () => setExplicacaoAberta(null),
+    },
+    {
+      tittleApresentation: "Rosca bíceps no banco inclinado",
+      imageApresentation: bicepsInclinado,
+      title: "5",
+      texts: [
+        "Texto 1",
+        "Texto 2",
+        "Texto 3",
+      ],
+      errors: [
+        {
+          title: "Erro 1",
+          description:
+            "Descrição erro 1",
+        },
+        {
+          title: "Erro 1",
+          description:
+            "Descrição erro 1",
+        },
+        {
+          title: "Erro 2",
+          description:
+            "Descrição erro 2",
+        },
+      ],
+      onClose: () => setExplicacaoAberta(null),
+    },
+    {
+      tittleApresentation: "Rosca bíceps no banco Scott",
+      imageApresentation: roscaBarraW,
+      title: "6",
+      texts: [
+        "Texto 1",
+        "Texto 2",
+        "Texto 3",
+      ],
+      errors: [
+        {
+          title: "Erro 1",
+          description:
+            "Descrição erro 1",
+        },
+        {
+          title: "Erro 1",
+          description:
+            "Descrição erro 1",
+        },
+        {
+          title: "Erro 2",
+          description:
+            "Descrição erro 2",
+        },
+      ],
+      onClose: () => setExplicacaoAberta(null),
+    },
+    {
+      tittleApresentation: "Rosca bíceps martelo com halteres",
+      imageApresentation: martelo,
+      title: "7",
+      texts: [
+        "Texto 1",
+        "Texto 2",
+        "Texto 3",
+      ],
+      errors: [
+        {
+          title: "Erro 1",
+          description:
+            "Descrição erro 1",
+        },
+        {
+          title: "Erro 1",
+          description:
+            "Descrição erro 1",
+        },
+        {
+          title: "Erro 2",
+          description:
+            "Descrição erro 2",
+        },
+      ],
+      onClose: () => setExplicacaoAberta(null),
+    },
+    {
+      tittleApresentation: "Elevação de panturrilha na escada",
+      imageApresentation: panturrilhaEscada,
+      title: "8",
+      texts: [
+        "Texto 1",
+        "Texto 2",
+        "Texto 3",
+      ],
+      errors: [
+        {
+          title: "Erro 1",
+          description:
+            "Descrição erro 1",
+        },
+        {
+          title: "Erro 1",
+          description:
+            "Descrição erro 1",
+        },
+        {
+          title: "Erro 2",
+          description:
+            "Descrição erro 2",
+        },
+      ],
+      onClose: () => setExplicacaoAberta(null),
+    },
+    {
+      tittleApresentation: "Elevação de panturrilha aparelho",
+      imageApresentation: panturrilhaAparelho,
+      title: "9",
+      texts: [
+        "Texto 1",
+        "Texto 2",
+        "Texto 3",
+      ],
+      errors: [
+        {
+          title: "Erro 1",
+          description:
+            "Descrição erro 1",
+        },
+        {
+          title: "Erro 1",
+          description:
+            "Descrição erro 1",
+        },
+        {
+          title: "Erro 2",
+          description:
+            "Descrição erro 2",
+        },
+      ],
+      onClose: () => setExplicacaoAberta(null),
+    },
+    {
+      tittleApresentation: "Elevação de panturrilha no leg",
+      imageApresentation: panturrilhaLeg,
+      title: "10",
       texts: [
         "Texto 1",
         "Texto 2",
@@ -187,7 +376,7 @@ function Segunda(props: PropsSegunda) {
                     >
                       <p className="tittle">{explicacao.tittleApresentation}</p>
                       <img
-                        src={barraFixa}
+                        src={explicacao.imageApresentation}
                         className="img-exercices"
                         alt={explicacao.title}
                       />
@@ -197,22 +386,6 @@ function Segunda(props: PropsSegunda) {
                 <div className="next" onClick={props.nextExercise}>
                   <img src="../../../public/arrow.png" alt="Seta avançar"></img>
                 </div>
-                {/* <div>
-                  <div
-                    className="blocks"
-                    onClick={() => setExplCavalinho(true)}
-                  >
-                    <p className="tittle">Remada em pé com a barra T</p>
-                    <img src={cavalinho} className="img-exercices"></img>
-                  </div>
-                  <div
-                    className="blocks"
-                    onClick={() => setExplRemadaUnilateral(true)}
-                  >
-                    <p className="tittle">Remada unilateral com halter</p>
-                    <img src={remadaSerrote} className="img-exercices"></img>
-                  </div>
-                </div> */}
               </div>
             </div>
           )}
@@ -220,21 +393,21 @@ function Segunda(props: PropsSegunda) {
             <div className="title-exercises">
               <p>Biceps</p>
               <div className="exercises">
-                <div>
-                  <div
-                    className="blocks"
-                    onClick={() => setExplRoscaUnilateral(true)}
-                  >
-                    <p className="tittle">Rosca bíceps unilateral com halter</p>
-                    <img src={roscaUnilateral} className="img-exercices"></img>
-                  </div>
-                  <div
-                    className="blocks"
-                    onClick={() => setExplRoscaInclinado(true)}
-                  >
-                    <p className="tittle">Rosca bíceps no banco inclinado</p>
-                    <img src={bicepsInclinado} className="img-exercices"></img>
-                  </div>
+                <div className="arrumar">
+                {explicacoesData.slice(4, 8).map((explicacao, index) => (
+                    <div
+                      key={index}
+                      className="blocks"
+                      onClick={() => abrirExplicacao(index + 4)}
+                    >
+                      <p className="tittle">{explicacao.tittleApresentation}</p>
+                      <img
+                        src={explicacao.imageApresentation}
+                        className="img-exercices"
+                        alt={explicacao.title}
+                      />
+                    </div>
+                  ))}
                 </div>
                 <div className="next" onClick={props.nextExercise}>
                   <img src="../../../public/arrow.png" alt="Seta avançar"></img>
@@ -243,17 +416,6 @@ function Segunda(props: PropsSegunda) {
                   <img src="../../../public/arrow.png" alt="Seta voltar"></img>
                 </div>
                 <div>
-                  <div
-                    className="blocks"
-                    onClick={() => setExplRoscaBanco(true)}
-                  >
-                    <p className="tittle">Rosca bíceps no banco Scott</p>
-                    <img src={roscaBarraW} className="img-exercices"></img>
-                  </div>
-                  <div className="blocks" onClick={() => setExplMartelo(true)}>
-                    <p className="tittle">Rosca bíceps martelo com halteres</p>
-                    <img src={martelo} className="img-exercices"></img>
-                  </div>
                 </div>
               </div>
             </div>
@@ -262,39 +424,24 @@ function Segunda(props: PropsSegunda) {
             <div className="title-exercises">
               <p>Panturrilha</p>
               <div className="exercises">
-                <div>
-                  <div
-                    className="blocks"
-                    onClick={() => setExplPanturrilhaAparelho(true)}
-                  >
-                    <p className="tittle">Elevação de panturrilha aparelho</p>
-                    <img
-                      src={panturrilhaAparelho}
-                      className="img-exercices"
-                    ></img>
-                  </div>
-                  <div
-                    className="blocks"
-                    onClick={() => setExplPanturrilhaLegPress(true)}
-                  >
-                    <p className="tittle">Elevação de panturrilha no leg</p>
-                    <img src={panturrilhaLeg} className="img-exercices"></img>
-                  </div>
+                <div className="arrumar">
+                {explicacoesData.slice(8, 11).map((explicacao, index) => (
+                    <div
+                      key={index}
+                      className="blocks"
+                      onClick={() => abrirExplicacao(index + 8)}
+                    >
+                      <p className="tittle">{explicacao.tittleApresentation}</p>
+                      <img
+                        src={explicacao.imageApresentation}
+                        className="img-exercices"
+                        alt={explicacao.title}
+                      />
+                    </div>
+                  ))}
                 </div>
                 <div className="prev" onClick={props.previousExercise}>
                   <img src="../../../public/arrow.png" alt="Seta voltar"></img>
-                </div>
-                <div>
-                  <div
-                    className="blocks"
-                    onClick={() => setExplPanturrilhaEscada(true)}
-                  >
-                    <p className="tittle">Elevação de panturrilha na escada</p>
-                    <img
-                      src={panturrilhaEscada}
-                      className="img-exercices"
-                    ></img>
-                  </div>
                 </div>
               </div>
             </div>
