@@ -69,8 +69,45 @@ function ExplicacaoSegunda(props: PropsExplication) {
                 movimento até completar as repetições da sua série.
               </p>
             </div>
-            <div className="teste">
+            <div className="image-container">
               <img className="image-muscle" src={explMuscleBarraFixa}></img>
+            </div>
+          </div>
+          <div className="footer-container">
+            <div className="errors">
+              <div>
+                <p>Erros comuns</p>
+              </div>
+              <div>
+                <p className="tittle-error">
+                  Abrir muito os cotovelos durante a subida
+                </p>
+                <p className="description-error">
+                  Para ativar os músculos corretamente, é importante manter os
+                  cotovelos próximos do tronco durante o pull up.
+                </p>
+              </div>
+              <div>
+                <p className="tittle-error">Balançar durante o movimento</p>
+                <p className="description-error">
+                  Balançar o corpo exige menos dos músculos e isso pode tornar o
+                  pull up menos eficiente para o ganho de massa muscular.
+                </p>
+              </div>
+              <div>
+                <p className="tittle-error">Não manter abdômen contraído</p>
+                <p className="description-error">
+                  Contrair o abdômen é indispensável para proteger a coluna
+                  durante qualquer exercício na barra fixa. Além disso, é
+                  indicado estufar o peito para ajudar a manter a postura
+                  correta.
+                </p>
+              </div>
+            </div>
+            <div className="weight">
+              <div>
+                <p>Peso que consegue pegar</p>
+              </div>
             </div>
           </div>
         </div>

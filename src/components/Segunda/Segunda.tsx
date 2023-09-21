@@ -10,7 +10,7 @@ import panturrilhaLeg from "../../../public/Panturrilha-no-leg-press.webp";
 import panturrilhaAparelho from "../../../public/Panturrilha-em-pe-no-aparelho.webp";
 import panturrilhaEscada from "../../../public/Elevacao-de-panturrilha-em-pe-escada.webp";
 import { useState } from "react";
-import ExplicacaoSegunda from "../Explicação Segunda/ExplicacaoSegunda";
+import Explicacao from "../Explicação/Explicacao";
 
 interface PropsSegunda {
   onPressSegunda: () => void;
@@ -37,34 +37,135 @@ function Segunda(props: PropsSegunda) {
     props.onPressSegunda();
     props.setPage(1);
   }
+  const explicacoesData = [
+    {
+      tittleApresentation: "Barra Fixa Pull Up",
+      title: "0",
+      texts: [
+        "Para realizar o movimento corretamente, é importante segurar a barra com a pegada aberta pronada. Primeiramente, se pendure na barra com os braços esticados e as mãos afastadas na mesma largura dos ombros.",
+        "Em seguida, flexione os joelhos e cruze os tornozelos. Então, contraia os glúteos e as escápulas dos ombros e faça força para levantar o corpo para o alto até que seus ombros fiquem abaixo da barra e seus braços fiquem em um ângulo de 90 graus.",
+        "Mantenha-se no alto por alguns segundos e desça em um movimento controlado até seus braços ficarem esticados novamente.",
+      ],
+      errors: [
+        {
+          title: "Abrir muito os cotovelos durante a subida",
+          description:
+            "Para ativar os músculos corretamente, é importante manter os cotovelos próximos do tronco durante o pull up. ",
+        },
+        {
+          title: "Balançar durante o movimento",
+          description:
+            "Embora isso reduza a fadiga muscular e ajude a completar a série, balançar o corpo exige menos dos músculos e isso pode tornar o pull up menos eficiente para o ganho de massa muscular.",
+        },
+        {
+          title: "Não manter abdômen contraído",
+          description:
+            "Contrair o abdômen é indispensável para proteger a coluna durante qualquer exercício na barra fixa. ",
+        },
+      ],
+      onClose: () => setExplicacaoAberta(null),    },
+    {
+      tittleApresentation: "Remada na máquina de cabos",
+      title: "1",
+      texts: [
+        "Texto 1",
+        "Texto 2",
+        "Texto 3",
+      ],
+      errors: [
+        {
+          title: "Erro 1",
+          description:
+            "Descrição erro 1",
+        },
+        {
+          title: "Erro 1",
+          description:
+            "Descrição erro 1",
+        },
+        {
+          title: "Erro 2",
+          description:
+            "Descrição erro 2",
+        },
+      ],
+      onClose: () => setExplicacaoAberta(null),
+    },
+    {
+      tittleApresentation: "Remada na testes de cabos",
+      title: "2",
+      texts: [
+        "Texto 1",
+        "Texto 2",
+        "Texto 3",
+      ],
+      errors: [
+        {
+          title: "Erro 1",
+          description:
+            "Descrição erro 1",
+        },
+        {
+          title: "Erro 1",
+          description:
+            "Descrição erro 1",
+        },
+        {
+          title: "Erro 2",
+          description:
+            "Descrição erro 2",
+        },
+      ],
+      onClose: () => setExplicacaoAberta(null),
+    },
+    {
+      tittleApresentation: "Remada na testes de cabos",
+      title: "3",
+      texts: [
+        "Texto 1",
+        "Texto 2",
+        "Texto 3",
+      ],
+      errors: [
+        {
+          title: "Erro 1",
+          description:
+            "Descrição erro 1",
+        },
+        {
+          title: "Erro 1",
+          description:
+            "Descrição erro 1",
+        },
+        {
+          title: "Erro 2",
+          description:
+            "Descrição erro 2",
+        },
+      ],
+      onClose: () => setExplicacaoAberta(null),
+    },
+  ];
+
+  const [explicacaoAberta, setExplicacaoAberta] = useState(null);
+
+  function abrirExplicacao(index: any) {
+    setExplicacaoAberta(index);
+  }
+
+  function fecharExplicacao() {
+    setExplicacaoAberta(null);
+  }
 
   return (
     <>
       <div className="containerWorkDay">
-        <ExplicacaoSegunda
-          explPanturrilhaAparelho={explPanturrilhaAparelho}
-          setExplPanturrilhaAparelho={setExplPanturrilhaAparelho}
-          explPanturrilhaLegPress={explPanturrilhaLegPress}
-          setExplPanturrilhaLegPress={setExplPanturrilhaLegPress}
-          explPanturrilhaEscada={explPanturrilhaEscada}
-          setExplPanturrilhaEscada={setExplPanturrilhaEscada}
-          explRoscaUnilateral={explRoscaUnilateral}
-          setExplRoscaUnilateral={setExplRoscaUnilateral}
-          explRoscaInclinado={explRoscaInclinado}
-          setExplRoscaInclinado={setExplRoscaInclinado}
-          explRoscaBanco={explRoscaBanco}
-          setExplRoscaBanco={setExplRoscaBanco}
-          explMartelo={explMartelo}
-          setExplMartelo={setExplMartelo}
-          explCavalinho={explCavalinho}
-          setExplCavalinho={setExplCavalinho}
-          explRemadaUnilateral={explRemadaUnilateral}
-          setExplRemadaUnilateral={setExplRemadaUnilateral}
-          explBarraFixa={explBarraFixa}
-          setExplBarraFixa={setExplBarraFixa}
-          explRemadaCabos={explRemadaCabos}
-          setExplRemadaCabos={setExplRemadaCabos}
-        ></ExplicacaoSegunda>
+        {explicacaoAberta !== null && (
+          <Explicacao
+            {...explicacoesData[explicacaoAberta]}
+            onClose={fecharExplicacao}
+          />
+        )}
         <div className="headerWorkDay">
           <p className="marginHeader">Segunda</p>
           <p>Costas - Biceps - Panturrilha</p>
@@ -77,26 +178,26 @@ function Segunda(props: PropsSegunda) {
             <div className="title-exercises">
               <p>Costas</p>
               <div className="exercises">
-                <div>
-                  <div
-                    className="blocks"
-                    onClick={() => setExplBarraFixa(true)}
-                  >
-                    <p className="tittle">Barra fixa com pegada aberta</p>
-                    <img src={barraFixa} className="img-exercices"></img>
-                  </div>
-                  <div
-                    className="blocks"
-                    onClick={() => setExplRemadaCabos(true)}
-                  >
-                    <p className="tittle">Remada na máquina de cabos</p>
-                    <img src={remadaMaquina} className="img-exercices"></img>
-                  </div>
+                <div className="arrumar">
+                  {explicacoesData.slice(0, 4).map((explicacao, index) => (
+                    <div
+                      key={index}
+                      className="blocks"
+                      onClick={() => abrirExplicacao(index)}
+                    >
+                      <p className="tittle">{explicacao.tittleApresentation}</p>
+                      <img
+                        src={barraFixa}
+                        className="img-exercices"
+                        alt={explicacao.title}
+                      />
+                    </div>
+                  ))}
                 </div>
                 <div className="next" onClick={props.nextExercise}>
                   <img src="../../../public/arrow.png" alt="Seta avançar"></img>
                 </div>
-                <div>
+                {/* <div>
                   <div
                     className="blocks"
                     onClick={() => setExplCavalinho(true)}
@@ -106,14 +207,12 @@ function Segunda(props: PropsSegunda) {
                   </div>
                   <div
                     className="blocks"
-                    onClick={() =>
-                      setExplRemadaUnilateral(true)
-                    }
+                    onClick={() => setExplRemadaUnilateral(true)}
                   >
                     <p className="tittle">Remada unilateral com halter</p>
                     <img src={remadaSerrote} className="img-exercices"></img>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           )}
@@ -151,10 +250,7 @@ function Segunda(props: PropsSegunda) {
                     <p className="tittle">Rosca bíceps no banco Scott</p>
                     <img src={roscaBarraW} className="img-exercices"></img>
                   </div>
-                  <div
-                    className="blocks"
-                    onClick={() => setExplMartelo(true)}
-                  >
+                  <div className="blocks" onClick={() => setExplMartelo(true)}>
                     <p className="tittle">Rosca bíceps martelo com halteres</p>
                     <img src={martelo} className="img-exercices"></img>
                   </div>
@@ -169,9 +265,7 @@ function Segunda(props: PropsSegunda) {
                 <div>
                   <div
                     className="blocks"
-                    onClick={() =>
-                      setExplPanturrilhaAparelho(true)
-                    }
+                    onClick={() => setExplPanturrilhaAparelho(true)}
                   >
                     <p className="tittle">Elevação de panturrilha aparelho</p>
                     <img
@@ -181,9 +275,7 @@ function Segunda(props: PropsSegunda) {
                   </div>
                   <div
                     className="blocks"
-                    onClick={() =>
-                      setExplPanturrilhaLegPress(true)
-                    }
+                    onClick={() => setExplPanturrilhaLegPress(true)}
                   >
                     <p className="tittle">Elevação de panturrilha no leg</p>
                     <img src={panturrilhaLeg} className="img-exercices"></img>
@@ -195,9 +287,7 @@ function Segunda(props: PropsSegunda) {
                 <div>
                   <div
                     className="blocks"
-                    onClick={() =>
-                      setExplPanturrilhaEscada(true)
-                    }
+                    onClick={() => setExplPanturrilhaEscada(true)}
                   >
                     <p className="tittle">Elevação de panturrilha na escada</p>
                     <img
