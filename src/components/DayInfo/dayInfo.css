@@ -39,6 +39,10 @@
   justify-content: space-around;
 }
 
+.arrumar {
+  display: flex;
+}
+
 .btnClose {
   border: none;
   margin-right: 20px;

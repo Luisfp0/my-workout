@@ -25,7 +25,7 @@ function Segunda(props: PropsSegunda) {
     props.onPressSegunda();
     props.setPage(1);
   }
-  
+
   const explicacoesData = [
     {
       tittleApresentation: "Barra Fixa Pull Up",
@@ -53,31 +53,25 @@ function Segunda(props: PropsSegunda) {
             "Contrair o abdômen é indispensável para proteger a coluna durante qualquer exercício na barra fixa. ",
         },
       ],
-      onClose: () => setExplicacaoAberta(null),    },
+      onClose: () => setExplicacaoAberta(null),
+    },
     {
       tittleApresentation: "Remada na máquina de cabos",
       imageApresentation: remadaMaquina,
       title: "1",
-      texts: [
-        "Texto 1",
-        "Texto 2",
-        "Texto 3",
-      ],
+      texts: ["Texto 1", "Texto 2", "Texto 3"],
       errors: [
         {
           title: "Erro 1",
-          description:
-            "Descrição erro 1",
+          description: "Descrição erro 1",
         },
         {
           title: "Erro 1",
-          description:
-            "Descrição erro 1",
+          description: "Descrição erro 1",
         },
         {
           title: "Erro 2",
-          description:
-            "Descrição erro 2",
+          description: "Descrição erro 2",
         },
       ],
       onClose: () => setExplicacaoAberta(null),
@@ -86,26 +80,19 @@ function Segunda(props: PropsSegunda) {
       tittleApresentation: "Remada em pé com a barra T",
       imageApresentation: cavalinho,
       title: "2",
-      texts: [
-        "Texto 1",
-        "Texto 2",
-        "Texto 3",
-      ],
+      texts: ["Texto 1", "Texto 2", "Texto 3"],
       errors: [
         {
           title: "Erro 1",
-          description:
-            "Descrição erro 1",
+          description: "Descrição erro 1",
         },
         {
           title: "Erro 1",
-          description:
-            "Descrição erro 1",
+          description: "Descrição erro 1",
         },
         {
           title: "Erro 2",
-          description:
-            "Descrição erro 2",
+          description: "Descrição erro 2",
         },
       ],
       onClose: () => setExplicacaoAberta(null),
@@ -114,26 +101,19 @@ function Segunda(props: PropsSegunda) {
       tittleApresentation: "Remada unilateral com halter",
       imageApresentation: remadaSerrote,
       title: "3",
-      texts: [
-        "Texto 1",
-        "Texto 2",
-        "Texto 3",
-      ],
+      texts: ["Texto 1", "Texto 2", "Texto 3"],
       errors: [
         {
           title: "Erro 1",
-          description:
-            "Descrição erro 1",
+          description: "Descrição erro 1",
         },
         {
           title: "Erro 1",
-          description:
-            "Descrição erro 1",
+          description: "Descrição erro 1",
         },
         {
           title: "Erro 2",
-          description:
-            "Descrição erro 2",
+          description: "Descrição erro 2",
         },
       ],
       onClose: () => setExplicacaoAberta(null),
@@ -142,26 +122,19 @@ function Segunda(props: PropsSegunda) {
       tittleApresentation: "Rosca bíceps unilateral com halter",
       imageApresentation: roscaUnilateral,
       title: "4",
-      texts: [
-        "Texto 1",
-        "Texto 2",
-        "Texto 3",
-      ],
+      texts: ["Texto 1", "Texto 2", "Texto 3"],
       errors: [
         {
           title: "Erro 1",
-          description:
-            "Descrição erro 1",
+          description: "Descrição erro 1",
         },
         {
           title: "Erro 1",
-          description:
-            "Descrição erro 1",
+          description: "Descrição erro 1",
         },
         {
           title: "Erro 2",
-          description:
-            "Descrição erro 2",
+          description: "Descrição erro 2",
         },
       ],
       onClose: () => setExplicacaoAberta(null),
@@ -170,26 +143,19 @@ function Segunda(props: PropsSegunda) {
       tittleApresentation: "Rosca bíceps no banco inclinado",
       imageApresentation: bicepsInclinado,
       title: "5",
-      texts: [
-        "Texto 1",
-        "Texto 2",
-        "Texto 3",
-      ],
+      texts: ["Texto 1", "Texto 2", "Texto 3"],
       errors: [
         {
           title: "Erro 1",
-          description:
-            "Descrição erro 1",
+          description: "Descrição erro 1",
         },
         {
           title: "Erro 1",
-          description:
-            "Descrição erro 1",
+          description: "Descrição erro 1",
         },
         {
           title: "Erro 2",
-          description:
-            "Descrição erro 2",
+          description: "Descrição erro 2",
         },
       ],
       onClose: () => setExplicacaoAberta(null),
@@ -198,26 +164,19 @@ function Segunda(props: PropsSegunda) {
       tittleApresentation: "Rosca bíceps no banco Scott",
       imageApresentation: roscaBarraW,
       title: "6",
-      texts: [
-        "Texto 1",
-        "Texto 2",
-        "Texto 3",
-      ],
+      texts: ["Texto 1", "Texto 2", "Texto 3"],
       errors: [
         {
           title: "Erro 1",
-          description:
-            "Descrição erro 1",
+          description: "Descrição erro 1",
         },
         {
           title: "Erro 1",
-          description:
-            "Descrição erro 1",
+          description: "Descrição erro 1",
         },
         {
           title: "Erro 2",
-          description:
-            "Descrição erro 2",
+          description: "Descrição erro 2",
         },
       ],
       onClose: () => setExplicacaoAberta(null),
@@ -226,26 +185,19 @@ function Segunda(props: PropsSegunda) {
       tittleApresentation: "Rosca bíceps martelo com halteres",
       imageApresentation: martelo,
       title: "7",
-      texts: [
-        "Texto 1",
-        "Texto 2",
-        "Texto 3",
-      ],
+      texts: ["Texto 1", "Texto 2", "Texto 3"],
       errors: [
         {
           title: "Erro 1",
-          description:
-            "Descrição erro 1",
+          description: "Descrição erro 1",
         },
         {
           title: "Erro 1",
-          description:
-            "Descrição erro 1",
+          description: "Descrição erro 1",
         },
         {
           title: "Erro 2",
-          description:
-            "Descrição erro 2",
+          description: "Descrição erro 2",
         },
       ],
       onClose: () => setExplicacaoAberta(null),
@@ -254,26 +206,19 @@ function Segunda(props: PropsSegunda) {
       tittleApresentation: "Elevação de panturrilha na escada",
       imageApresentation: panturrilhaEscada,
       title: "8",
-      texts: [
-        "Texto 1",
-        "Texto 2",
-        "Texto 3",
-      ],
+      texts: ["Texto 1", "Texto 2", "Texto 3"],
       errors: [
         {
           title: "Erro 1",
-          description:
-            "Descrição erro 1",
+          description: "Descrição erro 1",
         },
         {
           title: "Erro 1",
-          description:
-            "Descrição erro 1",
+          description: "Descrição erro 1",
         },
         {
           title: "Erro 2",
-          description:
-            "Descrição erro 2",
+          description: "Descrição erro 2",
         },
       ],
       onClose: () => setExplicacaoAberta(null),
@@ -282,26 +227,19 @@ function Segunda(props: PropsSegunda) {
       tittleApresentation: "Elevação de panturrilha aparelho",
       imageApresentation: panturrilhaAparelho,
       title: "9",
-      texts: [
-        "Texto 1",
-        "Texto 2",
-        "Texto 3",
-      ],
+      texts: ["Texto 1", "Texto 2", "Texto 3"],
       errors: [
         {
           title: "Erro 1",
-          description:
-            "Descrição erro 1",
+          description: "Descrição erro 1",
         },
         {
           title: "Erro 1",
-          description:
-            "Descrição erro 1",
+          description: "Descrição erro 1",
         },
         {
           title: "Erro 2",
-          description:
-            "Descrição erro 2",
+          description: "Descrição erro 2",
         },
       ],
       onClose: () => setExplicacaoAberta(null),
@@ -310,26 +248,19 @@ function Segunda(props: PropsSegunda) {
       tittleApresentation: "Elevação de panturrilha no leg",
       imageApresentation: panturrilhaLeg,
       title: "10",
-      texts: [
-        "Texto 1",
-        "Texto 2",
-        "Texto 3",
-      ],
+      texts: ["Texto 1", "Texto 2", "Texto 3"],
       errors: [
         {
           title: "Erro 1",
-          description:
-            "Descrição erro 1",
+          description: "Descrição erro 1",
         },
         {
           title: "Erro 1",
-          description:
-            "Descrição erro 1",
+          description: "Descrição erro 1",
         },
         {
           title: "Erro 2",
-          description:
-            "Descrição erro 2",
+          description: "Descrição erro 2",
         },
       ],
       onClose: () => setExplicacaoAberta(null),
@@ -367,8 +298,24 @@ function Segunda(props: PropsSegunda) {
             <div className="title-exercises">
               <p>Costas</p>
               <div className="exercises">
-                <div className="arrumar">
-                  {explicacoesData.slice(0, 4).map((explicacao, index) => (
+                <div>
+                  {explicacoesData.slice(0, 2).map((explicacao, index) => (
+                    <div
+                      key={index}
+                      className="blocks"
+                      onClick={() => abrirExplicacao(index)}
+                    >
+                      <p className="tittle">{explicacao.tittleApresentation}</p>
+                      <img
+                        src={explicacao.imageApresentation}
+                        className="img-exercices"
+                        alt={explicacao.title}
+                      />
+                    </div>
+                  ))}
+                </div>
+                <div>
+                  {explicacoesData.slice(2, 4).map((explicacao, index) => (
                     <div
                       key={index}
                       className="blocks"
@@ -393,8 +340,24 @@ function Segunda(props: PropsSegunda) {
             <div className="title-exercises">
               <p>Biceps</p>
               <div className="exercises">
-                <div className="arrumar">
-                {explicacoesData.slice(4, 8).map((explicacao, index) => (
+                <div>
+                  {explicacoesData.slice(4, 6).map((explicacao, index) => (
+                    <div
+                      key={index}
+                      className="blocks"
+                      onClick={() => abrirExplicacao(index + 4)}
+                    >
+                      <p className="tittle">{explicacao.tittleApresentation}</p>
+                      <img
+                        src={explicacao.imageApresentation}
+                        className="img-exercices"
+                        alt={explicacao.title}
+                      />
+                    </div>
+                  ))}
+                </div>
+                <div>
+                  {explicacoesData.slice(6, 8).map((explicacao, index) => (
                     <div
                       key={index}
                       className="blocks"
@@ -415,8 +378,6 @@ function Segunda(props: PropsSegunda) {
                 <div className="prev" onClick={props.previousExercise}>
                   <img src="../../../public/arrow.png" alt="Seta voltar"></img>
                 </div>
-                <div>
-                </div>
               </div>
             </div>
           )}
@@ -425,7 +386,7 @@ function Segunda(props: PropsSegunda) {
               <p>Panturrilha</p>
               <div className="exercises">
                 <div className="arrumar">
-                {explicacoesData.slice(8, 11).map((explicacao, index) => (
+                  {explicacoesData.slice(8, 11).map((explicacao, index) => (
                     <div
                       key={index}
                       className="blocks"
