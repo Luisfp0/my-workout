@@ -14,7 +14,6 @@
   justify-content: center;
 }
 
-
 .tittle-explication {
   width: 60%;
   display: flex;
@@ -69,12 +68,31 @@
   text-align: center;
 }
 
-.weight {
+.container-weight {
+  display: flex;
+  flex-direction: column;
   width: 40%;
+  height: 100%;
   text-align: center;
 }
 
-.weight div:first-child{
+.weight{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+.weight p {
+  font-size: 35px;
+}
+
+.weight button {
+  height: 30px;
+  width: 30px;
+}
+
+.container-weight div:first-child{
   margin-bottom: 15px;
 }
 

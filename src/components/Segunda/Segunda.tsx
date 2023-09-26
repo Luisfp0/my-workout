@@ -21,16 +21,48 @@ interface PropsSegunda {
 }
 
 function Segunda(props: PropsSegunda) {
+
+  const [explicacaoAberta, setExplicacaoAberta] = useState(null);
+
   function closeSegunda() {
     props.onPressSegunda();
     props.setPage(1);
   }
 
-  const explicacoesData = [
+  function abrirExplicacao(index: any) {
+    setExplicacaoAberta(index);
+  }
+
+  function fecharExplicacao() {
+    setExplicacaoAberta(null);
+  }
+
+  function addWeight(index: number) {
+    console.log(index)
+    const updatedExplicacoesData = [...explicacoesData];
+    updatedExplicacoesData[index].weight += 1;
+    setExplicacoesData(updatedExplicacoesData);
+  }
+  
+  function removeWeight(index: number) {
+    if (explicacoesData[index].weight === 0) {
+      return;
+    }
+    const updatedExplicacoesData = [...explicacoesData];
+    updatedExplicacoesData[index].weight -= 1;
+    setExplicacoesData(updatedExplicacoesData);
+  }  
+
+  
+
+  const [explicacoesData, setExplicacoesData] = useState([
     {
       tittleApresentation: "Barra Fixa Pull Up",
       imageApresentation: barraFixa,
-      title: "0",
+      title: "Barra fixa pull up",
+      weight: 0,
+      addWeight: () => addWeight(0),
+      removeWeight: () => removeWeight(0),
       texts: [
         "Para realizar o movimento corretamente, é importante segurar a barra com a pegada aberta pronada. Primeiramente, se pendure na barra com os braços esticados e as mãos afastadas na mesma largura dos ombros.",
         "Em seguida, flexione os joelhos e cruze os tornozelos. Então, contraia os glúteos e as escápulas dos ombros e faça força para levantar o corpo para o alto até que seus ombros fiquem abaixo da barra e seus braços fiquem em um ângulo de 90 graus.",
@@ -59,6 +91,9 @@ function Segunda(props: PropsSegunda) {
       tittleApresentation: "Remada na máquina de cabos",
       imageApresentation: remadaMaquina,
       title: "1",
+      weight: 0,
+      addWeight: () => addWeight(1),
+      removeWeight: () => removeWeight(1),
       texts: ["Texto 1", "Texto 2", "Texto 3"],
       errors: [
         {
@@ -80,6 +115,9 @@ function Segunda(props: PropsSegunda) {
       tittleApresentation: "Remada em pé com a barra T",
       imageApresentation: cavalinho,
       title: "2",
+      weight: 0,
+      addWeight: () => addWeight(2),
+      removeWeight: () => removeWeight(2),
       texts: ["Texto 1", "Texto 2", "Texto 3"],
       errors: [
         {
@@ -101,6 +139,9 @@ function Segunda(props: PropsSegunda) {
       tittleApresentation: "Remada unilateral com halter",
       imageApresentation: remadaSerrote,
       title: "3",
+      weight: 0,
+      addWeight: () => addWeight(3),
+      removeWeight: () => removeWeight(3),
       texts: ["Texto 1", "Texto 2", "Texto 3"],
       errors: [
         {
@@ -122,6 +163,9 @@ function Segunda(props: PropsSegunda) {
       tittleApresentation: "Rosca bíceps unilateral com halter",
       imageApresentation: roscaUnilateral,
       title: "4",
+      weight: 0,
+      addWeight: addWeight,
+      removeWeight: removeWeight,
       texts: ["Texto 1", "Texto 2", "Texto 3"],
       errors: [
         {
@@ -143,6 +187,9 @@ function Segunda(props: PropsSegunda) {
       tittleApresentation: "Rosca bíceps no banco inclinado",
       imageApresentation: bicepsInclinado,
       title: "5",
+      weight: 0,
+      addWeight: addWeight,
+      removeWeight: removeWeight,
       texts: ["Texto 1", "Texto 2", "Texto 3"],
       errors: [
         {
@@ -164,6 +211,9 @@ function Segunda(props: PropsSegunda) {
       tittleApresentation: "Rosca bíceps no banco Scott",
       imageApresentation: roscaBarraW,
       title: "6",
+      weight: 0,
+      addWeight: addWeight,
+      removeWeight: removeWeight,
       texts: ["Texto 1", "Texto 2", "Texto 3"],
       errors: [
         {
@@ -185,6 +235,9 @@ function Segunda(props: PropsSegunda) {
       tittleApresentation: "Rosca bíceps martelo com halteres",
       imageApresentation: martelo,
       title: "7",
+      weight: 0,
+      addWeight: addWeight,
+      removeWeight: removeWeight,
       texts: ["Texto 1", "Texto 2", "Texto 3"],
       errors: [
         {
@@ -206,6 +259,9 @@ function Segunda(props: PropsSegunda) {
       tittleApresentation: "Elevação de panturrilha na escada",
       imageApresentation: panturrilhaEscada,
       title: "8",
+      weight: 0,
+      addWeight: addWeight,
+      removeWeight: removeWeight,
       texts: ["Texto 1", "Texto 2", "Texto 3"],
       errors: [
         {
@@ -227,6 +283,9 @@ function Segunda(props: PropsSegunda) {
       tittleApresentation: "Elevação de panturrilha aparelho",
       imageApresentation: panturrilhaAparelho,
       title: "9",
+      weight: 0,
+      addWeight: addWeight,
+      removeWeight: removeWeight,
       texts: ["Texto 1", "Texto 2", "Texto 3"],
       errors: [
         {
@@ -248,6 +307,9 @@ function Segunda(props: PropsSegunda) {
       tittleApresentation: "Elevação de panturrilha no leg",
       imageApresentation: panturrilhaLeg,
       title: "10",
+      weight: 0,
+      addWeight: addWeight,
+      removeWeight: removeWeight,
       texts: ["Texto 1", "Texto 2", "Texto 3"],
       errors: [
         {
@@ -265,25 +327,19 @@ function Segunda(props: PropsSegunda) {
       ],
       onClose: () => setExplicacaoAberta(null),
     },
-  ];
+  ])
 
-  const [explicacaoAberta, setExplicacaoAberta] = useState(null);
 
-  function abrirExplicacao(index: any) {
-    setExplicacaoAberta(index);
-  }
-
-  function fecharExplicacao() {
-    setExplicacaoAberta(null);
-  }
 
   return (
     <>
       <div className="containerWorkDay">
         {explicacaoAberta !== null && (
           <Explicacao
-            {...explicacoesData[explicacaoAberta]}
-            onClose={fecharExplicacao}
+          {...explicacoesData[explicacaoAberta]}
+          onClose={fecharExplicacao}
+          texts={explicacoesData[explicacaoAberta].texts}
+          errors={explicacoesData[explicacaoAberta].errors}
           />
         )}
         <div className="headerWorkDay">
@@ -319,7 +375,7 @@ function Segunda(props: PropsSegunda) {
                     <div
                       key={index}
                       className="blocks"
-                      onClick={() => abrirExplicacao(index)}
+                      onClick={() => abrirExplicacao(index + 2)}
                     >
                       <p className="tittle">{explicacao.tittleApresentation}</p>
                       <img
@@ -361,7 +417,7 @@ function Segunda(props: PropsSegunda) {
                     <div
                       key={index}
                       className="blocks"
-                      onClick={() => abrirExplicacao(index + 4)}
+                      onClick={() => abrirExplicacao(index + 6)}
                     >
                       <p className="tittle">{explicacao.tittleApresentation}</p>
                       <img

@@ -1,16 +1,27 @@
 import explMuscleBarraFixa from '../../../public/expl-barra-fixa.webp'
 import './explicacao.css'
 
+interface ExplicacaoProps {
+  title: string;
+  onClose: () => void;
+  texts: string[];
+  errors: { title: string; description: string; }[];
+  removeWeight?: () => void;
+  addWeight?: () => void;
+  weight?: number;
+}
 
-function Explicacao(props: any) {
-  console.log(props)
+
+function Explicacao(props: ExplicacaoProps) {
   return (
     <div className="explication">
       <div className="header-explication">
         <p className="tittle-explication">{props.title}</p>
+        <div className='close-box'>
         <button className="close-explication" onClick={props.onClose}>
           X
         </button>
+        </div>
       </div>
       <div className="body-explanation">
         <div className="texts">
@@ -34,9 +45,12 @@ function Explicacao(props: any) {
             </div>
           ))}
         </div>
-        <div className="weight">
-          <div>
+        <div className="container-weight">
             <p>Peso que consegue pegar</p>
+          <div className='weight'>
+            <button onClick={props.removeWeight}>-</button>
+            <p>{props.weight} KG</p>
+            <button onClick={props.addWeight}>+</button>
           </div>
         </div>
       </div>
