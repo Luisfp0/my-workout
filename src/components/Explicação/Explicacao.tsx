@@ -1,4 +1,3 @@
-import explMuscleBarraFixa from '../../../public/expl-barra-fixa.webp'
 import './explicacao.css'
 
 interface ExplicacaoProps {
@@ -9,6 +8,7 @@ interface ExplicacaoProps {
   removeWeight?: () => void;
   addWeight?: () => void;
   weight?: number;
+  imageJpg: any;
 }
 
 
@@ -30,7 +30,7 @@ function Explicacao(props: ExplicacaoProps) {
           ))}
         </div>
         <div className="image-container">
-          <img className="image-muscle" src={explMuscleBarraFixa} alt={props.title} />
+          <img className="image-muscle" src={props.imageJpg} alt={props.title} />
         </div>
       </div>
       <div className="footer-container">
