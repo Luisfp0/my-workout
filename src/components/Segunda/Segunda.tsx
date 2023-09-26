@@ -164,8 +164,8 @@ function Segunda(props: PropsSegunda) {
       imageApresentation: roscaUnilateral,
       title: "4",
       weight: 0,
-      addWeight: addWeight,
-      removeWeight: removeWeight,
+      addWeight: () => addWeight(4),
+      removeWeight: () => removeWeight(4),
       texts: ["Texto 1", "Texto 2", "Texto 3"],
       errors: [
         {
@@ -188,8 +188,8 @@ function Segunda(props: PropsSegunda) {
       imageApresentation: bicepsInclinado,
       title: "5",
       weight: 0,
-      addWeight: addWeight,
-      removeWeight: removeWeight,
+      addWeight: () => addWeight(5),
+      removeWeight: () => removeWeight(5),
       texts: ["Texto 1", "Texto 2", "Texto 3"],
       errors: [
         {
@@ -212,8 +212,8 @@ function Segunda(props: PropsSegunda) {
       imageApresentation: roscaBarraW,
       title: "6",
       weight: 0,
-      addWeight: addWeight,
-      removeWeight: removeWeight,
+      addWeight: () => addWeight(6),
+      removeWeight: () => removeWeight(6),
       texts: ["Texto 1", "Texto 2", "Texto 3"],
       errors: [
         {
@@ -236,8 +236,8 @@ function Segunda(props: PropsSegunda) {
       imageApresentation: martelo,
       title: "7",
       weight: 0,
-      addWeight: addWeight,
-      removeWeight: removeWeight,
+      addWeight: () => addWeight(7),
+      removeWeight: () => removeWeight(7),
       texts: ["Texto 1", "Texto 2", "Texto 3"],
       errors: [
         {
@@ -260,8 +260,8 @@ function Segunda(props: PropsSegunda) {
       imageApresentation: panturrilhaEscada,
       title: "8",
       weight: 0,
-      addWeight: addWeight,
-      removeWeight: removeWeight,
+      addWeight: () => addWeight(8),
+      removeWeight: () => removeWeight(8),
       texts: ["Texto 1", "Texto 2", "Texto 3"],
       errors: [
         {
@@ -284,8 +284,8 @@ function Segunda(props: PropsSegunda) {
       imageApresentation: panturrilhaAparelho,
       title: "9",
       weight: 0,
-      addWeight: addWeight,
-      removeWeight: removeWeight,
+      addWeight: () => addWeight(9),
+      removeWeight: () => removeWeight(9),
       texts: ["Texto 1", "Texto 2", "Texto 3"],
       errors: [
         {
@@ -308,8 +308,8 @@ function Segunda(props: PropsSegunda) {
       imageApresentation: panturrilhaLeg,
       title: "10",
       weight: 0,
-      addWeight: addWeight,
-      removeWeight: removeWeight,
+      addWeight: () => addWeight(10),
+      removeWeight: () => removeWeight(10),
       texts: ["Texto 1", "Texto 2", "Texto 3"],
       errors: [
         {
