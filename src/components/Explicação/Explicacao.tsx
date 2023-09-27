@@ -8,7 +8,7 @@ interface ExplicacaoProps {
   removeWeight?: () => void;
   addWeight?: () => void;
   weight?: number;
-  imageJpg: any;
+  imageJpg?: any;
 }
 
 
