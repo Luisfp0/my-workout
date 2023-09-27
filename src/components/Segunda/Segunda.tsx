@@ -13,6 +13,10 @@ import explRemadaMaquina from "../../../public/expl-remada-maquina.jpg";
 import explMuscleBarraFixa from "../../../public/expl-barra-fixa.webp";
 import explCavalinho from "../../../public/expl-cavalinho.webp";
 import explRemadaUnilateral from "../../../public/expl-remada-unilateral.jpg";
+import explRoscaUnilateral from "../../../public/expl-rosca-concentrada-.webp";
+import explRoscaInclinado from "../../../public/expl-rosca-inclinado.jpg";
+import explRoscaBancoScoot from "../../../public/expl-rosca-banco-scoot.webp";
+import explBicepsMartelo from "../../../public/expl-biceps-martelo.webp";
 
 
 import { useState } from "react";
@@ -190,23 +194,32 @@ function Segunda(props: PropsSegunda) {
     {
       tittleApresentation: "Rosca bíceps unilateral com halter",
       imageApresentation: roscaUnilateral,
-      title: "4",
+      title: "Rosca bíceps unilateral com halter",
+      imageJpg: explRoscaUnilateral,
       weight: 0,
       addWeight: () => addWeight(4),
       removeWeight: () => removeWeight(4),
-      texts: ["Texto 1", "Texto 2", "Texto 3"],
+      texts: [
+        "Sente-se na extremidade de um banco reto com os pés no chão e as pernas afastadas entre si em uma distância maior do que a largura dos ombros.",
+        "Ative o abdômen e incline o tronco para a frente mantendo a coluna em sua curvatura natural. Mantenha o pescoço e as costas relaxados, o peito erguido e olhe para a frente. ",
+        "Agora, segure um halter com a pegada supinada (palmas das mãos voltadas para cima) e apoie o cotovelo na parte interna da coxa. Então, estique o braço para baixo e considere esta a posição inicial.",
+        "Flexione o braço com o cuidado de não hiperestender o cotovelo enquanto levanta o halter em direção ao peitoral. Não esqueça de contrair o bíceps durante a elevação. Retorne lentamente à posição inicial e repita quantas vezes forem necessárias para completar sua série. Inspire ao baixar o halter e expire ao levantar o peso.",
+      ],
       errors: [
         {
-          title: "Erro 1",
-          description: "Descrição erro 1",
+          title: "Deixar a coluna torta",
+          description:
+            "Mantenha a coluna em uma posição neutra, pois isso diminui o risco de sentir dor ou sofrer uma lesão por conta da má postura. ",
         },
         {
-          title: "Erro 1",
-          description: "Descrição erro 1",
+          title: "Apoiar o cotovelo em cima da coxa",
+          description:
+            "O cotovelo deve ficar apoiado na lateral interna da coxa e não em cima. De fato, a posição errada pode mudar o foco do exercício e diminuir o uso do bíceps.",
         },
         {
-          title: "Erro 2",
-          description: "Descrição erro 2",
+          title: "Movimentar o punho",
+          description:
+            "É muito importante manter o punho em uma posição neutra, sem nenhum tipo de flexão para evitar desconfortos durante e após o treino.",
         },
       ],
       onClose: () => setExplicacaoAberta(null),
@@ -214,23 +227,32 @@ function Segunda(props: PropsSegunda) {
     {
       tittleApresentation: "Rosca bíceps no banco inclinado",
       imageApresentation: bicepsInclinado,
-      title: "5",
+      title: "Rosca bíceps no banco inclinado",
+      imageJpg: explRoscaInclinado,
       weight: 0,
       addWeight: () => addWeight(5),
       removeWeight: () => removeWeight(5),
-      texts: ["Texto 1", "Texto 2", "Texto 3"],
+      texts: [
+        "Primeiramente, escolha um par de halteres para fazer o exercício. Então, sente-se com as costas apoiadas no banco e as pernas afastadas em volta do banco. Os pés devem ficar firmes no chão e os braços esticados ao lado do corpo enquanto você segura os halteres com uma pegada neutra. ",
+        "Mantenha o pescoço em uma posição neutra e alinhado com as costas. Agora, gire os ombros para trás e para baixo, contraia o abdômen e comece o exercício.",
+        "Comece contraindo o bíceps e dobrando os cotovelos. Ao flexionar os cotovelos, gire os punhos para mudar de uma pegada neutra para uma pegada supinada com as palmas das mãos voltadas para cima.",
+        "Pare no topo do movimento assim que os halteres chegarem perto dos ombros. Então, desça lentamente até voltar para a posição inicial.",
+      ],
       errors: [
         {
-          title: "Erro 1",
-          description: "Descrição erro 1",
+          title: "Esticar os braços",
+          description:
+            "É importante estender os braços durante a rosca bíceps, mas você não precisa ir até o limite, pois isso pode sobrecarregar as articulações dos cotovelos e causar dores. ",
         },
         {
-          title: "Erro 1",
-          description: "Descrição erro 1",
+          title: "Descer os braços muito rapidamente",
+          description:
+            "Controle o movimento, principalmente na hora da descida. Ao descer os halteres rápido demais, você reduz a tensão muscular no bíceps e corre o risco de deixá-los escapar das mãos.",
         },
         {
-          title: "Erro 2",
-          description: "Descrição erro 2",
+          title: "Balançar os braços para a frente",
+          description:
+            "Mantenha os braços pendurados atrás do tronco em uma posição estável, sem nenhum tipo de balanço. Se você notar que seus braços estão balançando para a frente no momento de erguer os halteres, faça uma pausa e corrija o movimento, pois isso diminui o alongamento e a tensão muscular.",
         },
       ],
       onClose: () => setExplicacaoAberta(null),
@@ -238,23 +260,31 @@ function Segunda(props: PropsSegunda) {
     {
       tittleApresentation: "Rosca bíceps no banco Scott",
       imageApresentation: roscaBarraW,
-      title: "6",
+      title: "Rosca bíceps no banco Scott",
+      imageJpg: explRoscaBancoScoot,
       weight: 0,
       addWeight: () => addWeight(6),
       removeWeight: () => removeWeight(6),
-      texts: ["Texto 1", "Texto 2", "Texto 3"],
+      texts: [
+        "Mantenha as pernas afastadas entre si em uma distância maior do que a largura dos ombros. Os pés devem ficar levemente apontados para fora. O tronco pode ficar um pouco inclinado para a frente, mas as costas e a cabeça devem estar retas e alinhadas.",
+        "Então, apoie a parte posterior dos braços no apoio almofadado, desde as axilas até os cotovelos.",
+        "Agora, segure a barra W com a pegada supinada (palmas das mãos voltadas para cima) e deixe os braços esticados para baixo em um ângulo de cerca de 45 graus em relação ao tronco. Esta é a posição inicial da rosca Scott com a barra W.",
+      ],
       errors: [
         {
-          title: "Erro 1",
-          description: "Descrição erro 1",
+          title: "Esticar totalmente o cotovelo",
+          description:
+            "Pare o movimento de extensão de cotovelos antes que seus braços “travem” na parte inferior. Caso contrário, você pode colocar muito estresse nos cotovelos e causar dor ou lesão.",
         },
         {
-          title: "Erro 1",
-          description: "Descrição erro 1",
+          title: "Encostar a barra nos ombros",
+          description:
+            "Tente subir a barra W ao máximo, mas sem que para isso você encoste a barra nos ombros. O fato é que esse toque aparentemente inofensivo pode fazer o seu corpo relaxar e descansar.",
         },
         {
-          title: "Erro 2",
-          description: "Descrição erro 2",
+          title: "Ajustar o banco Scott incorretamente",
+          description:
+            "Preste atenção no ajuste do banco Scott. Pois ele não deve ficar muito alto nem muito baixo, já que isso afeta a postura corporal e pode tornar mais difícil manter os braços apoiados no suporte.",
         },
       ],
       onClose: () => setExplicacaoAberta(null),
@@ -262,23 +292,32 @@ function Segunda(props: PropsSegunda) {
     {
       tittleApresentation: "Rosca bíceps martelo com halteres",
       imageApresentation: martelo,
-      title: "7",
+      title: "Rosca bíceps martelo com halteres",
+      imageJpg: explBicepsMartelo,
       weight: 0,
       addWeight: () => addWeight(7),
       removeWeight: () => removeWeight(7),
-      texts: ["Texto 1", "Texto 2", "Texto 3"],
+      texts: [
+        "Fique em pé com os pés afastados entre si na largura dos ombros e os joelhos levemente dobrados. Segure um halter em cada mão com os pesos ao lado da parte externa da coxa, deixando as palmas das mãos viradas para as laterais das coxas. Arrume sua postura deixando o corpo reto e os cotovelos relaxados. ",
+        "Agora, eleve os halteres em direção ao ombro enquanto flexiona os cotovelos. As palmas das mãos continuam viradas uma para a outra preservando a pegada neutra.",
+        "Deixe o core firme e estável e contraia também os músculos abdominais para proteger as suas costas e evitar movimentos involuntários na hora de levantar e abaixar os halteres. Mantenha também o bíceps contraído para uma melhor ativação muscular.",
+        "Os pulsos ficam alinhados com os antebraços e os únicos movimentos feitos são a flexão e extensão de cotovelos. Por fim, volte para a posição inicial devagar e repita até terminar sua série.",
+      ],
       errors: [
         {
-          title: "Erro 1",
-          description: "Descrição erro 1",
+          title: "Usar o impulso",
+          description:
+            "O erro campeão é usar o impulso para completar o movimento com os halteres. Porém, usar o balanço do corpo para realizar a rosca martelo aumenta o risco de lesão e ainda diminui a ativação do bíceps.",
         },
         {
-          title: "Erro 1",
-          description: "Descrição erro 1",
+          title: "Subir e descer os halteres muito rapidamente",
+          description:
+            "A amplitude de movimento neste exercício não é muito grande. Por isso, é preciso reduzir a velocidade de execução para manter o músculo tensionado por mais tempo.",
         },
         {
-          title: "Erro 2",
-          description: "Descrição erro 2",
+          title: "Fazer movimentos incompletos",
+          description:
+            "É importante esticar totalmente os braços na parte inferior do movimento para alongar os músculos antes de elevar os halteres novamente. Isso também garante uma maior amplitude de movimento e mais tempo de tensão muscular que vai gerar a hipertrofia dos músculos envolvidos na rosca martelo.",
         },
       ],
       onClose: () => setExplicacaoAberta(null),
