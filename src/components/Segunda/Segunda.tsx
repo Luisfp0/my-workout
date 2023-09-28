@@ -17,7 +17,7 @@ import explRoscaUnilateral from "../../../public/expl-rosca-concentrada-.webp";
 import explRoscaInclinado from "../../../public/expl-rosca-inclinado.jpg";
 import explRoscaBancoScoot from "../../../public/expl-rosca-banco-scoot.webp";
 import explBicepsMartelo from "../../../public/expl-biceps-martelo.webp";
-
+import explPanturrilha from "../../../public/expl-musculos-da-perna-panturrilha.webp";
 
 import { useState } from "react";
 import Explicacao from "../Explicação/Explicacao";
@@ -325,72 +325,45 @@ function Segunda(props: PropsSegunda) {
     {
       tittleApresentation: "Elevação de panturrilha na escada",
       imageApresentation: panturrilhaEscada,
-      title: "8",
+      title: "Elevação de panturrilha na escada",
+      imageJpg: panturrilhaEscada,
       weight: 0,
-      addWeight: () => addWeight(8),
-      removeWeight: () => removeWeight(8),
-      texts: ["Texto 1", "Texto 2", "Texto 3"],
-      errors: [
-        {
-          title: "Erro 1",
-          description: "Descrição erro 1",
-        },
-        {
-          title: "Erro 1",
-          description: "Descrição erro 1",
-        },
-        {
-          title: "Erro 2",
-          description: "Descrição erro 2",
-        },
+      texts: [
+        "Para começar, fique em pé em cima de um caixote ou bloco e posicione somente as pontas dos pés no objeto. Deixe as pernas paralelas aos ombros. Em seguida, certifique-se de que as metades dos pés e os calcanhares não estão apoiadas no objeto, de modo que seja possível sentir a panturrilha sendo alongada.",
+        "É aconselhável segurar um bastão ou apoiar-se próximo a uma parede durante a execução desse exercício para ter equilíbrio.",
+        "Então, pressione as pontas dos pés em cima do caixote ou bloco, erguendo os calcanhares.",
+        "Depois, retorne à posição inicial, sem se esquecer de alongar a panturrilha;",
+        "Opcionalmente pode-se usar halteres para aumentar o nível de dificuldade.",
       ],
       onClose: () => setExplicacaoAberta(null),
     },
     {
       tittleApresentation: "Elevação de panturrilha aparelho",
       imageApresentation: panturrilhaAparelho,
-      title: "9",
+      title: "Elevação de panturrilha aparelho",
+      imageJpg: panturrilhaAparelho,
       weight: 0,
       addWeight: () => addWeight(9),
       removeWeight: () => removeWeight(9),
-      texts: ["Texto 1", "Texto 2", "Texto 3"],
-      errors: [
-        {
-          title: "Erro 1",
-          description: "Descrição erro 1",
-        },
-        {
-          title: "Erro 1",
-          description: "Descrição erro 1",
-        },
-        {
-          title: "Erro 2",
-          description: "Descrição erro 2",
-        },
+      texts: [
+        "Primeiro, fique em pé na máquina, com os dedos dos pés em cima da plataforma e os ombros embaixo das almofadas;",
+        "Em seguida, deixe as costas retas e abaixe os calcanhares o máximo que conseguir para alongar completamente.",
+        "Depois, levante os calcanhares o mais alto que puder;",
       ],
       onClose: () => setExplicacaoAberta(null),
     },
     {
       tittleApresentation: "Elevação de panturrilha no leg",
       imageApresentation: panturrilhaLeg,
-      title: "10",
+      title: "Elevação de panturrilha no leg",
+      imageJpg: panturrilhaLeg,
       weight: 0,
       addWeight: () => addWeight(10),
       removeWeight: () => removeWeight(10),
-      texts: ["Texto 1", "Texto 2", "Texto 3"],
-      errors: [
-        {
-          title: "Erro 1",
-          description: "Descrição erro 1",
-        },
-        {
-          title: "Erro 1",
-          description: "Descrição erro 1",
-        },
-        {
-          title: "Erro 2",
-          description: "Descrição erro 2",
-        },
+      texts: [
+        "Para começar, ajuste o banco da máquina de modo que as pernas fiquem ligeiramente dobradas na posição inicial. As pontas dos pés devem estar firmemente apoiadas na plataforma;",
+        "Em seguida, selecione um peso adequado com ajuda do treinador; Depois, levante o peso estendendo os joelhos;",
+        "Então, mantenha os joelhos esticados e empurre os calcanhares para alongar a panturrilha. Faça o número de repetições determinado; Em seguida, retorne à posição inicial.",
       ],
       onClose: () => setExplicacaoAberta(null),
     },
