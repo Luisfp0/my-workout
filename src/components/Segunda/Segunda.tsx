@@ -17,8 +17,6 @@ import explRoscaUnilateral from "../../../public/expl-rosca-concentrada-.webp";
 import explRoscaInclinado from "../../../public/expl-rosca-inclinado.jpg";
 import explRoscaBancoScoot from "../../../public/expl-rosca-banco-scoot.webp";
 import explBicepsMartelo from "../../../public/expl-biceps-martelo.webp";
-import explPanturrilha from "../../../public/expl-musculos-da-perna-panturrilha.webp";
-
 import { useState } from "react";
 import Explicacao from "../Explicação/Explicacao";
 

@@ -6,8 +6,8 @@ import tricepsPulleyCabeca from "../../../public/triceps-no-pulley-atras-ca-cabe
 import extencaoDeitado from "../../../public/extencao-triceps-deitado.webp";
 import tricepsCoice from "../../../public/triceps-coice.gif";
 import crucifixo from "../../../public/crucifixo.webp";
-import ExplicacaoTerca from "../Explicação Terça/ExplicaçãoTerca";
 import { useState } from "react";
+import Explicacao from "../Explicação/Explicacao";
 
 interface PropsTerca {
   onPressTerca: () => void;
@@ -18,15 +18,233 @@ interface PropsTerca {
 }
 
 function Terca(props: PropsTerca) {
-  const [explSupinoHalter, setExplSupinoAlter] = useState(false);
-  const [explSupinoInclinado, setExplSupinoInclinado] = useState(false);
-  const [explVoadorNoCabo, setExplVoadorNoCabo] = useState(false);
-  const [explCrucifixo, setExplCrucifixo] = useState(false);
-  const [explTricepsPulley, setExplTricepsPulley] = useState(false);
-  const [explTricepsPulleyCabeca, setExplTricepsPulleyCabeca] = useState(false);
+  const [explicacaoAberta, setExplicacaoAberta] = useState(null);
 
-  const [explTricepsTesta, setExplTricepsTesta] = useState(false);
-  const [explTricepsCoice, setExplTricepsCoice] = useState(false);
+  function addWeight(index: number) {
+    const updatedExplicacoesData = [...explicacoesData];
+    updatedExplicacoesData[index].weight += 1;
+    setExplicacoesData(updatedExplicacoesData);
+  }
+
+  function removeWeight(index: number) {
+    if (explicacoesData[index].weight === 0) {
+      return;
+    }
+    const updatedExplicacoesData = [...explicacoesData];
+    updatedExplicacoesData[index].weight -= 1;
+    setExplicacoesData(updatedExplicacoesData);
+  }
+
+  function abrirExplicacao(index: any) {
+    setExplicacaoAberta(index);
+  }
+
+  function fecharExplicacao() {
+    setExplicacaoAberta(null);
+  }
+
+  const [explicacoesData, setExplicacoesData] = useState([
+    {
+      tittleApresentation: "Supino com Halter",
+      imageApresentation: supinoRetoHalter,
+      title: "Supino com Halter",
+      imageJpg: supinoRetoHalter,
+      weight: 0,
+      addWeight: () => addWeight(0),
+      removeWeight: () => removeWeight(0),
+      texts: ["Text1", "Text2", "Text3."],
+      errors: [
+        {
+          title: "Error1",
+          description: "DescriptionError1",
+        },
+        {
+          title: "Error2",
+          description: "DescriptionError2",
+        },
+        {
+          title: "Error3",
+          description: "DescriptionError2",
+        },
+      ],
+      onClose: () => setExplicacaoAberta(null),
+    },
+    {
+      tittleApresentation: "Supino inclinado com halteres",
+      imageApresentation: supinoInclinadoHalter,
+      title: "Supino inclinado com halteres",
+      imageJpg: supinoInclinadoHalter,
+      weight: 0,
+      addWeight: () => addWeight(1),
+      removeWeight: () => removeWeight(1),
+      texts: ["Text1", "Text2", "Text3."],
+      errors: [
+        {
+          title: "Error1",
+          description: "DescriptionError1",
+        },
+        {
+          title: "Error2",
+          description: "DescriptionError2",
+        },
+        {
+          title: "Error3",
+          description: "DescriptionError2",
+        },
+      ],
+      onClose: () => setExplicacaoAberta(null),
+    },
+    {
+      tittleApresentation: "Crucifixo",
+      imageApresentation: crucifixo,
+      title: "Crucifixo",
+      imageJpg: crucifixo,
+      weight: 0,
+      addWeight: () => addWeight(2),
+      removeWeight: () => removeWeight(2),
+      texts: ["Text1", "Text2", "Text3."],
+      errors: [
+        {
+          title: "Error1",
+          description: "DescriptionError1",
+        },
+        {
+          title: "Error2",
+          description: "DescriptionError2",
+        },
+        {
+          title: "Error3",
+          description: "DescriptionError2",
+        },
+      ],
+      onClose: () => setExplicacaoAberta(null),
+    },
+    {
+      tittleApresentation: "Voador no cabo com banco inclinado",
+      imageApresentation: voadorInclinado,
+      title: "Voador no cabo com banco inclinado",
+      imageJpg: voadorInclinado,
+      weight: 0,
+      addWeight: () => addWeight(3),
+      removeWeight: () => removeWeight(3),
+      texts: ["Text1", "Text2", "Text3."],
+      errors: [
+        {
+          title: "Error1",
+          description: "DescriptionError1",
+        },
+        {
+          title: "Error2",
+          description: "DescriptionError2",
+        },
+        {
+          title: "Error3",
+          description: "DescriptionError2",
+        },
+      ],
+      onClose: () => setExplicacaoAberta(null),
+    },
+    {
+      tittleApresentation: "Tríceps na polia alta com barra reta",
+      imageApresentation: tricepsPulley,
+      title: "Tríceps na polia alta com barra reta",
+      imageJpg: tricepsPulley,
+      weight: 0,
+      addWeight: () => addWeight(4),
+      removeWeight: () => removeWeight(4),
+      texts: ["Text1", "Text2", "Text3."],
+      errors: [
+        {
+          title: "Error1",
+          description: "DescriptionError1",
+        },
+        {
+          title: "Error2",
+          description: "DescriptionError2",
+        },
+        {
+          title: "Error3",
+          description: "DescriptionError2",
+        },
+      ],
+      onClose: () => setExplicacaoAberta(null),
+    },
+    {
+      tittleApresentation: "Extensão de tríceps no cabo sob a cabeça com corda",
+      imageApresentation: tricepsPulleyCabeca,
+      title: "Extensão de tríceps no cabo sob a cabeça com corda",
+      imageJpg: tricepsPulleyCabeca,
+      weight: 0,
+      addWeight: () => addWeight(5),
+      removeWeight: () => removeWeight(5),
+      texts: ["Text1", "Text2", "Text3."],
+      errors: [
+        {
+          title: "Error1",
+          description: "DescriptionError1",
+        },
+        {
+          title: "Error2",
+          description: "DescriptionError2",
+        },
+        {
+          title: "Error3",
+          description: "DescriptionError2",
+        },
+      ],
+      onClose: () => setExplicacaoAberta(null),
+    },
+    {
+      tittleApresentation: "Extensão de tríceps deitado",
+      imageApresentation: extencaoDeitado,
+      title: "Extensão de tríceps deitado",
+      imageJpg: extencaoDeitado,
+      weight: 0,
+      addWeight: () => addWeight(6),
+      removeWeight: () => removeWeight(6),
+      texts: ["Text1", "Text2", "Text3."],
+      errors: [
+        {
+          title: "Error1",
+          description: "DescriptionError1",
+        },
+        {
+          title: "Error2",
+          description: "DescriptionError2",
+        },
+        {
+          title: "Error3",
+          description: "DescriptionError2",
+        },
+      ],
+      onClose: () => setExplicacaoAberta(null),
+    },
+    {
+      tittleApresentation: "Triceps Coice",
+      imageApresentation: tricepsCoice,
+      title: "Triceps Coice",
+      imageJpg: tricepsCoice,
+      weight: 0,
+      addWeight: () => addWeight(7),
+      removeWeight: () => removeWeight(7),
+      texts: ["Text1", "Text2", "Text3."],
+      errors: [
+        {
+          title: "Error1",
+          description: "DescriptionError1",
+        },
+        {
+          title: "Error2",
+          description: "DescriptionError2",
+        },
+        {
+          title: "Error3",
+          description: "DescriptionError2",
+        },
+      ],
+      onClose: () => setExplicacaoAberta(null),
+    },
+  ]);
 
   function closeTerca() {
     props.onPressTerca();
@@ -34,24 +252,14 @@ function Terca(props: PropsTerca) {
   }
   return (
     <div className="containerWorkDay">
-      <ExplicacaoTerca
-        explTricepsCoice={explTricepsCoice}
-        setExplTricepsCoice={setExplTricepsCoice}
-        explTricepsTesta={explTricepsTesta}
-        setExplTricepsTesta={setExplTricepsTesta}
-        explTricepsPulleyCabeca={explTricepsPulleyCabeca}
-        setExplTricepsPulleyCabeca={setExplTricepsPulleyCabeca}
-        explTricepsPulley={explTricepsPulley}
-        setExplTricepsPulley={setExplTricepsPulley}
-        explCrucifixo={explCrucifixo}
-        setExplCrucifixo={setExplCrucifixo}
-        explVoadorNoCabo={explVoadorNoCabo}
-        setExplVoadorNoCabo={setExplVoadorNoCabo}
-        explSupinoInclinado={explSupinoInclinado}
-        setExplSupinoInclinado={setExplSupinoInclinado}
-        explSupinoHalter={explSupinoHalter}
-        setExplSupinoAlter={setExplSupinoAlter}
-      ></ExplicacaoTerca>
+      {explicacaoAberta !== null && (
+        <Explicacao
+          {...explicacoesData[explicacaoAberta]}
+          onClose={fecharExplicacao}
+          texts={explicacoesData[explicacaoAberta].texts}
+          errors={explicacoesData[explicacaoAberta].errors}
+        />
+      )}
       <div className="headerWorkDay">
         <p className="marginHeader">Terça</p>
         <p>Peito - Triceps - Abdomem</p>
@@ -65,39 +273,39 @@ function Terca(props: PropsTerca) {
             <p>Peito</p>
             <div className="exercises">
               <div>
-                <div
-                  className="blocks"
-                  onClick={() => setExplSupinoAlter(true)}
-                >
-                  <p className="tittle">Supino reto com halteres</p>
-                  <img src={supinoRetoHalter} className="img-exercices"></img>
-                </div>
-                <div
-                  className="blocks"
-                  onClick={() => setExplSupinoInclinado(true)}
-                >
-                  <p className="tittle">Supino inclinado com halteres</p>
-                  <img
-                    src={supinoInclinadoHalter}
-                    className="img-exercices"
-                  ></img>
-                </div>
+                {explicacoesData.slice(0, 2).map((explicacao, index) => (
+                  <div
+                    key={index}
+                    className="blocks"
+                    onClick={() => abrirExplicacao(index)}
+                  >
+                    <p className="tittle">{explicacao.tittleApresentation}</p>
+                    <img
+                      src={explicacao.imageApresentation}
+                      className="img-exercices"
+                      alt={explicacao.title}
+                    />
+                  </div>
+                ))}
               </div>
               <div className="next" onClick={props.nextExercise}>
                 <img src="../../../public/arrow.png" alt="Seta avançar"></img>
               </div>
               <div>
-                <div className="blocks" onClick={() => setExplCrucifixo(true)}>
-                  <p className="tittle">Crucifixo</p>
-                  <img src={crucifixo} className="img-exercices"></img>
-                </div>
-                <div
-                  className="blocks"
-                  onClick={() => setExplVoadorNoCabo(true)}
-                >
-                  <p className="tittle">Voador no cabo com banco inclinado</p>
-                  <img src={voadorInclinado} className="img-exercices"></img>
-                </div>
+                {explicacoesData.slice(2, 4).map((explicacao, index) => (
+                  <div
+                    key={index}
+                    className="blocks"
+                    onClick={() => abrirExplicacao(index + 2)}
+                  >
+                    <p className="tittle">{explicacao.tittleApresentation}</p>
+                    <img
+                      src={explicacao.imageApresentation}
+                      className="img-exercices"
+                      alt={explicacao.title}
+                    />
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -107,44 +315,39 @@ function Terca(props: PropsTerca) {
             <p>Triceps</p>
             <div className="exercises">
               <div>
-                <div
-                  className="blocks"
-                  onClick={() => setExplTricepsPulley(true)}
-                >
-                  <p className="tittle">Tríceps na polia alta com barra reta</p>
-                  <img src={tricepsPulley} className="img-exercices"></img>
-                </div>
-                <div
-                  className="blocks"
-                  onClick={() => setExplTricepsPulleyCabeca(true)}
-                >
-                  <p className="tittle">
-                    Extensão de tríceps no cabo sob a cabeça com corda
-                  </p>
-                  <img
-                    src={tricepsPulleyCabeca}
-                    className="img-exercices"
-                  ></img>
-                </div>
+              {explicacoesData.slice(4, 6).map((explicacao, index) => (
+                  <div
+                    key={index}
+                    className="blocks"
+                    onClick={() => abrirExplicacao(index + 4)}
+                  >
+                    <p className="tittle">{explicacao.tittleApresentation}</p>
+                    <img
+                      src={explicacao.imageApresentation}
+                      className="img-exercices"
+                      alt={explicacao.title}
+                    />
+                  </div>
+                ))}
               </div>
               <div className="prev" onClick={props.previousExercise}>
                 <img src="../../../public/arrow.png" alt="Seta voltar"></img>
               </div>
               <div>
-                <div
-                  className="blocks"
-                  onClick={() => setExplTricepsTesta(true)}
-                >
-                  <p className="tittle">Extensão de tríceps deitado</p>
-                  <img src={extencaoDeitado} className="img-exercices"></img>
-                </div>
-                <div
-                  className="blocks"
-                  onClick={() => setExplTricepsCoice(true)}
-                >
-                  <p className="tittle">Triceps Coice</p>
-                  <img src={tricepsCoice} className="img-exercices"></img>
-                </div>
+              {explicacoesData.slice(6, 8).map((explicacao, index) => (
+                  <div
+                    key={index}
+                    className="blocks"
+                    onClick={() => abrirExplicacao(index + 6)}
+                  >
+                    <p className="tittle">{explicacao.tittleApresentation}</p>
+                    <img
+                      src={explicacao.imageApresentation}
+                      className="img-exercices"
+                      alt={explicacao.title}
+                    />
+                  </div>
+                ))}
               </div>
             </div>
           </div>
