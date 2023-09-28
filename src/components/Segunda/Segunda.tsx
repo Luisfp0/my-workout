@@ -29,19 +29,11 @@ interface PropsSegunda {
 }
 
 function Segunda(props: PropsSegunda) {
-  const [explicacaoAberta, setExplicacaoAberta] = useState(null);
+  const [explicacaoAberta, setExplicacaoAberta] = useState<number | null>(null);
 
   function closeSegunda() {
     props.onPressSegunda();
     props.setPage(1);
-  }
-
-  function abrirExplicacao(index: any) {
-    setExplicacaoAberta(index);
-  }
-
-  function fecharExplicacao() {
-    setExplicacaoAberta(null);
   }
 
   function addWeight(index: number) {
@@ -371,12 +363,7 @@ function Segunda(props: PropsSegunda) {
     <>
       <div className="containerWorkDay">
         {explicacaoAberta !== null && (
-          <Explicacao
-            {...explicacoesData[explicacaoAberta]}
-            onClose={fecharExplicacao}
-            texts={explicacoesData[explicacaoAberta].texts}
-            errors={explicacoesData[explicacaoAberta].errors}
-          />
+          <Explicacao {...explicacoesData[explicacaoAberta]} />
         )}
         <div className="headerWorkDay">
           <p className="marginHeader">Segunda</p>
@@ -395,7 +382,7 @@ function Segunda(props: PropsSegunda) {
                     <div
                       key={index}
                       className="blocks"
-                      onClick={() => abrirExplicacao(index)}
+                      onClick={() => setExplicacaoAberta(index)}
                     >
                       <p className="tittle">{explicacao.tittleApresentation}</p>
                       <img
@@ -411,7 +398,7 @@ function Segunda(props: PropsSegunda) {
                     <div
                       key={index}
                       className="blocks"
-                      onClick={() => abrirExplicacao(index + 2)}
+                      onClick={() => setExplicacaoAberta(index + 2)}
                     >
                       <p className="tittle">{explicacao.tittleApresentation}</p>
                       <img
@@ -437,7 +424,7 @@ function Segunda(props: PropsSegunda) {
                     <div
                       key={index}
                       className="blocks"
-                      onClick={() => abrirExplicacao(index + 4)}
+                      onClick={() => setExplicacaoAberta(index + 4)}
                     >
                       <p className="tittle">{explicacao.tittleApresentation}</p>
                       <img
@@ -453,7 +440,7 @@ function Segunda(props: PropsSegunda) {
                     <div
                       key={index}
                       className="blocks"
-                      onClick={() => abrirExplicacao(index + 6)}
+                      onClick={() => setExplicacaoAberta(index + 6)}
                     >
                       <p className="tittle">{explicacao.tittleApresentation}</p>
                       <img
@@ -482,7 +469,7 @@ function Segunda(props: PropsSegunda) {
                     <div
                       key={index}
                       className="blocks"
-                      onClick={() => abrirExplicacao(index + 8)}
+                      onClick={() => setExplicacaoAberta(index + 8)}
                     >
                       <p className="tittle">{explicacao.tittleApresentation}</p>
                       <img

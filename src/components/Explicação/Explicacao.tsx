@@ -6,9 +6,9 @@ interface ExplicacaoProps {
   texts: string[];
   errors?: { title: string; description: string }[];
   removeWeight?: () => void;
-  addWeight?: () => void;
-  weight?: number;
-  imageJpg?: any;
+  addWeight?: () => void | undefined;
+  weight: number;
+  imageJpg?: string;
 }
 
 function Explicacao(props: ExplicacaoProps) {

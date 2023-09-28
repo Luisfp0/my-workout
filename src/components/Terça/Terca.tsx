@@ -18,7 +18,7 @@ interface PropsTerca {
 }
 
 function Terca(props: PropsTerca) {
-  const [explicacaoAberta, setExplicacaoAberta] = useState(null);
+  const [explicacaoAberta, setExplicacaoAberta] = useState<number | null>(null);
 
   function addWeight(index: number) {
     const updatedExplicacoesData = [...explicacoesData];
@@ -33,14 +33,6 @@ function Terca(props: PropsTerca) {
     const updatedExplicacoesData = [...explicacoesData];
     updatedExplicacoesData[index].weight -= 1;
     setExplicacoesData(updatedExplicacoesData);
-  }
-
-  function abrirExplicacao(index: any) {
-    setExplicacaoAberta(index);
-  }
-
-  function fecharExplicacao() {
-    setExplicacaoAberta(null);
   }
 
   const [explicacoesData, setExplicacoesData] = useState([
@@ -255,9 +247,6 @@ function Terca(props: PropsTerca) {
       {explicacaoAberta !== null && (
         <Explicacao
           {...explicacoesData[explicacaoAberta]}
-          onClose={fecharExplicacao}
-          texts={explicacoesData[explicacaoAberta].texts}
-          errors={explicacoesData[explicacaoAberta].errors}
         />
       )}
       <div className="headerWorkDay">
@@ -277,7 +266,7 @@ function Terca(props: PropsTerca) {
                   <div
                     key={index}
                     className="blocks"
-                    onClick={() => abrirExplicacao(index)}
+                    onClick={() => setExplicacaoAberta(index)}
                   >
                     <p className="tittle">{explicacao.tittleApresentation}</p>
                     <img
@@ -296,7 +285,7 @@ function Terca(props: PropsTerca) {
                   <div
                     key={index}
                     className="blocks"
-                    onClick={() => abrirExplicacao(index + 2)}
+                    onClick={() => setExplicacaoAberta(index + 2)}
                   >
                     <p className="tittle">{explicacao.tittleApresentation}</p>
                     <img
@@ -319,7 +308,7 @@ function Terca(props: PropsTerca) {
                   <div
                     key={index}
                     className="blocks"
-                    onClick={() => abrirExplicacao(index + 4)}
+                    onClick={() => setExplicacaoAberta(index + 4)}
                   >
                     <p className="tittle">{explicacao.tittleApresentation}</p>
                     <img
@@ -338,7 +327,7 @@ function Terca(props: PropsTerca) {
                   <div
                     key={index}
                     className="blocks"
-                    onClick={() => abrirExplicacao(index + 6)}
+                    onClick={() => setExplicacaoAberta(index + 6)}
                   >
                     <p className="tittle">{explicacao.tittleApresentation}</p>
                     <img
