@@ -153,15 +153,18 @@ function Terca(props: PropsTerca) {
       errors: [
         {
           title: "Dobrar muito os cotovelos",
-          description: "Deixar os cotovelos flexionarem muito limita a amplitude de movimento no exercício. Como resultado, a eficácia do crucifixo inclinado também diminui. Portanto, deixe os cotovelos levemente dobrados durante o voador inclinado. ",
+          description:
+            "Deixar os cotovelos flexionarem muito limita a amplitude de movimento no exercício. Como resultado, a eficácia do crucifixo inclinado também diminui. Portanto, deixe os cotovelos levemente dobrados durante o voador inclinado. ",
         },
         {
           title: "Esticar os cotovelos",
-          description: "Manter os cotovelos totalmente esticados não é recomendado, pois isso causa muito estresse nos ombros e pode contribuir para o surgimento de dores ou de uma lesão.",
+          description:
+            "Manter os cotovelos totalmente esticados não é recomendado, pois isso causa muito estresse nos ombros e pode contribuir para o surgimento de dores ou de uma lesão.",
         },
         {
           title: "Não controlar a velocidade do movimento",
-          description: "A dificuldade em controlar o movimento pode ocorrer quando a carga é muito leve ou muito pesada.",
+          description:
+            "A dificuldade em controlar o movimento pode ocorrer quando a carga é muito leve ou muito pesada.",
         },
       ],
       onClose: () => setExplicacaoAberta(null),
@@ -174,20 +177,10 @@ function Terca(props: PropsTerca) {
       weight: 0,
       addWeight: () => addWeight(4),
       removeWeight: () => removeWeight(4),
-      texts: ["Text1", "Text2", "Text3."],
-      errors: [
-        {
-          title: "Error1",
-          description: "DescriptionError1",
-        },
-        {
-          title: "Error2",
-          description: "DescriptionError2",
-        },
-        {
-          title: "Error3",
-          description: "DescriptionError2",
-        },
+      texts: [
+        "Prenda uma barra reta ou inclinada a uma polia alta e segure-a com as palmas das mãos voltadas para baixo e separadas em uma distância equivalente à largura dos ombros.",
+        "Mantendo o corpo na posição reta, com uma leve inclinação do tronco para frente, aproxime os antebraços do corpo e deixe-os perpendiculares ao chão. Neste momento, os cotovelos estarão dobrados e os antebraços direcionados para a polia.",
+        "Use o tríceps para empurrar a barra até a frente das coxas, deixando os braços totalmente estendidos, ao mesmo tempo em que exala o ar. Pause o movimento por um segundo nesta posição, e volte lentamente a barra ao seu posicionamento original enquanto inala o ar.",
       ],
       onClose: () => setExplicacaoAberta(null),
     },
@@ -199,19 +192,26 @@ function Terca(props: PropsTerca) {
       weight: 0,
       addWeight: () => addWeight(5),
       removeWeight: () => removeWeight(5),
-      texts: ["Text1", "Text2", "Text3."],
+      texts: [
+        "Antes de mais nada, prenda a corda na polia baixa ou na altura da cintura, se a máquina permitir essa regulagem. Depois disso, selecione o peso adequado para o seu nível de condicionamento físico. Manter a postura correta também faz parte do exercício. Por isso, mantenha sua coluna reta, o abdômen contraído e os pés ligeiramente afastados entre si. ",
+        "Agora, fique de costas para o equipamento, segure as alças da corda e deixe as palmas voltadas uma para a outra em uma pegada neutra. Em seguida, puxe a corda esticando o cabo para o alto até que seus cotovelos fiquem dobrados em um ângulo de 90 graus. A parte superior do braço fica reta apontando para cima e perpendicular ao chão, enquanto que seu antebraço fica paralelo ao solo. ",
+        "Então, inicie o exercício esticando os braços para o alto até estender os cotovelos. Faça uma breve pausa e retorne à posição inicial com os cotovelos flexionados. Volte bem devagar para não soltar o peso de uma vez e se lesionar.",
+      ],
       errors: [
         {
-          title: "Error1",
-          description: "DescriptionError1",
+          title: "Forçar os pulsos",
+          description:
+            "Mesmo sendo pouco intuitivo segurar as alças de uma corda atrás da cabeça, tente manter os pulsos o mais estáveis e confortáveis possível.",
         },
         {
-          title: "Error2",
-          description: "DescriptionError2",
+          title: "Afastar os cotovelos do tronco",
+          description:
+            "Ao cometer esse erro, a tensão muscular deixa o tríceps e acaba sobrecarregando peito e ombros. Desta forma, se concentre para travar os cotovelos ao lado do corpo e movimente as articulações do cotovelo apenas para cima e para baixo. ",
         },
         {
-          title: "Error3",
-          description: "DescriptionError2",
+          title: "Não completar o movimento",
+          description:
+            "Certamente, a baixa amplitude de movimento prejudica os seus resultados pois não ativa o tríceps como deveria. É muito importante que você estenda totalmente os cotovelos e flexione de volta em um ângulo de 90 graus, pois só assim o exercício será eficiente de verdade. ",
         },
       ],
       onClose: () => setExplicacaoAberta(null),
@@ -224,19 +224,26 @@ function Terca(props: PropsTerca) {
       weight: 0,
       addWeight: () => addWeight(6),
       removeWeight: () => removeWeight(6),
-      texts: ["Text1", "Text2", "Text3."],
+      texts: [
+        "Segure um halter em cada mão de modo que as palmas das mãos fiquem viradas uma para a outra. Em seguida, estenda os braços para cima levantando o peso. Considere esta a posição inicial do exercício. Então, flexione os cotovelos para trás levando os halteres em direção ao topo da cabeça. Estique os braços para voltar à posição inicial e repita esses movimentos até completar a sua série.",
+        "Mantenha os braços imóveis e dobre apenas os cotovelos. Além disso, tente manter os cotovelos na mesma linha dos ombros.",
+        "O peso nunca deve tocar a parte de trás da cabeça quando estiver na posição mais baixa. Por isso, faça um movimento lento e controlado.",
+      ],
       errors: [
         {
-          title: "Error1",
-          description: "DescriptionError1",
+          title: "Travar os cotovelos",
+          description:
+            "Apesar de ser bom manter os cotovelos alinhados com os ombros, você nunca deve travar totalmente os cotovelos durante o movimento, esticando completamente os braços.",
         },
         {
-          title: "Error2",
-          description: "DescriptionError2",
+          title: "Errar a posição das mãos",
+          description:
+            "Tente manter as mãos afastadas entre si na mesma largura dos ombros. Isso ajuda a diminuir o estresse nas articulações dos cotovelos durante o exercício.",
         },
         {
-          title: "Error3",
-          description: "DescriptionError2",
+          title: "Deixar o halter escorregar",
+          description:
+            "É muito importante manter os halteres bem firmes nas mãos. Lembre-se que o peso passa muito perto da sua cabeça. Caso um dos halteres escorregue e escape das suas mãos, você pode sofrer um ferimento grave no rosto ou na cabeça.",
         },
       ],
       onClose: () => setExplicacaoAberta(null),
@@ -249,20 +256,11 @@ function Terca(props: PropsTerca) {
       weight: 0,
       addWeight: () => addWeight(7),
       removeWeight: () => removeWeight(7),
-      texts: ["Text1", "Text2", "Text3."],
-      errors: [
-        {
-          title: "Error1",
-          description: "DescriptionError1",
-        },
-        {
-          title: "Error2",
-          description: "DescriptionError2",
-        },
-        {
-          title: "Error3",
-          description: "DescriptionError2",
-        },
+      texts: [
+        "Em uma polia sem nada, ajuste a altura para mais ou menos a altura da sua cintura.",
+        "O braço deve permanecer perto do torso;",
+        "Mantenha o braço direito, e mova apenas o antebraço para trás. Estique o braço completamente e segure;",
+        "Mova o braço calmamente de volta para a posição inicial;",
       ],
       onClose: () => setExplicacaoAberta(null),
     },
