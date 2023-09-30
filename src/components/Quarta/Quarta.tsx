@@ -9,8 +9,8 @@ import elevacaoPelvica from "../../../public/elevacao-pelvica.gif";
 import panturrilhaLeg from "../../../public/Panturrilha-no-leg-press.webp";
 import panturrilhaAparelho from "../../../public/Panturrilha-em-pe-no-aparelho.webp";
 import panturrilhaEscada from "../../../public/Elevacao-de-panturrilha-em-pe-escada.webp";
-import ExplicacaoQuarta from "../Explicação Quarta/ExplicacaoQuarta";
 import { useState } from "react";
+import Explicacao from "../Explicação/Explicacao";
 
 interface PropsQuarta {
   onPressQuarta: () => void;
@@ -21,49 +21,236 @@ interface PropsQuarta {
 }
 
 function Quarta(props: PropsQuarta) {
-  const [explAducao, setExplAducao] = useState(false);
-  const [explAbducaoMaquina, setExplAbducaoMaquina] = useState(false);
-  const [explLeg45, setExplLeg45] = useState(false);
-  const [explCadeiraExtensora, setExplCadeiraExtensora] = useState(false);
-  const [explCadeiraFlexora, setExplCadeiraFlexora] = useState(false);
-  const [explAgachamentoRack, setExplAgachamentoRack] = useState(false);
-  const [expLevantamentoTerra, setExpLevantamentoTerra] = useState(false);
-  const [explElevacaoPelvica, setExplElevacaoPelvica] = useState(false);
-  const [explPanturrilhaLeg, setExplPanturrilhaLeg] = useState(false);
-  const [explPanturrilhaAparelho, setExplPanturrilhaAparelho] = useState(false);
-  const [explPanturrilhaEscada, setExplPanturrilhaEscada] = useState(false);
+  const [explicacaoAberta, setExplicacaoAberta] = useState<number | null>(null);
+
+  function addWeight(index: number) {
+    const updatedExplicacoesData = [...explicacoesData];
+    updatedExplicacoesData[index].weight += 1;
+    setExplicacoesData(updatedExplicacoesData);
+  }
+
+  function removeWeight(index: number) {
+    if (explicacoesData[index].weight === 0) {
+      return;
+    }
+    const updatedExplicacoesData = [...explicacoesData];
+    updatedExplicacoesData[index].weight -= 1;
+    setExplicacoesData(updatedExplicacoesData);
+  }
 
   function closeQuarta() {
     props.onPressQuarta();
     props.setPage(1);
   }
 
+  const [explicacoesData, setExplicacoesData] = useState([
+    {
+      tittleApresentation: "Adução e abdução de coxa",
+      imageApresentation: aducao,
+      title: "Adução e abdução de coxa",
+      imageJpg: aducao,
+      weight: 0,
+      addWeight: () => addWeight(0),
+      removeWeight: () => removeWeight(0),
+      texts: ["Text1", "Text2", "Text3"],
+      errors: [
+        {
+          title: "error1",
+          description: "error1",
+        },
+        {
+          title: "error1",
+          description: "error1.",
+        },
+        {
+          title: "error1",
+          description: "error1",
+        },
+      ],
+      onClose: () => setExplicacaoAberta(null),
+    },
+    {
+      tittleApresentation: "Abdução na maquina",
+      imageApresentation: abducaoMaquina,
+      title: "Abdução na maquina",
+      imageJpg: abducaoMaquina,
+      weight: 0,
+      addWeight: () => addWeight(1),
+      removeWeight: () => removeWeight(1),
+      texts: ["Text1", "Text2", "Text3"],
+      errors: [
+        {
+          title: "error1",
+          description: "error1",
+        },
+        {
+          title: "error1",
+          description: "error1.",
+        },
+        {
+          title: "error1",
+          description: "error1",
+        },
+      ],
+      onClose: () => setExplicacaoAberta(null),
+    },
+    {
+      tittleApresentation: "Agachamento no rack",
+      imageApresentation: agachamentoRack,
+      title: "Agachamento no rack",
+      imageJpg: agachamentoRack,
+      weight: 0,
+      addWeight: () => addWeight(2),
+      removeWeight: () => removeWeight(2),
+      texts: ["Text1", "Text2", "Text3"],
+      errors: [
+        {
+          title: "error1",
+          description: "error1",
+        },
+        {
+          title: "error1",
+          description: "error1.",
+        },
+        {
+          title: "error1",
+          description: "error1",
+        },
+      ],
+      onClose: () => setExplicacaoAberta(null),
+    },
+    {
+      tittleApresentation: "Leg45",
+      imageApresentation: leg45,
+      title: "Leg45",
+      imageJpg: leg45,
+      weight: 0,
+      addWeight: () => addWeight(3),
+      removeWeight: () => removeWeight(3),
+      texts: ["Text1", "Text2", "Text3"],
+      errors: [
+        {
+          title: "error1",
+          description: "error1",
+        },
+        {
+          title: "error1",
+          description: "error1.",
+        },
+        {
+          title: "error1",
+          description: "error1",
+        },
+      ],
+      onClose: () => setExplicacaoAberta(null),
+    },
+    {
+      tittleApresentation: "Cadeira extensora",
+      imageApresentation: cadeiraExtensora,
+      title: "Cadeira extensora",
+      imageJpg: cadeiraExtensora,
+      weight: 0,
+      addWeight: () => addWeight(4),
+      removeWeight: () => removeWeight(4),
+      texts: ["Text1", "Text2", "Text3"],
+      errors: [
+        {
+          title: "error1",
+          description: "error1",
+        },
+        {
+          title: "error1",
+          description: "error1.",
+        },
+        {
+          title: "error1",
+          description: "error1",
+        },
+      ],
+      onClose: () => setExplicacaoAberta(null),
+    },
+    {
+      tittleApresentation: "Cadeira flexora",
+      imageApresentation: cadeiraFlexora,
+      title: "Cadeira flexora",
+      imageJpg: cadeiraFlexora,
+      weight: 0,
+      addWeight: () => addWeight(5),
+      removeWeight: () => removeWeight(5),
+      texts: ["Text1", "Text2", "Text3"],
+      errors: [
+        {
+          title: "error1",
+          description: "error1",
+        },
+        {
+          title: "error1",
+          description: "error1.",
+        },
+        {
+          title: "error1",
+          description: "error1",
+        },
+      ],
+      onClose: () => setExplicacaoAberta(null),
+    },
+    {
+      tittleApresentation: "Levantamento terra com barra",
+      imageApresentation: levantamentoTerra,
+      title: "Levantamento terra com barra",
+      imageJpg: levantamentoTerra,
+      weight: 0,
+      addWeight: () => addWeight(6),
+      removeWeight: () => removeWeight(6),
+      texts: ["Text1", "Text2", "Text3"],
+      errors: [
+        {
+          title: "error1",
+          description: "error1",
+        },
+        {
+          title: "error1",
+          description: "error1.",
+        },
+        {
+          title: "error1",
+          description: "error1",
+        },
+      ],
+      onClose: () => setExplicacaoAberta(null),
+    },
+    {
+      tittleApresentation: "Elevação pelvica",
+      imageApresentation: elevacaoPelvica,
+      title: "Elevação pelvica",
+      imageJpg: elevacaoPelvica,
+      weight: 0,
+      addWeight: () => addWeight(7),
+      removeWeight: () => removeWeight(7),
+      texts: ["Text1", "Text2", "Text3"],
+      errors: [
+        {
+          title: "error1",
+          description: "error1",
+        },
+        {
+          title: "error1",
+          description: "error1.",
+        },
+        {
+          title: "error1",
+          description: "error1",
+        },
+      ],
+      onClose: () => setExplicacaoAberta(null),
+    },
+  ]);
+
   return (
     <div className="containerWorkDay">
-      <ExplicacaoQuarta
-        expLevantamentoTerra={expLevantamentoTerra}
-        setExpLevantamentoTerra={setExpLevantamentoTerra}
-        explElevacaoPelvica={explElevacaoPelvica}
-        setExplElevacaoPelvica={setExplElevacaoPelvica}
-        explPanturrilhaLeg={explPanturrilhaLeg}
-        setExplPanturrilhaLeg={setExplPanturrilhaLeg}
-        explPanturrilhaAparelho={explPanturrilhaAparelho}
-        setExplPanturrilhaAparelho={setExplPanturrilhaAparelho}
-        explPanturrilhaEscada={explPanturrilhaEscada}
-        setExplPanturrilhaEscada={setExplPanturrilhaEscada}
-        explAgachamentoRack={explAgachamentoRack}
-        setExplAgachamentoRack={setExplAgachamentoRack}
-        explCadeiraFlexora={explCadeiraFlexora}
-        setExplCadeiraFlexora={setExplCadeiraFlexora}
-        explLeg45={explLeg45}
-        setExplLeg45={setExplLeg45}
-        explCadeiraExtensora={explCadeiraExtensora}
-        setExplCadeiraExtensora={setExplCadeiraExtensora}
-        explAbducaoMaquina={explAbducaoMaquina}
-        setExplAbducaoMaquina={setExplAbducaoMaquina}
-        explAducao={explAducao}
-        setExplAducao={setExplAducao}
-      ></ExplicacaoQuarta>
+      {explicacaoAberta !== null && (
+        <Explicacao {...explicacoesData[explicacaoAberta]} />
+      )}
       <div className="headerWorkDay">
         <p className="marginHeader">Quarta</p>
         <p>Coxa - Gluteo - Panturrilha</p>
@@ -77,49 +264,55 @@ function Quarta(props: PropsQuarta) {
             <p style={{ height: 40 }}>Coxa</p>
             <div className="exercises">
               <div>
-                <div className="blocks" onClick={() => setExplAducao(true)}>
-                  <p className="tittle">Adução e abdução de coxa</p>
-                  <img src={aducao} className="img-exercices"></img>
-                </div>
-                <div
-                  className="blocks"
-                  onClick={() => setExplAbducaoMaquina(true)}
-                >
-                  <p className="tittle">Abdução na maquina</p>
-                  <img src={abducaoMaquina} className="img-exercices"></img>
-                </div>
+                {explicacoesData.slice(0, 2).map((explicacao, index) => (
+                  <div
+                    key={index}
+                    className="blocks"
+                    onClick={() => setExplicacaoAberta(index)}
+                  >
+                    <p className="tittle">{explicacao.tittleApresentation}</p>
+                    <img
+                      src={explicacao.imageApresentation}
+                      className="img-exercices"
+                      alt={explicacao.title}
+                    />
+                  </div>
+                ))}
               </div>
               <div className="next" onClick={props.nextExercise}>
                 <img src="../../../public/arrow.png" alt="Seta avançar"></img>
               </div>
               <div>
-                <div
-                  className="blocks"
-                  onClick={() => setExplAgachamentoRack(true)}
-                >
-                  <p className="tittle">Agachamento no rack</p>
-                  <img src={agachamentoRack} className="img-exercices"></img>
-                </div>
-                <div className="blocks" onClick={() => setExplLeg45(true)}>
-                  <p className="tittle">Leg45</p>
-                  <img src={leg45} className="img-exercices"></img>
-                </div>
+                {explicacoesData.slice(2, 4).map((explicacao, index) => (
+                  <div
+                    key={index}
+                    className="blocks"
+                    onClick={() => setExplicacaoAberta(index + 2)}
+                  >
+                    <p className="tittle">{explicacao.tittleApresentation}</p>
+                    <img
+                      src={explicacao.imageApresentation}
+                      className="img-exercices"
+                      alt={explicacao.title}
+                    />
+                  </div>
+                ))}
               </div>
               <div>
-                <div
-                  className="blocks"
-                  onClick={() => setExplCadeiraExtensora(true)}
-                >
-                  <p className="tittle">Cadeira extensora</p>
-                  <img src={cadeiraExtensora} className="img-exercices"></img>
-                </div>
-                <div
-                  className="blocks"
-                  onClick={() => setExplCadeiraFlexora(true)}
-                >
-                  <p className="tittle">Cadeira Flexora</p>
-                  <img src={cadeiraFlexora} className="img-exercices"></img>
-                </div>
+              {explicacoesData.slice(4, 6).map((explicacao, index) => (
+                  <div
+                    key={index}
+                    className="blocks"
+                    onClick={() => setExplicacaoAberta(index + 4)}
+                  >
+                    <p className="tittle">{explicacao.tittleApresentation}</p>
+                    <img
+                      src={explicacao.imageApresentation}
+                      className="img-exercices"
+                      alt={explicacao.title}
+                    />
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -129,28 +322,26 @@ function Quarta(props: PropsQuarta) {
             <p style={{ height: 40 }}>Gluteo</p>
             <div className="exercises">
               <div>
-                <div
-                  className="blocks"
-                  onClick={() => setExpLevantamentoTerra(true)}
-                >
-                  <p className="tittle">Levantamento terra com barra</p>
-                  <img src={levantamentoTerra} className="img-exercices"></img>
-                </div>
+              {explicacoesData.slice(6, 8).map((explicacao, index) => (
+                  <div
+                    key={index}
+                    className="blocks"
+                    onClick={() => setExplicacaoAberta(index + 6)}
+                  >
+                    <p className="tittle">{explicacao.tittleApresentation}</p>
+                    <img
+                      src={explicacao.imageApresentation}
+                      className="img-exercices"
+                      alt={explicacao.title}
+                    />
+                  </div>
+                ))}
               </div>
               <div className="next" onClick={props.nextExercise}>
                 <img src="../../../public/arrow.png" alt="Seta avançar"></img>
               </div>
               <div className="prev" onClick={props.previousExercise}>
                 <img src="../../../public/arrow.png" alt="Seta voltar"></img>
-              </div>
-              <div>
-                <div
-                  className="blocks"
-                  onClick={() => setExplElevacaoPelvica(true)}
-                >
-                  <p className="tittle">Elevação pelvica</p>
-                  <img src={elevacaoPelvica} className="img-exercices"></img>
-                </div>
               </div>
             </div>
           </div>
