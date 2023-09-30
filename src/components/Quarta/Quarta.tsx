@@ -244,6 +244,81 @@ function Quarta(props: PropsQuarta) {
       ],
       onClose: () => setExplicacaoAberta(null),
     },
+    {
+      tittleApresentation: "Elevação de panturrilha no aparelho",
+      imageApresentation: panturrilhaAparelho,
+      title: "Elevação de panturrilha no aparelho",
+      imageJpg: panturrilhaAparelho,
+      weight: 0,
+      addWeight: () => addWeight(8),
+      removeWeight: () => removeWeight(8),
+      texts: ["Text1", "Text2", "Text3"],
+      errors: [
+        {
+          title: "error1",
+          description: "error1",
+        },
+        {
+          title: "error1",
+          description: "error1.",
+        },
+        {
+          title: "error1",
+          description: "error1",
+        },
+      ],
+      onClose: () => setExplicacaoAberta(null),
+    },
+    {
+      tittleApresentation: "Elevação de panturrilha no leg press",
+      imageApresentation: panturrilhaLeg,
+      title: "Elevação de panturrilha no leg press",
+      imageJpg: panturrilhaLeg,
+      weight: 0,
+      addWeight: () => addWeight(9),
+      removeWeight: () => removeWeight(9),
+      texts: ["Text1", "Text2", "Text3"],
+      errors: [
+        {
+          title: "error1",
+          description: "error1",
+        },
+        {
+          title: "error1",
+          description: "error1.",
+        },
+        {
+          title: "error1",
+          description: "error1",
+        },
+      ],
+      onClose: () => setExplicacaoAberta(null),
+    },
+    {
+      tittleApresentation: "Elevação de panturrilha em pé na escada",
+      imageApresentation: panturrilhaEscada,
+      title: "Elevação de panturrilha em pé na escada",
+      imageJpg: panturrilhaEscada,
+      weight: 0,
+      addWeight: () => addWeight(10),
+      removeWeight: () => removeWeight(10),
+      texts: ["Text1", "Text2", "Text3"],
+      errors: [
+        {
+          title: "error1",
+          description: "error1",
+        },
+        {
+          title: "error1",
+          description: "error1.",
+        },
+        {
+          title: "error1",
+          description: "error1",
+        },
+      ],
+      onClose: () => setExplicacaoAberta(null),
+    },
   ]);
 
   return (
@@ -299,7 +374,7 @@ function Quarta(props: PropsQuarta) {
                 ))}
               </div>
               <div>
-              {explicacoesData.slice(4, 6).map((explicacao, index) => (
+                {explicacoesData.slice(4, 6).map((explicacao, index) => (
                   <div
                     key={index}
                     className="blocks"
@@ -322,7 +397,7 @@ function Quarta(props: PropsQuarta) {
             <p style={{ height: 40 }}>Gluteo</p>
             <div className="exercises">
               <div>
-              {explicacoesData.slice(6, 8).map((explicacao, index) => (
+                {explicacoesData.slice(6, 8).map((explicacao, index) => (
                   <div
                     key={index}
                     className="blocks"
@@ -351,37 +426,39 @@ function Quarta(props: PropsQuarta) {
             <p style={{ height: 40 }}>Panturrilha</p>
             <div className="exercises">
               <div>
-                <div
-                  className="blocks"
-                  onClick={() => setExplPanturrilhaAparelho(true)}
-                >
-                  <p className="tittle">Elevação de panturrilha no aparelho</p>
-                  <img
-                    src={panturrilhaAparelho}
-                    className="img-exercices"
-                  ></img>
-                </div>
-                <div
-                  className="blocks"
-                  onClick={() => setExplPanturrilhaLeg(true)}
-                >
-                  <p className="tittle">Elevação de panturrilha no leg press</p>
-                  <img src={panturrilhaLeg} className="img-exercices"></img>
-                </div>
+                {explicacoesData.slice(8, 10).map((explicacao, index) => (
+                  <div
+                    key={index}
+                    className="blocks"
+                    onClick={() => setExplicacaoAberta(index + 8)}
+                  >
+                    <p className="tittle">{explicacao.tittleApresentation}</p>
+                    <img
+                      src={explicacao.imageApresentation}
+                      className="img-exercices"
+                      alt={explicacao.title}
+                    />
+                  </div>
+                ))}
               </div>
               <div className="prev" onClick={props.previousExercise}>
                 <img src="../../../public/arrow.png" alt="Seta voltar"></img>
               </div>
               <div>
-                <div
-                  className="blocks"
-                  onClick={() => setExplPanturrilhaEscada(true)}
-                >
-                  <p className="tittle">
-                    Elevação de panturrilha em pé na escada
-                  </p>
-                  <img src={panturrilhaEscada} className="img-exercices"></img>
-                </div>
+              {explicacoesData.slice(10, 11).map((explicacao, index) => (
+                  <div
+                    key={index}
+                    className="blocks"
+                    onClick={() => setExplicacaoAberta(index + 10)}
+                  >
+                    <p className="tittle">{explicacao.tittleApresentation}</p>
+                    <img
+                      src={explicacao.imageApresentation}
+                      className="img-exercices"
+                      alt={explicacao.title}
+                    />
+                  </div>
+                ))}
               </div>
             </div>
           </div>
