@@ -326,50 +326,16 @@ function Quarta(props: PropsQuarta) {
       tittleApresentation: "Elevação de panturrilha no leg press",
       imageApresentation: panturrilhaLeg,
       title: "Elevação de panturrilha no leg press",
-      imageJpg: panturrilhaLeg,
       weight: 0,
-      addWeight: () => addWeight(9),
-      removeWeight: () => removeWeight(9),
       texts: ["Text1", "Text2", "Text3"],
-      errors: [
-        {
-          title: "error1",
-          description: "error1",
-        },
-        {
-          title: "error1",
-          description: "error1.",
-        },
-        {
-          title: "error1",
-          description: "error1",
-        },
-      ],
       onClose: () => setExplicacaoAberta(null),
     },
     {
       tittleApresentation: "Elevação de panturrilha em pé na escada",
       imageApresentation: panturrilhaEscada,
       title: "Elevação de panturrilha em pé na escada",
-      imageJpg: panturrilhaEscada,
       weight: 0,
-      addWeight: () => addWeight(10),
-      removeWeight: () => removeWeight(10),
       texts: ["Text1", "Text2", "Text3"],
-      errors: [
-        {
-          title: "error1",
-          description: "error1",
-        },
-        {
-          title: "error1",
-          description: "error1.",
-        },
-        {
-          title: "error1",
-          description: "error1",
-        },
-      ],
       onClose: () => setExplicacaoAberta(null),
     },
   ]);
@@ -483,7 +449,6 @@ function Quarta(props: PropsQuarta) {
                   <div
                     key={index}
                     className="blocks"
-                    onClick={() => setExplicacaoAberta(index + 8)}
                   >
                     <p className="tittle">{explicacao.tittleApresentation}</p>
                     <img
@@ -502,7 +467,6 @@ function Quarta(props: PropsQuarta) {
                   <div
                     key={index}
                     className="blocks"
-                    onClick={() => setExplicacaoAberta(index + 10)}
                   >
                     <p className="tittle">{explicacao.tittleApresentation}</p>
                     <img
