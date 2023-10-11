@@ -2,8 +2,11 @@ import desenHalter from "../../../public/desenvolvimento-para-ombros-com-haltere
 import elevacaoLateral from "../../../public/ombros-elevacao-lateral-de-ombros-com-halteres.webp";
 import remadaAlta from "../../../public/ombros-remada-alta-em-pe-com-halteres.webp";
 import explRemadaAlta from "../../../public/expl-remada-alta-musculos-envolvidos.jpg";
-
 import elevacaoFrontal from "../../../public/Elevacao-Frontal-com-Barra-na-Polia.gif";
+import explRoscaDePunho from "../../../public/expl-rosca-de-punho.jpg";
+import explDocinho from "../../../public/explDocinho.jpg";
+import explRoscaInvertida from "../../../public/expl-rosca-invertida.jpg";
+
 import { useState } from "react";
 import Explicacao from "../Explicação/Explicacao";
 
@@ -140,14 +143,61 @@ function Quinta(props: PropsQuinta) {
       title: "Elevação frontal",
       imageJpg: elevacaoFrontal,
       weight: 0,
-      addWeight: () => addWeight(1),
-      removeWeight: () => removeWeight(1),
+      addWeight: () => addWeight(3),
+      removeWeight: () => removeWeight(3),
       texts: [
         "O movimento do exercício elevação frontal é bastante simples. Ele pode ser feito com barra, halteres, anilhas e até na polia baixa no cross.",
         "Basicamente, do ponto de vista de movimento articular, temos uma flexão de ombro. Veja no vídeo, como deve ser a execução correta:",
         "1° Basicamente, você deve estar com o corpo ereto, seja em pé ou em um banco e os braços paralelos ao corpo.",
         "2° Eleve os halteres até aproximadamente a linha do ombro, formando uma angulação de 90°. Retorne a posição inicial.",
         "De forma simplificada, esta é a execução básica da elevação frontal.",
+      ],
+      onClose: () => setExplicacaoAberta(null),
+    },
+    {
+      tittleApresentation: "Rosca de Punho",
+      imageApresentation: explRoscaDePunho,
+      title: "Rosca de Punho",
+      imageJpg: explRoscaDePunho,
+      weight: 0,
+      addWeight: () => addWeight(4),
+      removeWeight: () => removeWeight(4),
+      texts: [
+        "Sente-se sobre um banco e pegue a barra com uma pegada supinada (dorso da mão voltado para baixo e palma da mão voltada para cima);",
+        "Afaste as mãos na barra até que fiquem paralelas aos ombros",
+        "Repouse o dorso do antebraço sobre as coxas",
+        "Dobre os punhos para baixo abaixando a barra",
+        "Faça o movimento de rosca com os punhos e erga novamente a barra (tente realizar o exercício com repetições prolongadas).",
+      ],
+      onClose: () => setExplicacaoAberta(null),
+    },
+    {
+      tittleApresentation: "Rolo de Pulso ou Rosca de Punho",
+      imageApresentation: explDocinho,
+      title: "Rolo de Pulso ou Rosca de Punho",
+      imageJpg: explDocinho,
+      weight: 0,
+      addWeight: () => addWeight(5),
+      removeWeight: () => removeWeight(5),
+      texts: [
+        "Fique ereto com os pés paralelos aos ombros, braços esticados na altura dos ombros;",
+        "Você pode iniciar o movimento com a corda esticada, enrole a corda com um movimento rodando a barra, uma mão após a outra, repetindo até o peso encostar na barra.",
+        "Em seguida, retorne o peso de para baixo, girando os punhos na direção oposta.",
+      ],
+      onClose: () => setExplicacaoAberta(null),
+    },
+    {
+      tittleApresentation: "Rosca Direta Invertida com Halteres",
+      imageApresentation: explRoscaInvertida,
+      title: "Rosca Direta Invertida com Halteres",
+      imageJpg: explRoscaInvertida,
+      weight: 0,
+      addWeight: () => addWeight(6),
+      removeWeight: () => removeWeight(6),
+      texts: [
+        "Posicione-se em pé, segure a barra do halter com pegada pronada;",
+        "Afaste as mãos na largura dos ombros e segure a barra com os braços estendidos;",
+        "O exercício consiste em elevar a barra até os ombros flexionando os cotovelos. Por fim abaixe a barra deixando os braços estendidos novamente.",
       ],
       onClose: () => setExplicacaoAberta(null),
     },
@@ -218,52 +268,39 @@ function Quinta(props: PropsQuinta) {
             <p>Antebraço</p>
             <div className="exercises">
               <div>
-                <div className="blocks">
-                  <p className="tittle">Antebraço1</p>
-                </div>
-                <div className="blocks">
-                  <p className="tittle">Antebraço2</p>
-                </div>
-              </div>
-              <div className="next" onClick={props.nextExercise}>
-                <img src="../../../public/arrow.png" alt="Seta avançar"></img>
-              </div>
-              <div className="prev" onClick={props.previousExercise}>
-                <img src="../../../public/arrow.png" alt="Seta voltar"></img>
-              </div>
-              <div>
-                <div className="blocks">
-                  <p className="tittle">Antebraço3</p>
-                </div>
-                <div className="blocks">
-                  <p className="tittle">Antebraço4</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-        {props.page === 3 && (
-          <div className="title-exercises">
-            <p>Abdomem</p>
-            <div className="exercises">
-              <div>
-                <div className="blocks">
-                  <p className="tittle">Abdomem1</p>
-                </div>
-                <div className="blocks">
-                  <p className="tittle">Abdomem2</p>
-                </div>
+                {explicacoesData.slice(4, 6).map((explicacao, index) => (
+                  <div
+                    key={index}
+                    className="blocks"
+                    onClick={() => setExplicacaoAberta(index + 4)}
+                  >
+                    <p className="tittle">{explicacao.tittleApresentation}</p>
+                    <img
+                      src={explicacao.imageApresentation}
+                      className="img-exercices"
+                      alt={explicacao.title}
+                    />
+                  </div>
+                ))}
               </div>
               <div className="prev" onClick={props.previousExercise}>
                 <img src="../../../public/arrow.png" alt="Seta voltar"></img>
               </div>
               <div>
-                <div className="blocks">
-                  <p className="tittle">Abdomem3</p>
-                </div>
-                <div className="blocks">
-                  <p className="tittle">Abdomem4</p>
-                </div>
+                {explicacoesData.slice(6, 7).map((explicacao, index) => (
+                  <div
+                    key={index}
+                    className="blocks"
+                    onClick={() => setExplicacaoAberta(index + 6)}
+                  >
+                    <p className="tittle">{explicacao.tittleApresentation}</p>
+                    <img
+                      src={explicacao.imageApresentation}
+                      className="img-exercices"
+                      alt={explicacao.title}
+                    />
+                  </div>
+                ))}
               </div>
             </div>
           </div>
