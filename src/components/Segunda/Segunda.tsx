@@ -367,7 +367,7 @@ function Segunda(props: PropsSegunda) {
         )}
         <div className="headerWorkDay">
           <p className="marginHeader">Segunda</p>
-          <p>Costas - Biceps - Panturrilha</p>
+          <p>Cossstas - Biceps - Panturrilha</p>
           <button className="btnClose" onClick={closeSegunda}>
             X
           </button>
