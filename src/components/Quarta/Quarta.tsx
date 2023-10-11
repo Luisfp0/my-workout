@@ -446,10 +446,7 @@ function Quarta(props: PropsQuarta) {
             <div className="exercises">
               <div>
                 {explicacoesData.slice(8, 10).map((explicacao, index) => (
-                  <div
-                    key={index}
-                    className="blocks"
-                  >
+                  <div key={index} className="blocks">
                     <p className="tittle">{explicacao.tittleApresentation}</p>
                     <img
                       src={explicacao.imageApresentation}
@@ -464,10 +461,7 @@ function Quarta(props: PropsQuarta) {
               </div>
               <div>
                 {explicacoesData.slice(10, 11).map((explicacao, index) => (
-                  <div
-                    key={index}
-                    className="blocks"
-                  >
+                  <div key={index} className="blocks">
                     <p className="tittle">{explicacao.tittleApresentation}</p>
                     <img
                       src={explicacao.imageApresentation}
